@@ -1,0 +1,852 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+SceneSettings:
+  m_ObjectHideFlags: 0
+  m_PVSData: 
+  m_PVSObjectsArray: []
+  m_PVSPortalsArray: []
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: .25
+    backfaceThreshold: 100
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 6
+  m_Fog: 0
+  m_FogColor: {r: .5, g: .5, b: .5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: .00999999978
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: .211999997, g: .226999998, b: .259000003, a: 1}
+  m_AmbientEquatorColor: {r: .114, g: .125, b: .133000001, a: 1}
+  m_AmbientGroundColor: {r: .0469999984, g: .0430000015, b: .0350000001, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 3
+  m_SkyboxMaterial: {fileID: 0}
+  m_HaloStrength: .5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+--- !u!127 &3
+LevelGameManager:
+  m_ObjectHideFlags: 0
+--- !u!157 &4
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 5
+  m_GIWorkflowMode: 0
+  m_LightmapsMode: 1
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_TemporalCoherenceThreshold: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 0
+    m_EnableRealtimeLightmaps: 0
+  m_LightmapEditorSettings:
+    serializedVersion: 3
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_TextureWidth: 1024
+    m_TextureHeight: 1024
+    m_AOMaxDistance: 1
+    m_Padding: 2
+    m_CompAOExponent: 0
+    m_LightmapParameters: {fileID: 0}
+    m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherRayCount: 1024
+  m_LightmapSnapshot: {fileID: 0}
+  m_RuntimeCPUUsage: 25
+--- !u!196 &5
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 2
+    agentRadius: .5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: .400000006
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    accuratePlacement: 0
+    minRegionArea: 2
+    cellSize: .166666672
+    manualCellSize: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1 &7574981
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 7574984}
+  - 222: {fileID: 7574983}
+  - 114: {fileID: 7574982}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &7574982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 7574981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 1
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 300
+    m_Alignment: 4
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "Spur\xF0u \xFEann sem situr hli\xF0in\xE1 \xFE\xE9r spurningu og hann ver\xF0ur
+    a\xF0 svara me\xF0 spurningu, \\ns\xE1 sem tapar tekur sopa."
+--- !u!222 &7574983
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 7574981}
+--- !u!224 &7574984
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 7574981}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1379652333}
+  m_RootOrder: 2
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 100}
+  m_Pivot: {x: .5, y: 0}
+--- !u!1 &570808280
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 570808281}
+  - 222: {fileID: 570808283}
+  - 114: {fileID: 570808282}
+  m_Layer: 5
+  m_Name: Table
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &570808281
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 570808280}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1379652333}
+  m_RootOrder: 1
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: .122130007, y: -250}
+  m_SizeDelta: {x: 351.600006, y: 100}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &570808282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 570808280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: bceb7ce9140814a4dae570c27e7a1a26, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &570808283
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 570808280}
+--- !u!1 &1178320159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1178320162}
+  - 222: {fileID: 1178320161}
+  - 114: {fileID: 1178320160}
+  m_Layer: 5
+  m_Name: BackCard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1178320160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1178320159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: ddac6d30498c4fd4db02ec971e796fee, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1178320161
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1178320159}
+--- !u!224 &1178320162
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1178320159}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1379652333}
+  m_RootOrder: 0
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: -.000358584686, y: 49.9999847}
+  m_SizeDelta: {x: 351.839996, y: 500}
+  m_Pivot: {x: .5, y: .5}
+--- !u!1 &1194253195
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1194253199}
+  - 114: {fileID: 1194253198}
+  - 114: {fileID: 1194253197}
+  - 114: {fileID: 1194253196}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1194253196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1194253195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1997211142, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AllowActivationOnStandalone: 0
+--- !u!114 &1194253197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1194253195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1077351063, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: .5
+  m_AllowActivationOnMobileDevice: 0
+--- !u!114 &1194253198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1194253195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 5
+--- !u!4 &1194253199
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1194253195}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+--- !u!1 &1379652332
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1379652333}
+  - 223: {fileID: 1379652336}
+  - 114: {fileID: 1379652335}
+  - 114: {fileID: 1379652334}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1379652333
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1379652332}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1178320162}
+  - {fileID: 570808281}
+  - {fileID: 7574984}
+  - {fileID: 1880624547}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &1379652334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1379652332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1379652335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1379652332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 1
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &1379652336
+Canvas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1379652332}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!1 &1728375646
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1728375648}
+  - 114: {fileID: 1728375647}
+  m_Layer: 0
+  m_Name: GameLogic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1728375647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1728375646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c61faac3f39ddc448a0c64387c0f004, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deck:
+  - name: 2
+    cardGFX: {fileID: 21300000, guid: 5a8498911c0d6f04bb01d01a8f09f2ba, type: 3}
+    cardRule: Tveir sopar.
+  - name: 2
+    cardGFX: {fileID: 21300000, guid: ded2f238e9a947d44aebf65bd234f440, type: 3}
+    cardRule: Tveir sopar.
+  - name: 2
+    cardGFX: {fileID: 21300000, guid: e08320bec1f7aea4ca3583c1e337f72f, type: 3}
+    cardRule: Tveir sopar.
+  - name: 2
+    cardGFX: {fileID: 21300000, guid: 6c11e30ac43a9954f93bd102488130c1, type: 3}
+    cardRule: Tveir sopar.
+  - name: 3
+    cardGFX: {fileID: 21300000, guid: 8b3b8500f4d90724dbff870632d605d6, type: 3}
+    cardRule: "\xDEr\xEDr sopar."
+  - name: 3
+    cardGFX: {fileID: 21300000, guid: 631d0a7b5cc78de48bba90ca773641f2, type: 3}
+    cardRule: "\xDEr\xEDr sopar."
+  - name: 3
+    cardGFX: {fileID: 21300000, guid: 31b09b2ed675f1a4697ae5f73f8d44a9, type: 3}
+    cardRule: "\xDEr\xEDr sopar."
+  - name: 4
+    cardGFX: {fileID: 21300000, guid: b88bd1a17e7db3c4e95c3be60e8bf3cf, type: 3}
+    cardRule: "\xDEr\xEDr sopar."
+  - name: 4
+    cardGFX: {fileID: 21300000, guid: 62aee84339798f04a866d14109b93a88, type: 3}
+    cardRule: "Spurning: \xDE\xFA l\xEDtur \xE1 \xFEann sem \xFE\xE9r s\xFDnist, hann/h\xFAn
+      ver\xF0ur a\xF0 svara spurningunni me\xF0 spurningu og \xFEannig heldur \xFEa\xF0
+      \xE1fram \xFEanga\xF0 til einhver klikkar. D\xE6mi. Hva\xF0 er a\xF0 gerast?
+      Af hverju snertir\xF0u \xFEig? \xDE\xFA \xFEarft ekki a\xF0 spyrja manneskjuna
+      sem spur\xF0i \xFEig. Vertu bara \xF6rugg/ur a\xF0 n\xE1 augnsambandi. "
+  - name: 4
+    cardGFX: {fileID: 21300000, guid: a587af2ad51e6054289a5bd6f54b391f, type: 3}
+    cardRule: "Spurning: \xDE\xFA l\xEDtur \xE1 \xFEann sem \xFE\xE9r s\xFDnist, hann/h\xFAn
+      ver\xF0ur a\xF0 svara spurningunni me\xF0 spurningu og \xFEannig heldur \xFEa\xF0
+      \xE1fram \xFEanga\xF0 til einhver klikkar. D\xE6mi. Hva\xF0 er a\xF0 gerast?
+      Af hverju snertir\xF0u \xFEig? \xDE\xFA \xFEarft ekki a\xF0 spyrja manneskjuna
+      sem spur\xF0i \xFEig. Vertu bara \xF6rugg/ur a\xF0 n\xE1 augnsambandi. "
+  - name: 4
+    cardGFX: {fileID: 21300000, guid: b8e056502fbe02a48ac21664cbc492ba, type: 3}
+    cardRule: "Spurning: \xDE\xFA l\xEDtur \xE1 \xFEann sem \xFE\xE9r s\xFDnist, hann/h\xFAn
+      ver\xF0ur a\xF0 svara spurningunni me\xF0 spurningu og \xFEannig heldur \xFEa\xF0
+      \xE1fram \xFEanga\xF0 til einhver klikkar. D\xE6mi. Hva\xF0 er a\xF0 gerast?
+      Af hverju snertir\xF0u \xFEig? \xDE\xFA \xFEarft ekki a\xF0 spyrja manneskjuna
+      sem spur\xF0i \xFEig. Vertu bara \xF6rugg/ur a\xF0 n\xE1 augnsambandi. "
+  - name: 4
+    cardGFX: {fileID: 21300000, guid: acc8a647c74c15e40be6f2d6f5e80d3f, type: 3}
+    cardRule: "Spurning: \xDE\xFA l\xEDtur \xE1 \xFEann sem \xFE\xE9r s\xFDnist, hann/h\xFAn
+      ver\xF0ur a\xF0 svara spurningunni me\xF0 spurningu og \xFEannig heldur \xFEa\xF0
+      \xE1fram \xFEanga\xF0 til einhver klikkar. D\xE6mi. Hva\xF0 er a\xF0 gerast?
+      Af hverju snertir\xF0u \xFEig? \xDE\xFA \xFEarft ekki a\xF0 spyrja manneskjuna
+      sem spur\xF0i \xFEig. Vertu bara \xF6rugg/ur a\xF0 n\xE1 augnsambandi. "
+  - name: 5
+    cardGFX: {fileID: 21300000, guid: acbc0438e1c72614190c02ae4311bd69, type: 3}
+    cardRule: "Gef\xF0u 5 sopa."
+  - name: 5
+    cardGFX: {fileID: 21300000, guid: 1ab0d97076b3c6048ad0c07f738b23ae, type: 3}
+    cardRule: "Gef\xF0u 5 sopa."
+  - name: 5
+    cardGFX: {fileID: 21300000, guid: 50e3b4a374536cd4bacad3fa37e59e12, type: 3}
+    cardRule: "Gef\xF0u 5 sopa."
+  - name: 5
+    cardGFX: {fileID: 21300000, guid: 3f99b04a05db01544af7dc0b76397fe0, type: 3}
+    cardRule: "Gef\xF0u 5 sopa."
+  - name: 6
+    cardGFX: {fileID: 21300000, guid: 63a6c88173ee0254ba15a693dcd34bb5, type: 3}
+    cardRule: "\xC9g hef aldrei. H\xE9r segir s\xE1 sem dr\xF3 spili\xF0 eitthva\xF0
+      sem hann hefur ekki gert en s\xE1/s\xFA sem hefur gert \xFEa\xF0 ver\xF0ur a\xF0
+      drekka tvo sopa. "
+  - name: 6
+    cardGFX: {fileID: 21300000, guid: 917f14c80a68a6a45a154b8579327f19, type: 3}
+    cardRule: "\xC9g hef aldrei. H\xE9r segir s\xE1 sem dr\xF3 spili\xF0 eitthva\xF0
+      sem hann hefur ekki gert en s\xE1/s\xFA sem hefur gert \xFEa\xF0 ver\xF0ur a\xF0
+      drekka tvo sopa. "
+  - name: 6
+    cardGFX: {fileID: 21300000, guid: ee15fe9cba8a41041aa8cbe736774ae1, type: 3}
+    cardRule: "\xC9g hef aldrei. H\xE9r segir s\xE1 sem dr\xF3 spili\xF0 eitthva\xF0
+      sem hann hefur ekki gert en s\xE1/s\xFA sem hefur gert \xFEa\xF0 ver\xF0ur a\xF0
+      drekka tvo sopa. "
+  - name: 6
+    cardGFX: {fileID: 21300000, guid: 98a4036552a4965489f94f8189c791e3, type: 3}
+    cardRule: "\xC9g hef aldrei. S\xE1 sem dregur \xFEetta spil segir eitthva\xF0
+      sem hann hefur aldrei og ef einhver hefur gert \xFEann gj\xF6rning \xFE\xE1
+      tekur hann sopa."
+  - name: 7
+    cardGFX: {fileID: 21300000, guid: f25bf31c5750fe84ea075562610563c9, type: 3}
+    cardRule: "Puttar: S\xE1 sem dregur spili\xF0 setur einn putta \xE1 bor\xF0i\xF0
+      og s\xE1 sem er s\xED\xF0astur a\xF0 setja putta \xE1 bor\xF0i\xF0 ver\xF0ur
+      a\xF0 drekka einn sopa. S\xE1 sem dr\xF3g m\xE1 gera \xFEetta eins oft og hann
+      vill \xFEanga\xF0 til n\xE6sta 7 kemur. "
+  - name: 7
+    cardGFX: {fileID: 21300000, guid: 2be692508242bf54dbca8d61e5e3b6bb, type: 3}
+    cardRule: "Puttar: S\xE1 sem dregur spili\xF0 setur einn putta \xE1 bor\xF0i\xF0
+      og s\xE1 sem er s\xED\xF0astur a\xF0 setja putta \xE1 bor\xF0i\xF0 ver\xF0ur
+      a\xF0 drekka einn sopa. S\xE1 sem dr\xF3g m\xE1 gera \xFEetta eins oft og hann
+      vill \xFEanga\xF0 til n\xE6sta 7 kemur. "
+  - name: 7
+    cardGFX: {fileID: 21300000, guid: a564d3c45df8bac408d1ed099af9435e, type: 3}
+    cardRule: "Puttar: S\xE1 sem dregur spili\xF0 setur einn putta \xE1 bor\xF0i\xF0
+      og s\xE1 sem er s\xED\xF0astur a\xF0 setja putta \xE1 bor\xF0i\xF0 ver\xF0ur
+      a\xF0 drekka einn sopa. S\xE1 sem dr\xF3g m\xE1 gera \xFEetta eins oft og hann
+      vill \xFEanga\xF0 til n\xE6sta 7 kemur. "
+  - name: 7
+    cardGFX: {fileID: 21300000, guid: 3b526ed8f0f7bbd4e80af8e94304014f, type: 3}
+    cardRule: "Puttar: S\xE1 sem dregur spili\xF0 setur einn putta \xE1 bor\xF0i\xF0
+      og s\xE1 sem er s\xED\xF0astur a\xF0 setja putta \xE1 bor\xF0i\xF0 ver\xF0ur
+      a\xF0 drekka einn sopa. S\xE1 sem dr\xF3g m\xE1 gera \xFEetta eins oft og hann
+      vill \xFEanga\xF0 til n\xE6sta 7 kemur. "
+  - name: 8
+    cardGFX: {fileID: 21300000, guid: 69f94e0f3f5860d49b69fde672baf9e7, type: 3}
+    cardRule: "S\xE1 sem er sj\xE1anlega minnst fullur ver\xF0ur a\xF0 drekka 3 sopa.. "
+  - name: 8
+    cardGFX: {fileID: 21300000, guid: 9e6525bdaccabd94f8f659c8769eb6f2, type: 3}
+    cardRule: "S\xE1 sem er sj\xE1anlega minnst fullur ver\xF0ur a\xF0 drekka 3 sopa.. "
+  - name: 8
+    cardGFX: {fileID: 21300000, guid: 6a8bdf561f1515644a6630ac301eabf7, type: 3}
+    cardRule: "S\xE1 sem er sj\xE1anlega minnst fullur ver\xF0ur a\xF0 drekka 3 sopa.. "
+  - name: 8
+    cardGFX: {fileID: 21300000, guid: 40c8a6d1f90847f4299996303de7d5fd, type: 3}
+    cardRule: "S\xE1 sem er sj\xE1anlega minnst fullur ver\xF0ur a\xF0 drekka 3 sopa.. "
+  - name: 9
+    cardGFX: {fileID: 21300000, guid: be8d6ff05cd808d489b8d1ffe569b757, type: 3}
+    cardRule: "R\xEDm: Allir ver\xF0a a\xF0 koma me\xF0 or\xF0 sem r\xEDmar vi\xF0
+      \xFEitt. "
+  - name: 9
+    cardGFX: {fileID: 21300000, guid: 69738a1fb9c11644fa976c67d33ed194, type: 3}
+    cardRule: "R\xEDm: Allir ver\xF0a a\xF0 koma me\xF0 or\xF0 sem r\xEDmar vi\xF0
+      \xFEitt. "
+  - name: 9
+    cardGFX: {fileID: 21300000, guid: 684ac615d42ea8448b34fb5467477336, type: 3}
+    cardRule: "R\xEDm: Allir ver\xF0a a\xF0 koma me\xF0 or\xF0 sem r\xEDmar vi\xF0
+      \xFEitt. "
+  - name: 9
+    cardGFX: {fileID: 21300000, guid: 2d42d0e158d04ea4d99908fb919ca7b5, type: 3}
+    cardRule: "R\xEDm: Allir ver\xF0a a\xF0 koma me\xF0 or\xF0 sem r\xEDmar vi\xF0
+      \xFEitt. "
+  - name: 10
+    cardGFX: {fileID: 21300000, guid: 922e86a7ca6fa734d9808c5023bb8989, type: 3}
+    cardRule: 'Allir drekka einn sopa. '
+  - name: 10
+    cardGFX: {fileID: 21300000, guid: 5b2598df7d2beed4e86a7784fac2bb18, type: 3}
+    cardRule: 'Allir drekka einn sopa. '
+  - name: 10
+    cardGFX: {fileID: 21300000, guid: 0659799568cc1da42ac065b50b9ee926, type: 3}
+    cardRule: 'Allir drekka einn sopa. '
+  - name: 10
+    cardGFX: {fileID: 21300000, guid: 4269d849154754845ad7af736304410e, type: 3}
+    cardRule: 'Allir drekka einn sopa. '
+  - name: G
+    cardGFX: {fileID: 21300000, guid: 6c609c48f56a53d488e4f9c5b7f15126, type: 3}
+    cardRule: "Str\xE1kar drekka. "
+  - name: G
+    cardGFX: {fileID: 21300000, guid: 6f53c3865bf79884c95ed8dab2f3096c, type: 3}
+    cardRule: "Str\xE1kar drekka. "
+  - name: G
+    cardGFX: {fileID: 21300000, guid: e099d9d0cf50dcb49a24929773b66217, type: 3}
+    cardRule: "Str\xE1kar drekka. "
+  - name: G
+    cardGFX: {fileID: 21300000, guid: cea11059a0b53c04c972454d3bf4b018, type: 3}
+    cardRule: "Str\xE1kar drekka."
+  - name: D
+    cardGFX: {fileID: 21300000, guid: ab9d92608f791ac4e813724b5f0a7759, type: 3}
+    cardRule: Stelpur drekka.
+  - name: D
+    cardGFX: {fileID: 21300000, guid: c8116eab8380dd44aa9a66217e9f0c80, type: 3}
+    cardRule: Stelpur drekka.
+  - name: D
+    cardGFX: {fileID: 21300000, guid: 59cf3d437495373438ddd317637a2124, type: 3}
+    cardRule: Stelpur drekka.
+  - name: D
+    cardGFX: {fileID: 21300000, guid: 8344142806644d548a9eeb1e0798c745, type: 3}
+    cardRule: Stelpur drekka.
+  - name: K
+    cardGFX: {fileID: 21300000, guid: c1953cbef31ba044d8201d8d590c8d55, type: 3}
+    cardRule: "S\xE1 sem dregur spili\xF0 drekkur eins og hann getur af bj\xF3r og
+      s\xE1 sem er \xE1 eftir honum ver\xF0ur a\xF0 drekka eins lengi og nr.1, \xFEri\xF0ji
+      ver\xF0ur a\xF0 drekka eins lengi og nr.2, og \xFEannig gengur \xFEa\xF0 \xE1fram."
+  - name: K
+    cardGFX: {fileID: 21300000, guid: 5b9867bc9970f6a43a19b0851bc0949d, type: 3}
+    cardRule: "S\xE1 sem dregur spili\xF0 drekkur eins og hann getur af bj\xF3r og
+      s\xE1 sem er \xE1 eftir honum ver\xF0ur a\xF0 drekka eins lengi og nr.1, \xFEri\xF0ji
+      ver\xF0ur a\xF0 drekka eins lengi og nr.2, og \xFEannig gengur \xFEa\xF0 \xE1fram."
+  - name: K
+    cardGFX: {fileID: 21300000, guid: c463b30a1bc6f7941aa9e3389019eabf, type: 3}
+    cardRule: "S\xE1 sem dregur spili\xF0 drekkur eins og hann getur af bj\xF3r og
+      s\xE1 sem er \xE1 eftir honum ver\xF0ur a\xF0 drekka eins lengi og nr.1, \xFEri\xF0ji
+      ver\xF0ur a\xF0 drekka eins lengi og nr.2, og \xFEannig gengur \xFEa\xF0 \xE1fram."
+  - name: K
+    cardGFX: {fileID: 21300000, guid: c4e1ccaee67e82b43a3918ad4f591a3b, type: 3}
+    cardRule: "S\xE1 sem dregur spili\xF0 drekkur eins og hann getur af bj\xF3r og
+      s\xE1 sem er \xE1 eftir honum ver\xF0ur a\xF0 drekka eins lengi og nr.1, \xFEri\xF0ji
+      ver\xF0ur a\xF0 drekka eins lengi og nr.2, og \xFEannig gengur \xFEa\xF0 \xE1fram."
+  - name: A
+    cardGFX: {fileID: 21300000, guid: 102baf0ddbc5e3a4b838653969e4daaa, type: 3}
+    cardRule: Drekktu einn sopa.
+  - name: A
+    cardGFX: {fileID: 21300000, guid: 54f7bb9b6c610b74ea8b8b8ed2fc86ac, type: 3}
+    cardRule: Drekktu einn sopa.
+  - name: A
+    cardGFX: {fileID: 21300000, guid: 2a648d24a0abddc4ab636ddb7e8b1ba7, type: 3}
+    cardRule: Drekktu einn sopa.
+  - name: A
+    cardGFX: {fileID: 21300000, guid: ea789b52057624341b30531723666760, type: 3}
+    cardRule: Drekktu einn sopa.
+  rule: {fileID: 7574982}
+  cardImage: {fileID: 1880624548}
+  backCover: {fileID: 21300000, guid: ddac6d30498c4fd4db02ec971e796fee, type: 3}
+  rotateTimer: .200000003
+  startRotation: {x: 0, y: 90, z: 0, w: 0}
+--- !u!4 &1728375648
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1728375646}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 160, y: 240, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+--- !u!1 &1817796689
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1817796694}
+  - 20: {fileID: 1817796693}
+  - 92: {fileID: 1817796692}
+  - 124: {fileID: 1817796691}
+  - 81: {fileID: 1817796690}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &1817796690
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1817796689}
+  m_Enabled: 1
+--- !u!124 &1817796691
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1817796689}
+  m_Enabled: 1
+--- !u!92 &1817796692
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1817796689}
+  m_Enabled: 1
+--- !u!20 &1817796693
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1817796689}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: .435294151, g: .435294151, b: .435294151, a: .0196078438}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: .300000012
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_HDR: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: .0219999999
+  m_StereoMirrorMode: 0
+--- !u!4 &1817796694
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1817796689}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!1 &1880624546
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1880624547}
+  - 222: {fileID: 1880624549}
+  - 114: {fileID: 1880624548}
+  - 114: {fileID: 1880624550}
+  m_Layer: 5
+  m_Name: Card
+  m_TagString: Card
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1880624547
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1880624546}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1379652333}
+  m_RootOrder: 3
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -1, y: 50}
+  m_SizeDelta: {x: 2, y: -100}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &1880624548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1880624546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 5a8498911c0d6f04bb01d01a8f09f2ba, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1880624549
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1880624546}
+--- !u!114 &1880624550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1880624546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab4d8fd4b2f2fa743836ada3c86c4069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -8,9 +8,9 @@ public class MainMenuScrip : MonoBehaviour
 
     float cuirtainAlphaFader = 0f;
 
-    public void FUBAR()
+    public void LoadGame(string LevelName)
     {
-        Application.LoadLevel(1);
+        Application.LoadLevel(LevelName);
     }
     void OnLevelWasLoaded()
     {

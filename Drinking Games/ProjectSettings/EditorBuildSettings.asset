@@ -8,6 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MENU.unity
   - enabled: 1
-    path: Assets/FUBAR.unity
+    path: Assets/Spilaleikur/FUBAR.unity
   - enabled: 1
-    path: Assets/WheelOfFortune.unity
+    path: "Assets/Lukkuhj\xF3l/WheelOfFortune.unity"

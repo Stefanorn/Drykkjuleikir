@@ -1,46 +1,80 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class spinnWheel : MonoBehaviour {
 
-    public float spinForce = 50;
-    public float rotationThreshold = 0.1f;
+    public float drag = 50f;
+    public int numOfPins = 14;
+    public string[] reglur;
+    public Text textBox;
+    
 
     Vector3 mouseClickPosition;
     Vector3 mouesEndClickPosition;
-    float dragDist;
-    Rigidbody rb;
-    Quaternion lastFrameRotation;
 
-    // Use this for initialization
-    void Start () {
-        rb = gameObject.GetComponent<Rigidbody>();
-        lastFrameRotation = transform.rotation;
+    float dragDist;
+    public static bool hasGameStarted = false; //ALSO USED IN pinScript!!!!
+
+    void Start()
+    {
+        hasGameStarted = false;
     }
-	
+
 	// Update is called once per frame
 	void OnMouseDown()
     {
-       mouseClickPosition = Input.mousePosition;
+        if (!hasGameStarted)
+        {
+            mouseClickPosition = Input.mousePosition;
+
+        } 
     }
     void OnMouseUp()
     {
-        mouesEndClickPosition = Input.mousePosition;
-        dragDist = Vector3.Distance(mouesEndClickPosition, mouseClickPosition);
-        rb.AddTorque(new Vector3(0, dragDist * spinForce, 0), ForceMode.Impulse);
+        if (!hasGameStarted)
+        {
+            mouesEndClickPosition = Input.mousePosition;
+            dragDist = Vector3.Distance(mouesEndClickPosition, mouseClickPosition);
+            hasGameStarted = true;
+        }
     }
     void FixedUpdate()
     {
-        Quaternion thisFrameRotation = transform.rotation;
-        float rotationSpeed = thisFrameRotation.eulerAngles.x - lastFrameRotation.eulerAngles.x;
+        //TODO!!!! Bæta inn þannig að hjólið getur snúist í öfuga átt,
+        //TODO!!!  Gera grein fyrir Tíma þegar notandi dregur í hjólið
+        //TODO!!! athuga reikning fyrir valið hólf
+        //TODO!!! Rglurnar eru bara dummy reglur flestar bæta og breita og laga þar
+        //TODO!!! FinnaNýa GFX
+        //TODO!!! Finna leið til að tengja lengt á filkinu Regla og num of pins
 
-        if(rotationSpeed < rotationThreshold && rotationSpeed < -rotationThreshold )
+        transform.Rotate(new Vector3(0, dragDist * Time.deltaTime, 0)); 
+        dragDist -= (Time.deltaTime * (drag ));
+
+        if (dragDist <= 0) //Clamps the Dragdist to 0
         {
-            Debug.Log(rotationSpeed);
+            if (hasGameStarted)
+            {
+                textBox.text =  reglur[(int)NumberChooser()];
+              hasGameStarted = false;
+            }
+            dragDist = 0;
         }
 
-        lastFrameRotation = transform.rotation;
     }
+    float NumberChooser() //ATH Reikning! //
+    {
+        float pinSpacing = 0;
+        if(transform.rotation.x < 0)
+        {
+            pinSpacing = (transform.rotation.x * numOfPins + 10) * 1;
 
+        }
+        else
+        {
+            pinSpacing = (transform.rotation.x* numOfPins - 10) * -1;
+        }
+        return pinSpacing;
+    }
 
 }

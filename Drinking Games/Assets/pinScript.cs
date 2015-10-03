@@ -27,8 +27,11 @@ public class pinScript : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        rb.AddTorque(new Vector3(0, 0, inpactAmount));
-        rotationTimer = 0;
+        if (spinnWheel.hasGameStarted)
+        {
+            rb.AddTorque(new Vector3(0, 0, inpactAmount));
+            rotationTimer = 0;
+        }
 
     }
 }

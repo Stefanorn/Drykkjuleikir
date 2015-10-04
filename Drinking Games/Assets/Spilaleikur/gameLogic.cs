@@ -37,7 +37,7 @@ public class gameLogic : MonoBehaviour {
 	void Update () {
         if (cardChecker.active == false) //This code only runs one per frame
         {
-            if (cardCounter == 4)
+            if (cardCounter == deck.Length)
             {
                 
                 curtains.gameObject.SetActive (true);

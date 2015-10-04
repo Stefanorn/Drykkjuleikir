@@ -55,7 +55,14 @@ public class spinnWheel : MonoBehaviour {
         {
             if (hasGameStarted)
             {
-                textBox.text =  reglur[(int)NumberChooser()];
+                if (Application.loadedLevel == 3)
+                {
+                    textBox.text = reglur[(int)NumberChooser()];
+                }
+                else
+                {
+                    textBox.text = reglur[ Random.Range(0, reglur.Length -1 ) ];
+                }
               hasGameStarted = false;
             }
             dragDist = 0;

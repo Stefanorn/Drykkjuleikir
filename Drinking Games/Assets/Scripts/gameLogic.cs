@@ -40,7 +40,7 @@ public class gameLogic : MonoBehaviour {
             if (cardCounter == deck.Length)
             {
                 
-                curtains.gameObject.SetActive (true);
+                curtains.gameObject.SetActive (true); //TODO taka þennan kóða út og gera static Klassa
                 curtains.color = new Color(255, 255, 255, cuirtainAlphaFader);
                 cuirtainAlphaFader = Mathf.Lerp(0, 1, fadeTimer / levelChangeTimer);
                 fadeTimer += Time.deltaTime;

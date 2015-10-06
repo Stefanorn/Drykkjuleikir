@@ -8,7 +8,7 @@ PhysicMaterial:
   m_Name: GolfMaterial
   dynamicFriction: .100000001
   staticFriction: .200000003
-  bounciness: .800000012
+  bounciness: 1
   frictionCombine: 0
   bounceCombine: 0
   frictionDirection2: {x: 0, y: 0, z: 0}

@@ -21,7 +21,7 @@ public class DiceHasStoped : MonoBehaviour {
 
             if (triggerOnce)
             {
-                GameObject.FindGameObjectWithTag("DiceRule").GetComponent<RuleHandler>().ChangeRule(DiceFace()); 
+                GameObject.FindGameObjectWithTag("DiceRule").GetComponent<RuleHandler>().GetDiceResult(DiceFace()); 
                 triggerOnce = false;
             }
 

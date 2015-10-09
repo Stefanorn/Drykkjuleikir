@@ -24,11 +24,14 @@ public class RuleHandler : MonoBehaviour {
         {
             
             diceHandler.ClearDice();
-            CallRule(); 
+            //CallRule(); 
+            textBox.text = rules[diceResults[0]-1];
             for(int i = 0;i < diceResults.Length ; i++) //Núlla gögnin í diceResult vegna þess að ég tékka hvort að það sé eitthvað annað enn 0 í því þegar ég cleara teningana
             {
                 diceResults[i] = 0;
+
             }
+            dC = 0;
         }
 	}
     public void GetDiceResult(int diceNumber)
@@ -40,9 +43,37 @@ public class RuleHandler : MonoBehaviour {
     {
         for(int i = 0; i < diceResults.Length ; i++) 
         {
-            if(diceResults[i] == diceResults[i+1])
+            int u = i + 1;
+            if(u > diceResults.Length -1 ) //passar að u fari aldrei útfyrir arrayin
             {
-
+                u = i;
+            }
+                
+            if(diceResults[i] == diceResults[u]) //Tékkar á tvennum
+            {
+                for (int y = 0; y< diceResults.Length ; y++)
+                {
+                    if( diceResults[i] == diceResults[y] && y != u)
+                    {
+                        Debug.Log("ÞRENNA " + diceResults[i] + " og " + diceResults[y] + " og  " + diceResults[u]);
+                        for(int t = 0; t < diceResults.Length ; t++)
+                        {
+                            if (diceResults[i] == diceResults[t] && t != y && t != u) 
+                            {
+                                Debug.Log("FERNA " + diceResults[i] + " og " + diceResults[y] + " og  " + diceResults[u] + " og " + diceResults[t]); //RUGL fynna betri laust
+                            }
+                          
+                        }
+                       
+                    }
+                    
+                }
+                Debug.Log("Tvenna " + diceResults[i] + " og " + diceResults[u]);
+             
+            }
+            if(diceResults[i] == 7)
+            {
+                Debug.Log("VILLA");
             }
         }
     }

@@ -14,16 +14,16 @@ public class MainMenuScrip : MonoBehaviour
     }
     void OnLevelWasLoaded()
     {
-        curtains.gameObject.SetActive(true);
+       // curtains.gameObject.SetActive(true);
     }
-    void Update()
+   /* void Update()
     {
         curtains.color = new Color(255, 255, 255, cuirtainAlphaFader);
         cuirtainAlphaFader = Mathf.Lerp(1, 0, Time.time *2 );
-        if (cuirtainAlphaFader <= 0)
+        if (cuirtainAlphaFader <= 0 )
         {
             curtains.gameObject.SetActive(false);
         }
 
-    }
+    }*/
 }

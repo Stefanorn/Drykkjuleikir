@@ -33,8 +33,8 @@ public class DiceHandler : MonoBehaviour
             if (diceInsts[i] == null)
             {
                 diceInsts[i] = (GameObject)Instantiate(dice, clickPos, Quaternion.identity);
-                break;
-            }
+               break; //Til að fá einn tening í einu 
+             }
     }
 
 }

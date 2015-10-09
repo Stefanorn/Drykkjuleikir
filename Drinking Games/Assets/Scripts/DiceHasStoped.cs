@@ -40,6 +40,7 @@ public class DiceHasStoped : MonoBehaviour {
         int xDiceRot = (int)transform.rotation.eulerAngles.x;
         int zDiceRot = (int)transform.rotation.eulerAngles.z;
 
+
         if (xDiceRot == 0 && zDiceRot == 90) //ás
         {
             return 1;
@@ -66,7 +67,7 @@ public class DiceHasStoped : MonoBehaviour {
         }
         else //Villa ?
         {
-            return 7;
+            return 6; //ÞARF AÐ GETA BETRI K'OÐA TIL AÐ TEKKA A VILLU
         }
     }
 }

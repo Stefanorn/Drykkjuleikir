@@ -606,8 +606,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7935adc2fc266fe4cb7b97103c6a0d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drag: 50
+  drag: .99000001
   numOfPins: 14
+  spinStopingPoint: .5
   textBox: {fileID: 1645319714}
   rules:
   - Allir drekka

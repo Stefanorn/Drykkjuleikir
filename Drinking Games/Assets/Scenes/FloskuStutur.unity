@@ -544,12 +544,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7935adc2fc266fe4cb7b97103c6a0d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drag: 50
+  drag: .99000001
   numOfPins: 14
+  spinStopingPoint: .5
   textBox: {fileID: 1645319714}
   rules:
   - Drekkur 2 sopa
-  - "F\xE6r a\xF0 smakka sopa hj\xE1 sessu nauti s\xEDnu"
+  - "\xE6r sopa hj\xE1 sithvorum sessunautt"
   - Tekur 1 skot
   - "F\xE6r sopa hj\xE1 \xFEeim sem sn\xE9ri fl\xF6skuni"
   - "blandar sterku \xE1fengi \xED bj\xF3rinn sinn og drekkur"

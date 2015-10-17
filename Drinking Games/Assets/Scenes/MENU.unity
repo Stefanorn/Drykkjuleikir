@@ -972,7 +972,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Fl\xF6skuStutur"
+  m_Text: "Fl\xF6skust\xFAtur"
 --- !u!222 &1605045371
 CanvasRenderer:
   m_ObjectHideFlags: 0

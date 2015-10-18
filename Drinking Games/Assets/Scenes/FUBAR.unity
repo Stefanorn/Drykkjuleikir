@@ -129,8 +129,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Spur\xF0u \xFEann sem situr hli\xF0in\xE1 \xFE\xE9r spurningu og hann ver\xF0ur
-    a\xF0 svara me\xF0 spurningu, \\ns\xE1 sem tapar tekur sopa."
+  m_Text: "Drag\xF0u spil"
 --- !u!222 &7574983
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -256,19 +255,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 32
+      value: 27.4249992
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 16
+      value: -13.25
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 65
+      value: 54.8499985
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 33
+      value: 26.5
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_AnchorMin.x
@@ -276,7 +275,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_AnchorMax.x
@@ -284,7 +283,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_Pivot.x
@@ -293,6 +292,38 @@ Prefab:
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_Pivot.y
       value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11427228, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11427228, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11427228, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11427228, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
+      propertyPath: m_Colors.m_PressedColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11427228, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
+      propertyPath: m_Colors.m_PressedColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11427228, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
+      propertyPath: m_Colors.m_PressedColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11427228, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
+      propertyPath: m_Colors.m_NormalColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11427228, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
+      propertyPath: m_Colors.m_DisabledColor.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
@@ -976,7 +1007,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 5a8498911c0d6f04bb01d01a8f09f2ba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ddac6d30498c4fd4db02ec971e796fee, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

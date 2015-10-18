@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/MENU.unity
   - enabled: 1
     path: Assets/Scenes/FUBAR.unity
-  - enabled: 1
+  - enabled: 0
     path: "Assets/Gamalt/Lukkuhj\xF3l/WheelOfFortune.unity"
   - enabled: 1
     path: Assets/Scenes/Lukkuhjol2.0.unity
   - enabled: 1
     path: Assets/Scenes/FloskuStutur.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Yatzee.unity

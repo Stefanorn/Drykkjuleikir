@@ -340,7 +340,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 29
+      value: -29
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_SizeDelta.x
@@ -356,7 +356,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_AnchorMax.x
@@ -364,7 +364,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_Pivot.x
@@ -526,7 +526,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Sn\xFA\xF0u hj\xF3linu."
+  m_Text: 
 --- !u!222 &1645319715
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -581,7 +581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 34234c7ba7296a541b8809c51c4cb718, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3933f026403cb7d4585fe4c9a1cc5b5b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -612,22 +612,22 @@ MonoBehaviour:
   textBox: {fileID: 1645319714}
   rules:
   - Allir drekka
-  - "Str\xE1kar taka 2 skot enn stelpur bara 1"
-  - "S\xE1 sem er b\xFAin a\xF0 drekka minst tekur 5 sopa"
+  - "Str\xE1kar taka 2 skot enn stelpur bara 1 "
+  - "S\xE1 sem er b\xFAin a\xF0 drekka minnst tekur 5 sopa"
   - "\xDE\xF6mbun, allir \xFEamba eins miki\xF0 og \xFEeir geta. B\xD3NUS: ef \xFE\xFA
-    kl\xE1ra fullan drikk f\xE6r\xF0u fr\xED fr\xE1 n\xE6stu reglu"
+    kl\xE1ra fullan drykk f\xE6r\xF0u fr\xED fr\xE1 n\xE6stu reglu "
   - "\xDE\xFA tapa\xF0ur, enginn drekkur"
   - "Allir rau\xF0h\xE6r\xF0ir drekka"
   - "Allir lj\xF3sh\xE6r\xF0ir drekka"
   - "Stelpur taka 2 skot enn str\xE1kar bara 1"
   - "\xCDslenskt, Allir sem drekka al \xEDslenskt \xE1fengi f\xE1 a\xF0 drekka"
-  - "\xDEeir sem b\xFAa \xE1 h\xF6fu\xF0borgarsv\xE6\xF0inu drekka."
+  - "\xDEeir sem b\xFAa \xE1 h\xF6fu\xF0borgarsv\xE6\xF0inu drekka"
   - "Sm\xF6kkun, allir drekka drikk fr\xE1 \xFEeim sem situr h\xE6grameginn vi\xF0
-    sig"
+    sig h\xE6grameginn vi\xF0 sig"
   - "\xD3ge\xF0isdrikkur, taki 3 mismunandi sterk \xE1fengi, bland og bj\xF3r og blandi\xF0
     \xED 1 glas og allir taka sopa af \xF3ge\xF0isdrikknum"
   - "Hv\xEDti Riddarinn, Allar stelpur drekka nema a\xF0 Hv\xEDti riddarinn kemur
-    ver\xF0ur \xE1 undan a\xF0 taka sopan \xFEeirra"
+    ver\xF0ur \xE1 undan a\xF0 taka sopann \xFEeirra"
   - "S\xE1 sem sn\xFDr hj\xF3linu drekkur 4 sopa"
 --- !u!1 &1678665555
 GameObject:

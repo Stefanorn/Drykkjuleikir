@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 public class RuleReader : MonoBehaviour {
 
-    public static string pathToRules = @"C:\Users\StefanOrn\Documents\GitHub\Unity\Drykkjuleikir\rulesTextDoc\" + Application.loadedLevelName + "Rules.txt";
+    public static string pathToRules = @"C:\Users\StefanOrn\Documents\" + Application.loadedLevelName +  "Rules.txt";
     public static string[] streamContent;
 
 
@@ -25,22 +25,24 @@ public class RuleReader : MonoBehaviour {
             returnString[i] = match.Groups[1].ToString();
             i++;
         }
-        return returnString;
-                
         sr.Close();
         fs.Close();
+        return returnString;
     }
     public static void WriteRules(string[] Rules)
     {
-        FileStream fs = new FileStream(pathToRules, FileMode.OpenOrCreate); //opnar straum í .txt skjal
+        FileStream fs = new FileStream(pathToRules, FileMode.OpenOrCreate ); //opnar straum í .txt skjal
         StreamWriter sw = new StreamWriter(fs);
+
+        sw.WriteLine(Application.loadedLevelName);
+        sw.WriteLine("-----------------------");
 
         foreach (string rule in Rules)
         {
            
-            sw.WriteLine(Application.loadedLevelName + "===  " + rule + "  ..."); //Skrifar í strauminn nafnið á levelinu þar sem þetta fall er kalla
+            sw.WriteLine(rule); //Skrifar í strauminn nafnið á levelinu þar sem þetta fall er kalla
         }
-
+        sw.WriteLine("---------------------------");
         sw.Close();
         fs.Close();
     }

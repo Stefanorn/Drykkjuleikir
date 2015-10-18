@@ -278,7 +278,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 29
+      value: -29
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_SizeDelta.x
@@ -294,7 +294,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_AnchorMax.x
@@ -302,7 +302,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_Pivot.x
@@ -550,17 +550,17 @@ MonoBehaviour:
   textBox: {fileID: 1645319714}
   rules:
   - Drekkur 2 sopa
-  - "\xE6r sopa hj\xE1 sithvorum sessunautt"
+  - "F\xE6r sopa hj\xE1 sithvorum sessunauti"
   - Tekur 1 skot
-  - "F\xE6r sopa hj\xE1 \xFEeim sem sn\xE9ri fl\xF6skuni"
+  - "F\xE6r sopa hj\xE1 \xFEeim sem sn\xE9ri fl\xF6skunni"
   - "blandar sterku \xE1fengi \xED bj\xF3rinn sinn og drekkur"
   - Drekkur 1 sopa
   - Drekkur 3 sopa
   - "Drekkur 1 sopa og m\xE1 ekki tala \xFEanga\xF0 til a\xF0 flaskan lendir aftur
-    \xE1 honum"
+    \xE1 honum "
   - "Shootgunnar 1 heilan bj\xF3r"
   - "Drekkur 4 skot og \xFEarf a\xF0 borga fyrir leigub\xEDl \xFEegar \xFEar a\xF0
-    kemur"
+    kemur  \xFEar a\xF0 kemur"
 --- !u!1 &1979003435
 GameObject:
   m_ObjectHideFlags: 0

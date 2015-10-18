@@ -31,6 +31,16 @@ public class gameLogic : MonoBehaviour {
     // Use this for initialization
     void Start () {
         cardChecker = GameObject.FindGameObjectWithTag("Card");
+
+
+        // Kóði sem sendir allar reglurnar í textaskjal
+ //       string[] sendRule = new string[deck.Length];
+   //     for ( int i = 0; i < deck.Length -1 ; i++)    
+     //   {
+       //     sendRule[i] = deck[i].cardRule;
+         //   Debug.Log(sendRule[i]);
+       // }
+        //RuleReader.WriteRules(sendRule);
 	}
 	
 	// Update is called once per frame

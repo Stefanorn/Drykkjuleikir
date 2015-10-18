@@ -13,7 +13,7 @@ public class GrabAndSpinn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     public string[] rules;
 
     RectTransform rect;
-    Vector3 startPointerPos, endPointerPos;
+    Vector2 startPointerPos, endPointerPos;
     float dragDist;
     bool gameHasStarted = false;
     float initialDrag; //Notað til að flaskan stoppar smoothly á réttum tíma
@@ -21,9 +21,14 @@ public class GrabAndSpinn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     void Start()
     {
         rect = transform.GetComponent<RectTransform>();
+        
+        // Kóði sem sendir allar reglur í textaskjal
+        //     RuleReader.WriteRules(rules);
+
     }
     void FixedUpdate()
     {
+           
         if (Input.GetKeyDown("space"))
         {
             dragDist = 0;
@@ -69,13 +74,15 @@ public class GrabAndSpinn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        Ray2D ray = new Ray2D(startPointerPos, eventData.position - (Vector2)startPointerPos);
+        Vector2 endPointerPos = eventData.position;
+        Ray2D ray = new Ray2D(startPointerPos, endPointerPos - startPointerPos);
         Debug.Log(ray.direction );
 
-        dragDist =  Vector3.Distance(startPointerPos, eventData.position);
-        if (dragDist > 10)
+
+        dragDist =  Vector3.Distance(startPointerPos, endPointerPos) / 2;
+        if (dragDist > 75)
         {
-            dragDist = 10;
+            dragDist = 75;
         }
 
 

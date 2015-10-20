@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System;
 
 public class RuleHandler : MonoBehaviour {
 
@@ -41,6 +42,12 @@ public class RuleHandler : MonoBehaviour {
     }
     public void CallRule()
     {
+        ResultYatzee();
+        ResultLargeStraigt();
+        ResultSmallStraigt();
+
+
+
         for(int i = 0; i < diceResults.Length ; i++) 
         {
             int u = i + 1;
@@ -51,29 +58,166 @@ public class RuleHandler : MonoBehaviour {
                 
             if(diceResults[i] == diceResults[u]) //Tékkar á tvennum
             {
-                for (int y = 0; y< diceResults.Length ; y++)
-                {
-                    if( diceResults[i] == diceResults[y] && y != u)
-                    {
-                        Debug.Log("ÞRENNA " + diceResults[i] + " og " + diceResults[y] + " og  " + diceResults[u]);
-                        for(int t = 0; t < diceResults.Length ; t++)
-                        {
-                            if (diceResults[i] == diceResults[t] && t != y && t != u) 
-                            {
-                                Debug.Log("FERNA " + diceResults[i] + " og " + diceResults[y] + " og  " + diceResults[u] + " og " + diceResults[t]); //RUGL fynna betri laust
-                            }
-                          
-                        }
-                       
-                    }
-                    
-                }
                 Debug.Log("Tvenna " + diceResults[i] + " og " + diceResults[u]);
-             
             }
+
             if(diceResults[i] == 7)
             {
                 Debug.Log("VILLA");
+            }
+        }
+    }
+
+    void ResultLargeStraigt()
+    {
+        int arrayLength = diceResults.Length;
+        for(int i = 0; i < diceResults.Length; i++) //Rúllar í gegnum alla teningana og leitra að langri röð
+        {
+            if( diceResults[i] == 1) //Tékkar hvort þú fékkst 1 og leitar þá að 2
+            {
+                for(int u = 0; u < arrayLength; u++)
+                {
+                    if( diceResults[u] == 2) // tékkar hvort að það sé enhverstaðra 2 og leitar þá að 3
+                    {
+                        for(int y = 0; y < arrayLength; y++)
+                        {
+                            if( diceResults[y] == 3) // tékkar hvort að það sé enhverstaðar 3 og leitar þá að 4
+                            {
+                                for( int t = 0; t < arrayLength; t++)
+                                {
+                                    if (diceResults[t] == 4) // tékkar hvort að það sé 4 enhverstaðar og leitar þá að 5
+                                    {
+                                        for(int r = 0; r < arrayLength; r++)
+                                        {
+                                            if( diceResults[r] == 5)
+                                            {
+                                                Debug.Log("þú fékkst röð frá 1-5");
+                                                return;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            else if( diceResults[i] == 2) //tékkar hvort að þú fékkst 2 einhverstaðar og leitar þá að 3
+            {
+                for(int u = 0; u < arrayLength; u++)
+                {
+                    if( diceResults[u] == 3)
+                    {
+                        for (int y = 0; y < arrayLength; y++)
+                        {
+                            if( diceResults[y] == 4)
+                            {
+                                for( int t = 0; t < arrayLength; t++)
+                                {
+                                    if(diceResults[t] == 5)
+                                    {
+                                        for( int r = 0; t < arrayLength; r++)
+                                        {
+                                            if(diceResults[r] == 6)
+                                            {
+                                                Debug.Log("Þú fékkst roð frá 2-6");
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    void ResultYatzee()
+    {
+        if(     diceResults[0] == diceResults[1] &&
+                diceResults[1] == diceResults[2] &&
+                diceResults[2] == diceResults[3] &&
+                diceResults[3] == diceResults[4]    )
+        {
+            Debug.Log("Allir eins, þú færð Yatzee");
+        }
+    }
+
+    void ResultSmallStraigt()
+    {
+        int arrayLength = diceResults.Length;
+
+        for( int i = 0; i < arrayLength; i++)
+        {
+            if (diceResults[i] == 1)
+            {
+                for(int u = 0; u < arrayLength; u++)
+                {
+                    if(diceResults[u] == 2)
+                    {
+                        for( int y = 0; y < arrayLength; y++)
+                        {
+                            if(diceResults[y] == 3)
+                            {
+                                for(int t = 0; y <arrayLength; y++)
+                                {
+                                    if(diceResults[t] == 4)
+                                    {
+                                        Debug.Log("Þú fékkstr röð frá 1-4");
+                                        return;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            } 
+            else if( diceResults[i] == 2)
+            {
+                for (int u = 0; u < arrayLength; u++)
+                {
+                    if (diceResults[u] == 3)
+                    {
+                        for (int y = 0; y < arrayLength; y++)
+                        {
+                            if (diceResults[y] == 4)
+                            {
+                                for (int t = 0; y < arrayLength; y++)
+                                {
+                                    if (diceResults[t] == 5)
+                                    {
+                                        Debug.Log("Þú fékkstr röð frá 2-5");
+                                        return;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            else if(diceResults[i] == 3)
+            {
+                for (int u = 0; u < arrayLength; u++)
+                {
+                    if (diceResults[u] == 4)
+                    {
+                        for (int y = 0; y < arrayLength; y++)
+                        {
+                            if (diceResults[y] == 5)
+                            {
+                                for (int t = 0; y < arrayLength; y++)
+                                {
+                                    if (diceResults[t] == 6)
+                                    {
+                                        Debug.Log("Þú fékkstr röð frá 3-6");
+                                        return;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }

@@ -355,7 +355,7 @@ MonoBehaviour:
   dice: {fileID: 109848, guid: 0a97718dd2cdaa442a1191f9ffaa84a5, type: 2}
   diceDropHight: 10
   clearTimer: 2
-  maxNoDice: 1
+  maxNoDice: 5
 --- !u!114 &905119422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -367,6 +367,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f6b57cadc50a874cbc6396afa36fe45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  yatzeeRule:
+  - name: Yatzee
+    rule: 
+  - name: "L\xF6ng R\xF6\xF0"
+    rule: 
+  - name: "Fj\xF3rir eins"
+    rule: 
+  - name: "Fullt h\xFAs"
+    rule: 
+  - name: "\xDEr\xEDr eins"
+    rule: 
+  - name: "Stutt R\xF6\xF0"
+    rule: 
+  - name: Tveir Eins
+    rule: 
+  - name: Ekkert
+    rule: 
   textBox: {fileID: 2125317437}
   rules:
   - Drektu 1x

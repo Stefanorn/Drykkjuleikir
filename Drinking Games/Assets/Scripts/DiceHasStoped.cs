@@ -20,9 +20,8 @@ public class DiceHasStoped : MonoBehaviour {
         {
             if (triggerOnce)
             {
-                GameObject.FindGameObjectWithTag("DiceRule").GetComponent<RuleHandler>().DiceStopedChecker();         //Segir við RuleHandler að þessi teningu er búin að stoppa, 
+                GameObject.FindGameObjectWithTag("DiceRule").GetComponent<RuleHandler>().DiceStopedChecker(1);         //Segir við RuleHandler að þessi teningu er búin að stoppa, 
                                                                                                                       //og rule handler telur hversu margir teningar eru stopp og kallar svo á diceface þegar allir teningar eru stopp
-
                 triggerOnce = false;
             }
         }

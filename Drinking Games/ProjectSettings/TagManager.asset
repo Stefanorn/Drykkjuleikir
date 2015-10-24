@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Card
   - DiceRule
+  - Dice
+  - NonSelectedDice
   layers:
   - Default
   - TransparentFX

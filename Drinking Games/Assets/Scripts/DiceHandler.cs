@@ -22,7 +22,7 @@ public class DiceHandler : MonoBehaviour
     {
         foreach (GameObject diceInst in diceInsts)
         {
-            if (diceInst.tag == "Dice")
+            if (diceInst.tag == "NonSelectedDice")
             {
                 Destroy(diceInst);
             }

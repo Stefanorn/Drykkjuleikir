@@ -18,10 +18,12 @@ public class RuleHandler : MonoBehaviour
     public Text textBox;
     public Button resetButton;
     public int ReThrows = 1;
+    public int reRoll = 1;
 
     //privat Breytur
+    int reRollCatcher;
+    public bool haveAllDiceStop = false;
     int[] diceResults;
-    int dC = 0;
     int numOfStopedDice = 0;
     DiceHandler diceHandler;
 
@@ -30,64 +32,76 @@ public class RuleHandler : MonoBehaviour
     {
         diceHandler = gameObject.GetComponent<DiceHandler>();
         diceResults = new int[diceHandler.maxNoDice];
+        reRollCatcher = reRoll;
     }
 
     // Update is called once per frame
     public void RoleAgin() //Kallað þegar það er ýtt á rest button
     {
-        diceHandler.ClearDice();
-        //textBox.text = rules[diceResults[0] - 1];
-        for (int i = 0; i < diceResults.Length; i++) 
+        if (reRoll <= 0)
         {
-            diceResults[i] = 0;
-
+            reRoll = reRollCatcher;
+            diceHandler.ClearDice();
+            for (int i = 0; i < diceResults.Length; i++)
+            {
+                diceResults[i] = 0;
+            }
         }
-        dC = 0;
+        else
+        {
+            numOfStopedDice = diceHandler.maxNoDice - selectedDice;
+            diceHandler.ClearDice();
+            reRoll--;
+        }
     }
 
     void FixedUpdate()
     {
-        
-        if (diceResults[diceResults.Length - 1] != 0) // Þegar allir teningarnir eru búnir að stoppa keyrist þetta
+
+        if (haveAllDiceStop) // Þegar allir teningarnir eru búnir að stoppa keyrist þetta
         {
             CallRule();
-            resetButton.gameObject.active =true;
+            resetButton.gameObject.active = true;
         }
         else
         {
             resetButton.gameObject.active = false;
         }
     }
-   // public void GetDiceResult(int diceNumber) //DiceHandler Sendir hingað hvað hver teningu fær þegar hann er stopp
-   // {
-     //   diceResults[dC] = diceNumber;
-       // dC++; //DiceCounter
-    //}
-    public void DiceStopedChecker()
+    // Skilar true þegar allir 5 teningar hafa stöðvast
+    // tekur inn int tölu 0 þegar ég vill ekki að hann telji tening enn tekur inn 1 þegar ég vill að hann telji tening
+    public void DiceStopedChecker(int numberOfDice) 
     {
-        numOfStopedDice++;
-
-            if (numOfStopedDice >= diceHandler.maxNoDice)
+        numOfStopedDice += numberOfDice;
+        if (numOfStopedDice >= diceHandler.maxNoDice)
+        {
+            haveAllDiceStop = true;
+            if (reRoll <= 0)
             {
                 GameObject[] dice = GameObject.FindGameObjectsWithTag("Dice");
-                for (int i = 0; i < diceHandler.maxNoDice; i++)
+                for (int i = 0; i <= diceHandler.maxNoDice; i++)
                 {
                     diceResults[i] = dice[i].GetComponent<DiceHasStoped>().DiceFace();
                 }
                 numOfStopedDice = 0;
-
             }
+        }
+    }
+    int selectedDice;
+    public void SelectedDiceTracker()
+    {
+        selectedDice++;
     }
 
     public void CallRule()
     {
         SortArray(diceResults); //RuleChecking algorithmar ganga útfá því að arrayið er sortað
 
-        if (ResultYatzee()) 
+        if (ResultYatzee())
         {
             textBox.text = yatzeeRule[0].rule;
         }
-        else if (ResultLargeStraigt()) 
+        else if (ResultLargeStraigt())
         {
             textBox.text = yatzeeRule[1].rule;
         }
@@ -99,7 +113,7 @@ public class RuleHandler : MonoBehaviour
         {
             textBox.text = yatzeeRule[3].rule;
         }
-        else if( ResultThreeOfAKind())
+        else if (ResultThreeOfAKind())
         {
             textBox.text = yatzeeRule[4].rule;
         }
@@ -257,7 +271,7 @@ public class RuleHandler : MonoBehaviour
         }
         else if (diceResults[0] == diceResults[1] &&
                  diceResults[1] == diceResults[2] &&
-                 diceResults[3] == diceResults[4]  )
+                 diceResults[3] == diceResults[4])
         {
             return true;
         }
@@ -265,13 +279,13 @@ public class RuleHandler : MonoBehaviour
     }
     bool ResultFourOfAKind()
     {
-        if( diceResults[0] == diceResults[1] &&
+        if (diceResults[0] == diceResults[1] &&
             diceResults[1] == diceResults[2] &&
             diceResults[2] == diceResults[3])
         {
             return true;
         }
-        else if(    diceResults[1] == diceResults[2] &&
+        else if (diceResults[1] == diceResults[2] &&
                     diceResults[2] == diceResults[3] &&
                     diceResults[3] == diceResults[4])
         {
@@ -281,10 +295,10 @@ public class RuleHandler : MonoBehaviour
     }
     bool ResultThreeOfAKind()
     {
-        for(int i = 0; i < diceResults.Length - 3; i++)
+        for (int i = 0; i < diceResults.Length - 3; i++)
         {
-            if( diceResults[i] == diceResults[i+1] &&
-                diceResults[i+1] == diceResults[i + 2]  )
+            if (diceResults[i] == diceResults[i + 1] &&
+                diceResults[i + 1] == diceResults[i + 2])
             {
                 return true;
             }

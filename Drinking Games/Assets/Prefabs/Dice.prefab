@@ -12,11 +12,11 @@ GameObject:
   - 23: {fileID: 2359108}
   - 54: {fileID: 5403098}
   - 64: {fileID: 6425858}
-  - 114: {fileID: 11407992}
   - 114: {fileID: 11433570}
+  - 114: {fileID: 11499296}
   m_Layer: 0
   m_Name: Dice
-  m_TagString: Untagged
+  m_TagString: NonSelectedDice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,18 +91,6 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: c00e35b2f98420747ac858df938a9955, type: 3}
---- !u!114 &11407992
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 109848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0b47909f27b459419eb99d57298011a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotRange: {x: -300, y: 300}
 --- !u!114 &11433570
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -114,6 +102,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518485468451dee4fbd4cb6a66e2f998, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11499296
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 109848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5eca8d486065ef49aebe11ca1eda913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickedFx: {fileID: 181040, guid: bec931d679255824b906accdb132fbd9, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -125,6 +125,18 @@ Prefab:
       propertyPath: m_Mass
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: NonSelectedDice
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ClickedFx
+      value: 
+      objectReference: {fileID: 181040, guid: bec931d679255824b906accdb132fbd9, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 109848}

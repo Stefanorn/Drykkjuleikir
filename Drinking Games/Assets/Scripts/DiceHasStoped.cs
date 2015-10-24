@@ -18,24 +18,21 @@ public class DiceHasStoped : MonoBehaviour {
 
         if(lastFramePos == transform.position && lastFrameRotation == transform.rotation)
         {
-
             if (triggerOnce)
             {
-                GameObject.FindGameObjectWithTag("DiceRule").GetComponent<RuleHandler>().GetDiceResult(DiceFace()); 
+                GameObject.FindGameObjectWithTag("DiceRule").GetComponent<RuleHandler>().DiceStopedChecker();         //Segir við RuleHandler að þessi teningu er búin að stoppa, 
+                                                                                                                      //og rule handler telur hversu margir teningar eru stopp og kallar svo á diceface þegar allir teningar eru stopp
+
                 triggerOnce = false;
             }
-
-
         }
         else
         {
-
             lastFramePos = transform.position;
             lastFrameRotation = transform.rotation;
         }
     }
-
-    private int DiceFace()
+    public int DiceFace()
     {
         int xDiceRot = (int)transform.rotation.eulerAngles.x;
         int zDiceRot = (int)transform.rotation.eulerAngles.z;

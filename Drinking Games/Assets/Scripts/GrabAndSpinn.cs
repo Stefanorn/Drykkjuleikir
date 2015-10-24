@@ -17,6 +17,7 @@ public class GrabAndSpinn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     float dragDist;
     bool gameHasStarted = false;
     float initialDrag; //Notað til að flaskan stoppar smoothly á réttum tíma
+    bool InversSpinCherker = false;
 
     void Start()
     {
@@ -44,13 +45,13 @@ public class GrabAndSpinn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             }
     
         }
-        if (dragDist <= 0)
+        if (dragDist < 0)
         {
             if (gameHasStarted)
             {
                 gameHasStarted = false; //sér til þess að þetta er kallað bara 1x þrátt fyrir að vera í updateloop
 
-                if (Application.loadedLevel == 3) // Ef þetta er lukkuhjól veldu reglu eftir hvernig spjaldið snýr
+                if (Application.loadedLevelName == "Lukkuhjol2.0") // Ef þetta er lukkuhjól veldu reglu eftir hvernig spjaldið snýr
                 {
                     textBox.text = rules[NumberChooser()];
                 }
@@ -79,14 +80,29 @@ public class GrabAndSpinn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         Debug.Log(ray.direction );
 
 
-        dragDist =  Vector3.Distance(startPointerPos, endPointerPos) / 2;
+        dragDist =  Vector3.Distance(startPointerPos, endPointerPos) * (ray.direction.x - ray.direction.y);
         if (dragDist > 75)
         {
             dragDist = 75;
         }
 
-
-
+      /*  if(endPointerPos.x < startPointerPos.x)
+        {
+            dragDist *= -1;
+        }
+        if(endPointerPos.y > startPointerPos.y)
+        {
+            dragDist *= -1;
+        }
+        if((endPointerPos.y - startPointerPos.y) < (endPointerPos.x - startPointerPos.x)  )
+        {
+            dragDist *= -1;
+        }
+        */
+        if(dragDist < 0)
+        {
+            InversSpinCherker = true;
+        }
 
         gameHasStarted = true;
         initialDrag = dragDist;

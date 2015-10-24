@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class DiceHandler : MonoBehaviour
 {
 
@@ -21,19 +22,26 @@ public class DiceHandler : MonoBehaviour
     {
         foreach (GameObject diceInst in diceInsts)
         {
-            Destroy(diceInst, clearTimer);
+            if (diceInst.tag == "Dice")
+            {
+                Destroy(diceInst);
+            }
         }
     }
 
     void Clicked(Vector3 clickPos)
     {
-        clickPos = new Vector3(clickPos.x, diceDropHight, clickPos.z);
+        clickPos = new Vector3(clickPos.x, clickPos.y, clickPos.z);
 
         for (int i = 0; i < diceInsts.Length; i++) 
             if (diceInsts[i] == null)
             {
-                diceInsts[i] = (GameObject)Instantiate(dice, clickPos, Quaternion.identity);
-                break; //Til að fá einn tening í einu 
+                Vector3 instPos = new Vector3(  clickPos.x + (i * Random.Range(1, 5)),
+                                                diceDropHight,
+                                                clickPos.z + (i * Random.Range(1, 5)));
+                diceInsts[i] = (GameObject)Instantiate(dice, instPos, Quaternion.identity);
+                //Hér getur komið alskonar foce og eginleikar fyrir hvern tening
+
              }
     }
 

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 using System;
 
@@ -15,10 +16,13 @@ public class RuleHandler : MonoBehaviour
 {
     public YatzeeRule[] yatzeeRule = new YatzeeRule[8];
     public Text textBox;
-    public string[] rules;
+    public Button resetButton;
+    public int ReThrows = 1;
 
+    //privat Breytur
     int[] diceResults;
     int dC = 0;
+    int numOfStopedDice = 0;
     DiceHandler diceHandler;
 
     // Use this for initialization
@@ -29,25 +33,50 @@ public class RuleHandler : MonoBehaviour
     }
 
     // Update is called once per frame
+    public void RoleAgin() //Kallað þegar það er ýtt á rest button
+    {
+        diceHandler.ClearDice();
+        //textBox.text = rules[diceResults[0] - 1];
+        for (int i = 0; i < diceResults.Length; i++) 
+        {
+            diceResults[i] = 0;
+
+        }
+        dC = 0;
+    }
+
     void FixedUpdate()
     {
-        if (diceResults[diceResults.Length - 1] != 0)
+        
+        if (diceResults[diceResults.Length - 1] != 0) // Þegar allir teningarnir eru búnir að stoppa keyrist þetta
         {
-            diceHandler.ClearDice();
-            CallRule(); 
-            //textBox.text = rules[diceResults[0] - 1];
-            for (int i = 0; i < diceResults.Length; i++) //Núlla gögnin í diceResult vegna þess að ég tékka hvort að það sé eitthvað annað enn 0 í því þegar ég cleara teningana
-            {
-                diceResults[i] = 0;
-
-            }
-            dC = 0;
+            CallRule();
+            resetButton.gameObject.active =true;
+        }
+        else
+        {
+            resetButton.gameObject.active = false;
         }
     }
-    public void GetDiceResult(int diceNumber)
+   // public void GetDiceResult(int diceNumber) //DiceHandler Sendir hingað hvað hver teningu fær þegar hann er stopp
+   // {
+     //   diceResults[dC] = diceNumber;
+       // dC++; //DiceCounter
+    //}
+    public void DiceStopedChecker()
     {
-        diceResults[dC] = diceNumber;
-        dC++;
+        numOfStopedDice++;
+
+            if (numOfStopedDice >= diceHandler.maxNoDice)
+            {
+                GameObject[] dice = GameObject.FindGameObjectsWithTag("Dice");
+                for (int i = 0; i < diceHandler.maxNoDice; i++)
+                {
+                    diceResults[i] = dice[i].GetComponent<DiceHasStoped>().DiceFace();
+                }
+                numOfStopedDice = 0;
+
+            }
     }
 
     public void CallRule()

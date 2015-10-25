@@ -11,7 +11,7 @@ public class DiceHandler : MonoBehaviour
     public int maxNoDice = 3;
 
 
-    GameObject[] diceInsts;
+    public GameObject[] diceInsts;
 
     void Start()
     {
@@ -40,6 +40,17 @@ public class DiceHandler : MonoBehaviour
                                                 diceDropHight,
                                                 clickPos.z + (i * Random.Range(1, 5)));
                 diceInsts[i] = (GameObject)Instantiate(dice, instPos, Quaternion.identity);
+                Rigidbody rb = diceInsts[i].GetComponent<Rigidbody>();
+                float randomFoceAmount = 300;
+                float randomRotatioAmount = 400;
+                rb.AddForce(Random.Range(   -randomFoceAmount, randomFoceAmount),
+                                            0 , 
+                                            Random.Range(  -randomFoceAmount, randomFoceAmount) ,
+                                            ForceMode.Impulse);
+                rb.AddTorque(Random.Range(  -randomRotatioAmount, randomRotatioAmount), 
+                                            Random.Range(randomRotatioAmount, randomRotatioAmount),
+                                            Random.Range(randomRotatioAmount, randomRotatioAmount) ,
+                                            ForceMode.Impulse);
                 //Hér getur komið alskonar foce og eginleikar fyrir hvern tening
 
              }

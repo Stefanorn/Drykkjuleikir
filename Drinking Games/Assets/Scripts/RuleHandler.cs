@@ -35,62 +35,71 @@ public class RuleHandler : MonoBehaviour
         reRollCatcher = reRoll;
     }
 
-    // Update is called once per frame
     public void RoleAgin() //Kallað þegar það er ýtt á rest button
     {
         if (reRoll <= 0)
         {
+            Application.LoadLevel(Application.loadedLevel);
+            /*
             reRoll = reRollCatcher;
             diceHandler.ClearDice();
             for (int i = 0; i < diceResults.Length; i++)
             {
                 diceResults[i] = 0;
-            }
+            }*/
         }
         else
         {
-            numOfStopedDice = diceHandler.maxNoDice - selectedDice;
             diceHandler.ClearDice();
+            haveAllDiceStop = false;
             reRoll--;
         }
     }
-
     void FixedUpdate()
     {
 
         if (haveAllDiceStop) // Þegar allir teningarnir eru búnir að stoppa keyrist þetta
         {
-            CallRule();
-            resetButton.gameObject.active = true;
+            if (reRoll == 0)
+            {
+                CallRule();
+            }
+            resetButton.gameObject.SetActive(true);
         }
         else
         {
-            resetButton.gameObject.active = false;
+            resetButton.gameObject.SetActive(false);
         }
     }
-    // Skilar true þegar allir 5 teningar hafa stöðvast
-    // tekur inn int tölu 0 þegar ég vill ekki að hann telji tening enn tekur inn 1 þegar ég vill að hann telji tening
-    public void DiceStopedChecker(int numberOfDice) 
+
+    //Telur alla go sem hafa gefið tagg og skila inn fjölda þeirra
+    private int CountTheDice(string tag)
     {
-        numOfStopedDice += numberOfDice;
+        GameObject[] stopedDice = GameObject.FindGameObjectsWithTag(tag);
+        int numberOfDice = 0;
+        foreach (GameObject dice in stopedDice)
+        {
+            numberOfDice++;
+        }
+        return numberOfDice;
+    }
+
+    //þegar teningur stöðvast kallar hann á þetta
+    public void DiceStopedChecker()
+    {
+        //taggið dice er sett á dice sem hefur verið valin og takkið nonselected dice kemur á tening sem hefur stöðvast
+        numOfStopedDice = CountTheDice("NonSelectedDice") + CountTheDice("Dice");
         if (numOfStopedDice >= diceHandler.maxNoDice)
         {
             haveAllDiceStop = true;
             if (reRoll <= 0)
             {
-                GameObject[] dice = GameObject.FindGameObjectsWithTag("Dice");
-                for (int i = 0; i <= diceHandler.maxNoDice; i++)
+                for (int i = 0; i <= diceHandler.maxNoDice - 1; i++)
                 {
-                    diceResults[i] = dice[i].GetComponent<DiceHasStoped>().DiceFace();
+                    diceResults[i] = diceHandler.diceInsts[i].GetComponent<DiceHasStoped>().DiceFace();
                 }
-                numOfStopedDice = 0;
             }
         }
-    }
-    int selectedDice;
-    public void SelectedDiceTracker()
-    {
-        selectedDice++;
     }
 
     public void CallRule()

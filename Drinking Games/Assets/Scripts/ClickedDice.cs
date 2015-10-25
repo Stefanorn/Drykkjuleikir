@@ -16,7 +16,6 @@ public class ClickedDice : MonoBehaviour
         if (    ruleHandler.haveAllDiceStop &&
                 gameObject.tag == "NonSelectedDice")
         {
-            ruleHandler.SelectedDiceTracker();
             gameObject.tag = "Dice";
             GameObject gfx =  (GameObject)Instantiate(ClickedFx, transform.position, Quaternion.identity);
             gfx.transform.parent = transform.parent;

@@ -114,11 +114,11 @@ public class GrabAndSpinn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         float returnNumber;
 
         returnNumber = transform.rotation.z * numOfPins;
-
+        /*
         if (returnNumber < 0)
         {
             returnNumber *= -1;
-        }
+        }*/
         return (int)returnNumber;
     }
 }

@@ -15,5 +15,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Lukkuhjol2.0.unity
   - enabled: 1
     path: Assets/Scenes/FloskuStutur.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Yatzee.unity

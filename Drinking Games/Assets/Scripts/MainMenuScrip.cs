@@ -12,6 +12,10 @@ public class MainMenuScrip : MonoBehaviour
     {
         Application.LoadLevel(LevelName);
     }
+    public void LoadGame(int LevelIndex)
+    {
+        Application.LoadLevel(LevelIndex);
+    }
     void OnLevelWasLoaded()
     {
        // curtains.gameObject.SetActive(true);

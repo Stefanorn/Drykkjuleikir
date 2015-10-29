@@ -37,6 +37,7 @@ public class RuleHandler : MonoBehaviour
 
     public void RoleAgin() //Kallað þegar það er ýtt á rest button
     {
+
         if (reRoll <= 0)
         {
             Application.LoadLevel(Application.loadedLevel);

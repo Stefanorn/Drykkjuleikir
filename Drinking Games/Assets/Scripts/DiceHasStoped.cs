@@ -22,11 +22,9 @@ public class DiceHasStoped : MonoBehaviour {
             {
                 gameObject.tag = "NonSelectedDice";
                 GameObject.FindGameObjectWithTag("DiceRule").GetComponent<RuleHandler>().DiceStopedChecker();         //Segir við RuleHandler að þessi teningu er búin að stoppa, 
-                                                                                                                      //og rule handler telur hversu margir teningar eru stopp og kallar svo á diceface þegar allir teningar eru stopp
+                triggerOnce = false;                                                                                  //og rule handler telur hversu margir teningar eru stopp og kallar svo á diceface þegar allir teningar eru stopp
                                                                                                                       //Hér væri hugsamlega hægt að láta hvern tening skila +1 til að auka performance
                                                                                                                       //þegar þeir hafa stöðvast enn það skilar stundum óskiljandi bögga (triggerOnce verður stundum ekki false og þá loopast allt)
-                triggerOnce = false;
-                Debug.Log("adfs");
             }
         }
         else

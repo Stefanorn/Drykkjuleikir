@@ -11,7 +11,9 @@ public class ClickedDice : MonoBehaviour
     {
         ruleHandler = GameObject.FindGameObjectWithTag("DiceRule").GetComponent<RuleHandler>();
     }
-    public void Clicked()
+    // Notar DetectClickAndTouce sem er script sem þarf alltaf að vera í scene á einhverju obj
+    // Einnig er hægt að nota ClickMessageSender sem sendir clickposition
+    public void MouseDown() 
     {
         if (    ruleHandler.haveAllDiceStop &&
                 gameObject.tag == "NonSelectedDice")

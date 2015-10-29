@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-
 public class DiceHandler : MonoBehaviour
 {
 
@@ -13,9 +12,29 @@ public class DiceHandler : MonoBehaviour
 
     public GameObject[] diceInsts;
 
+    Vector3 startPos;
+    Vector3 endPos;
+    float startTime;
+    float endTime;
+
     void Start()
     {
         diceInsts = new GameObject[maxNoDice];
+    }
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            startPos = ClickMessageSender.MousePos();
+            startTime = Time.time;
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            endPos = ClickMessageSender.MousePos();
+            endTime = Time.time;
+            SpawnDice();
+        }
+
     }
 
     public void ClearDice()
@@ -28,25 +47,19 @@ public class DiceHandler : MonoBehaviour
             }
         }
     }
-
-    void Clicked(Vector3 clickPos)
+    void SpawnDice()
     {
-        clickPos = new Vector3(clickPos.x, clickPos.y, clickPos.z);
-
         for (int i = 0; i < diceInsts.Length; i++) 
             if (diceInsts[i] == null)
             {
-                Vector3 instPos = new Vector3(  clickPos.x + (i * Random.Range(1, 5)),
+                Vector3 instPos = new Vector3(  ClickMessageSender.MousePos().x + (i * Random.Range(1, 5)),
                                                 diceDropHight,
-                                                clickPos.z + (i * Random.Range(1, 5)));
+                                                ClickMessageSender.MousePos().z + (i * Random.Range(1, 5)));
                 diceInsts[i] = (GameObject)Instantiate(dice, instPos, Quaternion.identity);
                 Rigidbody rb = diceInsts[i].GetComponent<Rigidbody>();
-                float randomFoceAmount = 300;
                 float randomRotatioAmount = 400;
-                rb.AddForce(Random.Range(   -randomFoceAmount, randomFoceAmount),
-                                            0 , 
-                                            Random.Range(  -randomFoceAmount, randomFoceAmount) ,
-                                            ForceMode.Impulse);
+                rb.AddForce(    (endPos - startPos) * 30 ,
+                                ForceMode.Impulse);
                 rb.AddTorque(Random.Range(  -randomRotatioAmount, randomRotatioAmount), 
                                             Random.Range(randomRotatioAmount, randomRotatioAmount),
                                             Random.Range(randomRotatioAmount, randomRotatioAmount) ,
@@ -55,5 +68,8 @@ public class DiceHandler : MonoBehaviour
 
              }
     }
+    void MouseUp(Vector3 endClick)
+    {
 
+    }
 }

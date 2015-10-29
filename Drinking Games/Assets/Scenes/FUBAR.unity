@@ -146,11 +146,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1880624547}
-  m_RootOrder: 0
+  m_Father: {fileID: 1379652333}
+  m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -.000178813934, y: -376.399994}
+  m_AnchoredPosition: {x: -1.00018251, y: -301.399994}
   m_SizeDelta: {x: 353.429993, y: 152.5}
   m_Pivot: {x: .5, y: 0}
 --- !u!1 &570808280
@@ -182,10 +182,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1379652333}
   m_RootOrder: 1
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: .103891015, y: -225.25}
-  m_SizeDelta: {x: 351.640015, y: 149.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 74.75}
+  m_SizeDelta: {x: 0, y: 149.5}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &570808282
 MonoBehaviour:
@@ -251,7 +251,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -498,6 +498,7 @@ RectTransform:
   m_Children:
   - {fileID: 1178320162}
   - {fileID: 570808281}
+  - {fileID: 7574984}
   - {fileID: 1880624547}
   - {fileID: 1732206515}
   - {fileID: 995489663}
@@ -840,7 +841,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1379652333}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -985,10 +986,9 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 7574984}
+  m_Children: []
   m_Father: {fileID: 1379652333}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -1, y: 75}

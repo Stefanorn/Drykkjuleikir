@@ -16,36 +16,26 @@ public class GrabAndSpinn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     Vector2 startPointerPos, endPointerPos;
     float dragDist;
     bool gameHasStarted = false;
-    float initialDrag; //Notað til að flaskan stoppar smoothly á réttum tíma
-    bool InversSpinCherker = false;
+    bool rotationCheckDelayer = false;
 
+    Rigidbody2D rb;
     void Start()
     {
         rect = transform.GetComponent<RectTransform>();
-        
+        rb = gameObject.GetComponent<Rigidbody2D>();
+
         // Kóði sem sendir allar reglur í textaskjal
         //     RuleReader.WriteRules(rules);
 
     }
     void FixedUpdate()
     {
-           
+
         if (Input.GetKeyDown("space"))
         {
-            dragDist = 0;
+            rb.angularVelocity = 0;
         }
-
-        if (gameHasStarted)
-        {
-            rect.Rotate(0, 0, dragDist);
-            dragDist = dragDist * drag;
-            if(dragDist < spinStopingPoint)
-            {
-                dragDist -=  spinStopingPoint / initialDrag;
-            }
-    
-        }
-        if (dragDist < 0)
+        if (rb.angularVelocity == 0)
         {
             if (gameHasStarted)
             {
@@ -61,11 +51,12 @@ public class GrabAndSpinn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                 }
             }
         }
+        Debug.Log(rb.angularVelocity);
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        startPointerPos = eventData.position;     
+        startPointerPos = eventData.position;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -75,50 +66,24 @@ public class GrabAndSpinn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        Vector2 endPointerPos = eventData.position;
-        Ray2D ray = new Ray2D(startPointerPos, endPointerPos - startPointerPos);
-        Debug.Log(ray.direction );
-
-
-        dragDist =  Vector3.Distance(startPointerPos, endPointerPos) * (ray.direction.x - ray.direction.y);
-        if (dragDist > 75)
-        {
-            dragDist = 75;
-        }
-
-      /*  if(endPointerPos.x < startPointerPos.x)
-        {
-            dragDist *= -1;
-        }
-        if(endPointerPos.y > startPointerPos.y)
-        {
-            dragDist *= -1;
-        }
-        if((endPointerPos.y - startPointerPos.y) < (endPointerPos.x - startPointerPos.x)  )
-        {
-            dragDist *= -1;
-        }
-        */
-        if(dragDist < 0)
-        {
-            InversSpinCherker = true;
-        }
-
-        gameHasStarted = true;
-        initialDrag = dragDist;
+        Vector3 spinVector = startPointerPos - eventData.position;
+        rb.AddTorque(-(spinVector.x + spinVector.y ) );
+        Invoke("GameHasStarted", 0.5f);
     }
-
+    public void GameHasStarted() //Hack to delay the 
+    {
+        gameHasStarted = true;
+    }
 
     int NumberChooser()
     {
         float returnNumber;
 
         returnNumber = transform.rotation.z * numOfPins;
-        /*
         if (returnNumber < 0)
         {
             returnNumber *= -1;
-        }*/
+        }
         return (int)returnNumber;
     }
 }

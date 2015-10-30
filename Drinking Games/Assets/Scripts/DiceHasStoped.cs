@@ -33,11 +33,53 @@ public class DiceHasStoped : MonoBehaviour {
             lastFrameRotation = transform.rotation;
         }
     }
+    //0 90 180 270 360
+    int RoundUp(int input )
+    {
+        Debug.Log(input);
+        if(input < 45 && input >= 0) //Ef input er 45 þá er skilað 0 afþví bara
+        {
+            return 0;
+        }
+        else if( input > 45 && input < 135 )
+        {
+            return 90;
+        }
+        else if( input > 135 && input < 225)
+        {
+            return 180;
+        }
+        else if(input > 225 && input < 315)
+        {
+            return 270;
+        }
+        else if ( input > 315 && input <= 360)
+        {
+            return 360;
+        }
+        else
+        {
+            Debug.LogError("Tala verður að vera á bilinu 0 - 360");
+            return input;
+        }
+
+        return input;
+    }
+
     public int DiceFace()
     {
         int xDiceRot = (int)transform.rotation.eulerAngles.x;
         int zDiceRot = (int)transform.rotation.eulerAngles.z;
 
+        if( xDiceRot%90 != 0)
+        {
+            xDiceRot = RoundUp(xDiceRot);
+        }
+        if (zDiceRot % 90 != 0)
+        {
+            zDiceRot= RoundUp(zDiceRot);
+        }
+        
 
         if (xDiceRot == 0 && zDiceRot == 90) //ás
         {
@@ -65,7 +107,8 @@ public class DiceHasStoped : MonoBehaviour {
         }
         else //Villa ?
         {
-            return 6; //ÞARF AÐ GETA BETRI K'OÐA TIL AÐ TEKKA A VILLU
+            Debug.LogError("Kóði gat ekki lesið hverning teningur snýr");
+            return 7; //ÞARF AÐ GETA BETRI K'OÐA TIL AÐ TEKKA A VILLU
         }
     }
 }

@@ -23,13 +23,14 @@ public class dragable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Vector2 pivotOffset = new Vector2(eventData.position.x / Screen.width , (eventData.position.y - 50f) / Screen.height );
+        Vector2 pivotOffset = new Vector2(eventData.position.x / Screen.width , (eventData.position.y - 100f) / Screen.height );
         rect.pivot = pivotOffset;
     }
     public void OnDrag (PointerEventData eventData)
     {
-
-         transform.position = eventData.position;
+        
+        transform.position = eventData.position;
+        transform.rotation = Quaternion.Euler(0, 0, (startPos.x - transform.position.x) / 8);
     }
     public void OnEndDrag (PointerEventData eventData)
     {
@@ -39,7 +40,6 @@ public class dragable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             transform.position.y > Screen.height - screenClamp ||
             transform.position.y < 0 + screenClamp )
         {
-
             Vector2 ratio = new Vector2(transform.position.x - startPos.x, transform.position.y - startPos.y );
             Vector3 offScreenPos = new Vector3( ratio.x * offScreenSpeed + transform.position.x,
                                                 ratio.y * offScreenSpeed + transform.position.y ,
@@ -64,6 +64,7 @@ public class dragable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         while (timer < animTime)
         {
             transform.position = Vector3.Lerp( transform.position , targetPos , timer / animTime);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.identity, timer / animTime);
             timer += Time.deltaTime;
             yield return null;
         }

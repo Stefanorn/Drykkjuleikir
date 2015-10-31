@@ -107,6 +107,7 @@ public class RuleHandler : MonoBehaviour
     {
         SortArray(diceResults); //RuleChecking algorithmar ganga útfá því að arrayið er sortað
 
+        StartCoroutine(TextEffects.FadeText(textBox, 0.5f));
         if (ResultYatzee())
         {
             textBox.text = yatzeeRule[0].rule;

@@ -30,11 +30,18 @@ public class GrabAndSpinn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     }
     void FixedUpdate()
     {
-
+        //DEBUG DÓT
         if (Input.GetKeyDown("space"))
         {
+            if (rb.angularVelocity == 0)
+            {
+                Application.LoadLevel(Application.loadedLevel);
+            }
             rb.angularVelocity = 0;
+
         }
+        //
+
         if (rb.angularVelocity == 0)
         {
             if (gameHasStarted)
@@ -44,32 +51,31 @@ public class GrabAndSpinn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                 if (Application.loadedLevelName == "Lukkuhjol2.0") // Ef þetta er lukkuhjól veldu reglu eftir hvernig spjaldið snýr
                 {
                     textBox.text = rules[NumberChooser()];
+                    StartCoroutine(TextEffects.FadeText(textBox, 0.5f));
                 }
                 else // Ef þetta er flöskustútur veldu þá reglu að handahófi
                 {
                     textBox.text = rules[Random.Range(0, rules.Length - 1)];
+                    StartCoroutine(TextEffects.FadeText(textBox, 0.5f));
                 }
             }
         }
-        Debug.Log(rb.angularVelocity);
     }
-
     public void OnBeginDrag(PointerEventData eventData)
     {
         startPointerPos = eventData.position;
     }
-
     public void OnDrag(PointerEventData eventData)
     {
 
     }
-
     public void OnEndDrag(PointerEventData eventData)
     {
         Vector3 spinVector = startPointerPos - eventData.position;
         rb.AddTorque(-(spinVector.x + spinVector.y ) );
         Invoke("GameHasStarted", 0.5f);
     }
+
     public void GameHasStarted() //Hack to delay the 
     {
         gameHasStarted = true;

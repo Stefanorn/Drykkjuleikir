@@ -31,16 +31,6 @@ public class gameLogic : MonoBehaviour {
     // Use this for initialization
     void Start () {
         cardChecker = GameObject.FindGameObjectWithTag("Card");
-
-
-        // Kóði sem sendir allar reglurnar í textaskjal
- //       string[] sendRule = new string[deck.Length];
-   //     for ( int i = 0; i < deck.Length -1 ; i++)    
-     //   {
-       //     sendRule[i] = deck[i].cardRule;
-         //   Debug.Log(sendRule[i]);
-       // }
-        //RuleReader.WriteRules(sendRule);
 	}
 	
 	// Update is called once per frame
@@ -61,20 +51,21 @@ public class gameLogic : MonoBehaviour {
                 return;
             }
 
-            int randomNumber = Random.Range(0, deck.Length - 1);
-            foreach (int index in chooesnCardIndex) //Check if the card have been drawn before
+            int randomNumber = Random.Range(0, deck.Length - 1);//Velur Random tölu 
+            foreach (int index in chooesnCardIndex) //Tékkar hvort að þessi random tala hafi komið fyrir áður og dregur þá aftur random tölu
             {
                 if (index == randomNumber)
                 {
-                    randomNumber = Random.Range(0, deck.Length - 1); ///BUG? gæti verið að random gefi sömu tölu aftur
+                    randomNumber = Random.Range(0, deck.Length - 1);
                 }
             }
-            chooesnCardIndex[cardCounter] = randomNumber;
+            chooesnCardIndex[cardCounter] = randomNumber; 
             cardCounter++;
 
-            cardImage.sprite = backCover;
-            cardImage.tag = "Card";
+            cardImage.sprite = backCover; 
+           // cardImage.tag = "Card";
             rule.text = deck[randomNumber].cardRule;
+            StartCoroutine(TextEffects.FadeText(rule, 0.5f));
             cardChecker.SetActive(true);
             cardChecker.transform.rotation = startRotation;
             StartCoroutine(RotateCard(deck[randomNumber].cardGFX));

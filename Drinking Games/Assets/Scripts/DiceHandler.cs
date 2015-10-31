@@ -14,8 +14,6 @@ public class DiceHandler : MonoBehaviour
 
     Vector3 startPos;
     Vector3 endPos;
-    float startTime;
-    float endTime;
 
     void Start()
     {
@@ -26,12 +24,10 @@ public class DiceHandler : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             startPos = ClickMessageSender.MousePos();
-            startTime = Time.time;
         }
         else if (Input.GetMouseButtonUp(0))
         {
             endPos = ClickMessageSender.MousePos();
-            endTime = Time.time;
             SpawnDice();
         }
 

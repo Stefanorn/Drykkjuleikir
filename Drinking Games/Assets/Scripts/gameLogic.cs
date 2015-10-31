@@ -34,9 +34,7 @@ public class gameLogic : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        if (cardChecker.active == false) //This code only runs one per frame
-        {
+	public void FindAndCallTheNextCard () {
             if (cardCounter == deck.Length)
             {
                 
@@ -62,14 +60,13 @@ public class gameLogic : MonoBehaviour {
             chooesnCardIndex[cardCounter] = randomNumber; 
             cardCounter++;
 
-            cardImage.sprite = backCover; 
+            cardImage.sprite = backCover; //Stillir spritin á back cover þannig þegar card fer aftur á byrjunar reit og snýst þá er eins og það snúi öfugt
            // cardImage.tag = "Card";
-            rule.text = deck[randomNumber].cardRule;
-            StartCoroutine(TextEffects.FadeText(rule, 0.5f));
-            cardChecker.SetActive(true);
-            cardChecker.transform.rotation = startRotation;
+            rule.text = deck[randomNumber].cardRule; //velur næstu reglu
+            StartCoroutine(TextEffects.FadeText(rule, 0.5f)); // feidar inn regluna
+            cardChecker.SetActive(true); //spil situr sjálft sig á false Þetta er trick til að passa að þessi kóði keyri bara 1x
+            cardChecker.transform.rotation = startRotation; 
             StartCoroutine(RotateCard(deck[randomNumber].cardGFX));
-        }
 	
 	}
     void BackToMainMenu()

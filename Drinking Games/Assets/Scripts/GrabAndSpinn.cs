@@ -12,16 +12,13 @@ public class GrabAndSpinn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     public Text textBox;
     public string[] rules;
 
-    RectTransform rect;
     Vector2 startPointerPos, endPointerPos;
     float dragDist;
     bool gameHasStarted = false;
-    bool rotationCheckDelayer = false;
 
     Rigidbody2D rb;
     void Start()
     {
-        rect = transform.GetComponent<RectTransform>();
         rb = gameObject.GetComponent<Rigidbody2D>();
 
         // Kóði sem sendir allar reglur í textaskjal

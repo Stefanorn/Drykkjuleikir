@@ -4,10 +4,6 @@ using System.Collections;
 
 public class MainMenuScrip : MonoBehaviour
 {
-    public Image curtains;
-
-    float cuirtainAlphaFader = 0f;
-
     public void LoadGame(string LevelName)
     {
         Application.LoadLevel(LevelName);

@@ -62,8 +62,6 @@ public class DiceHasStoped : MonoBehaviour {
             Debug.LogError("Tala verður að vera á bilinu 0 - 360");
             return input;
         }
-
-        return input;
     }
 
     public int DiceFace()

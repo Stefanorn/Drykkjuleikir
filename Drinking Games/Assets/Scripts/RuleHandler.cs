@@ -21,7 +21,6 @@ public class RuleHandler : MonoBehaviour
     public int reRoll = 1;
 
     //privat Breytur
-    int reRollCatcher;
     public bool haveAllDiceStop = false;
     int[] diceResults;
     int numOfStopedDice = 0;
@@ -32,7 +31,6 @@ public class RuleHandler : MonoBehaviour
     {
         diceHandler = gameObject.GetComponent<DiceHandler>();
         diceResults = new int[diceHandler.maxNoDice];
-        reRollCatcher = reRoll;
     }
 
     public void RoleAgin() //Kallað þegar það er ýtt á rest button
@@ -77,12 +75,7 @@ public class RuleHandler : MonoBehaviour
     private int CountTheDice(string tag)
     {
         GameObject[] stopedDice = GameObject.FindGameObjectsWithTag(tag);
-        int numberOfDice = 0;
-        foreach (GameObject dice in stopedDice)
-        {
-            numberOfDice++;
-        }
-        return numberOfDice;
+        return stopedDice.Length;
     }
 
     //þegar teningur stöðvast kallar hann á þetta

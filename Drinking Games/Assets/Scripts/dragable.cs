@@ -1,7 +1,5 @@
 using UnityEngine;
-
 using UnityEngine.EventSystems;
-
 using System.Collections; 
 
 public class dragable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler {
@@ -13,8 +11,11 @@ public class dragable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     Vector3 startPos;
     RectTransform rect;
     Vector2 startAncor;
+    gameLogic gl;
+
     void Start()
     {
+        gl = GameObject.FindGameObjectWithTag("GameController").GetComponent<gameLogic>();
         screenClamp = Screen.width / 5f;
         startPos = transform.position;
         rect = transform.GetComponent<RectTransform>();
@@ -55,7 +56,7 @@ public class dragable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     }
     void Delay()
     {
-        gameObject.SetActive(false);
+        gl.FindAndCallTheNextCard();
         transform.position = startPos;
     }
     IEnumerator SmoothAnimation(Vector3 targetPos)

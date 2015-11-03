@@ -401,7 +401,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Drikkjuspil
+  m_Text: Drykkjuspil
 --- !u!222 &556656135
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -731,7 +731,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4359cc58ae2e74c41b9913c0fb52dded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curtains: {fileID: 0}
 --- !u!4 &1023201596
 Transform:
   m_ObjectHideFlags: 0

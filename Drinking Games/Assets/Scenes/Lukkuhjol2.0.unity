@@ -164,16 +164,16 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 87962313}
-  m_LocalRotation: {x: 3.2584137e-07, y: -5.30862992e-14, z: -1, w: 1.62920685e-07}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -3.25779865e-07, y: -6.57089672e-09, z: .999796689, w: .0201656278}
+  m_LocalPosition: {x: 0, y: 0, z: -5.18872594e-06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 347211408}
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: 734.599976}
-  m_SizeDelta: {x: 175.800003, y: 339.700012}
+  m_AnchoredPosition: {x: -.881271362, y: 714.818665}
+  m_SizeDelta: {x: 176, y: 301}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &87962315
 MonoBehaviour:
@@ -639,7 +639,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1659956210}
   m_Mass: 20
   m_LinearDrag: 0
-  m_AngularDrag: .25
+  m_AngularDrag: .5
   m_GravityScale: 0
   m_IsKinematic: 0
   m_Interpolate: 0

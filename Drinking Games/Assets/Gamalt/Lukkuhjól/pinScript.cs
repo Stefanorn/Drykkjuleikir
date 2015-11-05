@@ -6,32 +6,34 @@ public class pinScript : MonoBehaviour
     public float inpactAmount = 50f ;
     public float timeToOrgPos = 1;
 
-    float rotationTimer = 0;
-    Vector3 orgPos;
-    Rigidbody rb;
+    float rotationTimer = 2;
+    Quaternion orgRot;
+    Rigidbody2D rb;
+    Rigidbody2D wheelRB;
 
     // Use this for initialization
     void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody>();
-        orgPos = transform.position;
-
+        rb = gameObject.GetComponent<Rigidbody2D>();
+        orgRot = transform.rotation;
+        wheelRB = GameObject.Find("Lukkuhjól").GetComponent<Rigidbody2D>(); //OPTIMIZE!!! þarf að leita í öllum GO í projectinu
     }
     void FixedUpdate()
     {
-        transform.position = orgPos;
-       // Quaternion desierdRotation = Quaternion.LookRotation( Vector3.zero);
-        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.identity, rotationTimer * timeToOrgPos );
+        transform.rotation = Quaternion.Lerp(transform.rotation, orgRot, rotationTimer * timeToOrgPos );
         rotationTimer += Time.deltaTime;
+
     }
 
-    void OnCollisionEnter(Collision col)
+    void OnTriggerEnter2D()
     {
-        if (spinnWheel.hasGameStarted)
+        float wheelAngVel = Mathf.Sqrt(Mathf.Pow( wheelRB.angularVelocity, 2 ));
+        if (wheelAngVel > 10)
         {
-            rb.AddTorque(new Vector3(0, 0, inpactAmount));
-            rotationTimer = 0;
+            transform.Rotate(new Vector3(0, 0, (wheelAngVel / 100) * Random.Range(inpactAmount - (inpactAmount / 10), inpactAmount + (inpactAmount / 10))));
         }
 
+        rotationTimer = 0;
     }
+
 }

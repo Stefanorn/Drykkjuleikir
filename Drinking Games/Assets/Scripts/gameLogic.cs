@@ -73,6 +73,8 @@ public class gameLogic : MonoBehaviour
         cardChecker.transform.rotation = startRotation; //Gefur spilinu upprunalega rotationið
         audio.volume = Random.Range(0.5f, 1f); // Gefur hljóði smá random í vol
         audio.Play(); // Spilar hljóð
+        audio.pitch = audio.clip.length / rotateTimer;
+        Debug.Log( audio.clip.length);
         StartCoroutine(RotateCard(deck[randomNumber].cardGFX));
 
 

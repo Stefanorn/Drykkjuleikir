@@ -169,6 +169,7 @@ GameObject:
   - 114: {fileID: 87962317}
   - 50: {fileID: 87962319}
   - 58: {fileID: 87962318}
+  - 82: {fileID: 87962320}
   m_Layer: 5
   m_Name: Stick
   m_TagString: Untagged
@@ -228,11 +229,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 87962313}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f473c01def0babb43b293b09eb6f31a5, type: 3}
+  m_Script: {fileID: 11500000, guid: 962c0d7ad66a10041b87301ec5a091b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inpactAmount: 20
-  timeToOrgPos: 1
+  inpactAmount: 10
+  timeToOrgPos: 5
 --- !u!58 &87962318
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -262,6 +263,75 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!82 &87962320
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 87962313}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 92a9b4fcc2b7d2d448d3e1900b1a5a6a, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!224 &123326234 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22411942, guid: 1921f608b5b74384bacd87fd031d6e29,

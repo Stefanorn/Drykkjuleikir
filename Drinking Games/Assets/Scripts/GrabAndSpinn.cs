@@ -25,7 +25,7 @@ public class GrabAndSpinn : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         //     RuleReader.WriteRules(rules);
 
     }
-    void FixedUpdate()
+        void FixedUpdate()
     {
         //DEBUG DÓT
         if (Input.GetKeyDown("space"))

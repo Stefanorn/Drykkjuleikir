@@ -74,7 +74,6 @@ public class gameLogic : MonoBehaviour
         audio.volume = Random.Range(0.5f, 1f); // Gefur hljóði smá random í vol
         audio.Play(); // Spilar hljóð
         audio.pitch = audio.clip.length / rotateTimer;
-        Debug.Log( audio.clip.length);
         StartCoroutine(RotateCard(deck[randomNumber].cardGFX));
 
 

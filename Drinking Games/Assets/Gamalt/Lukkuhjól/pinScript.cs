@@ -10,10 +10,13 @@ public class pinScript : MonoBehaviour
     Quaternion orgRot;
     Rigidbody2D rb;
     Rigidbody2D wheelRB;
+    AudioSource sourse;
+    AudioClip pinSound;
 
     // Use this for initialization
     void Start()
     {
+        sourse = GetComponent<AudioSource>();
         rb = gameObject.GetComponent<Rigidbody2D>();
         orgRot = transform.rotation;
         wheelRB = GameObject.Find("Lukkuhjól").GetComponent<Rigidbody2D>(); //OPTIMIZE!!! þarf að leita í öllum GO í projectinu
@@ -25,12 +28,20 @@ public class pinScript : MonoBehaviour
 
     }
 
-    void OnTriggerEnter2D()
+    Collider2D lastCol;
+    void OnTriggerEnter2D(Collider2D col )
     {
-        float wheelAngVel = Mathf.Sqrt(Mathf.Pow( wheelRB.angularVelocity, 2 ));
-        if (wheelAngVel > 10)
+      
+        if ( col != lastCol)
         {
-            transform.Rotate(new Vector3(0, 0, (wheelAngVel / 100) * Random.Range(inpactAmount - (inpactAmount / 10), inpactAmount + (inpactAmount / 10))));
+            sourse.Play();
+            lastCol = col;
+        }
+
+        float wheelAngVel = Mathf.Sqrt(Mathf.Pow( wheelRB.angularVelocity, 2 ));
+        if (wheelAngVel > 5)
+        {
+            transform.Rotate(new Vector3(0, 0, (-wheelRB.angularVelocity / 100) * Random.Range(inpactAmount - (inpactAmount / 10), inpactAmount + (inpactAmount / 10))));
         }
 
         rotationTimer = 0;

@@ -7,12 +7,6 @@ public class DiceHasStoped : MonoBehaviour {
     Quaternion lastFrameRotation;
 
     bool triggerOnce = true;
-
-	// Use this for initialization
-	void Start () {
-
-	}
-	
 	// Update is called once per frame
 	void FixedUpdate () {
 

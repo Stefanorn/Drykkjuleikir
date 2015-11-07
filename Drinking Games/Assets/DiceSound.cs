@@ -14,12 +14,13 @@ public class DiceSound : MonoBehaviour {
 
     void OnCollisionEnter(Collision col)
     {
-
-        Debug.Log( col.relativeVelocity.magnitude);
         if (!source.isPlaying)
         {
+            float diceColForce = Mathf.Clamp(col.relativeVelocity.magnitude, 10, 100);
+
             source.Play();
-            source.pitch = Random.Range(0.8F, 1.2F);
+            source.volume  = (diceColForce / 100f);
+            Debug.Log(1 + (diceColForce / 100)); 
         }
     }
 }

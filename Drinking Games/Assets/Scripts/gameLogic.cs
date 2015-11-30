@@ -24,7 +24,8 @@ public class gameLogic : MonoBehaviour
     public Quaternion startRotation;
 
     AudioSource audio;
-    int[] chooesnCardIndex = new int[150]; ///HARÐKÓÐUN!!! Þarf að gera grein fyrir deck.length
+
+    int[] chooesnCardIndex;
     int cardCounter = 0;
     float cuirtainAlphaFader = 0;
     float levelChangeTimer = 2;
@@ -33,6 +34,7 @@ public class gameLogic : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        chooesnCardIndex = new int[deck.Length];
         audio = GetComponent<AudioSource>();
         cardChecker = GameObject.FindGameObjectWithTag("Card");
     }
@@ -60,6 +62,7 @@ public class gameLogic : MonoBehaviour
             if (index == randomNumber)
             {
                 randomNumber = Random.Range(0, deck.Length - 1);
+                Debug.Log(index);
             }
         }
         chooesnCardIndex[cardCounter] = randomNumber;

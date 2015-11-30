@@ -19,8 +19,7 @@ public class ClickedDice : MonoBehaviour
                 gameObject.tag == "NonSelectedDice")
         {
             gameObject.tag = "Dice";
-            GameObject gfx =  (GameObject)Instantiate(ClickedFx, transform.position, Quaternion.identity);
-            gfx.transform.parent = transform.parent;
+            Instantiate(ClickedFx, transform.position, Quaternion.identity);
         }
     }
 }

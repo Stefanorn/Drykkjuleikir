@@ -13,12 +13,13 @@ public class dragable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     Vector2 startAncor;
     gameLogic gl;
     AudioSource audio;
+    bool canIDrag = true;
 
     void Start()
     {
         audio = GetComponent<AudioSource>();
         gl = GameObject.FindGameObjectWithTag("GameController").GetComponent<gameLogic>();
-        screenClamp = Screen.width / 5f;
+        screenClamp = Screen.width / 4f;
         startPos = transform.position;
         rect = transform.GetComponent<RectTransform>();
         startAncor = rect.pivot;
@@ -26,36 +27,45 @@ public class dragable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Vector2 pivotOffset = new Vector2(eventData.position.x / Screen.width , (eventData.position.y - 100f) / Screen.height );
-        rect.pivot = pivotOffset;
+        if (canIDrag)
+        {
+            Vector2 pivotOffset = new Vector2(eventData.position.x / Screen.width, (eventData.position.y - 100f) / Screen.height);
+            rect.pivot = pivotOffset;
+        }
     }
     public void OnDrag (PointerEventData eventData)
     {
-        
-        transform.position = eventData.position;
-        transform.rotation = Quaternion.Euler(0, 0, (startPos.x - transform.position.x) / 8);
+        if (canIDrag)
+        {
+            transform.position = eventData.position;
+            transform.rotation = Quaternion.Euler(0, 0, (startPos.x - transform.position.x) / 8);
+        }
     }
     public void OnEndDrag (PointerEventData eventData)
     {
-        rect.pivot = startAncor;
-        if ( transform.position.x > Screen.width - screenClamp ||
-            transform.position.x < 0 + screenClamp ||
-            transform.position.y > Screen.height - screenClamp ||
-            transform.position.y < 0 + screenClamp )
+         
+        if (canIDrag)
         {
-            audio.volume = Random.Range(0.5f, 1f);
-            audio.Play();
-            Vector2 ratio = new Vector2(transform.position.x - startPos.x, transform.position.y - startPos.y );
-            Vector3 offScreenPos = new Vector3( ratio.x * offScreenSpeed + transform.position.x,
-                                                ratio.y * offScreenSpeed + transform.position.y ,
-                                                transform.position.z );
-            StartCoroutine(SmoothAnimation(offScreenPos));
-            Invoke("Delay", animTime);
-        }
+            rect.pivot = startAncor;
+            if (transform.position.x > Screen.width - screenClamp ||
+                transform.position.x < 0 + screenClamp ||
+                transform.position.y > Screen.height - screenClamp ||
+                transform.position.y < 0 + screenClamp)
+            {
+                audio.volume = Random.Range(0.5f, 1f);
+                audio.Play();
+                Vector2 ratio = new Vector2(transform.position.x - startPos.x, transform.position.y - startPos.y);
+                Vector3 offScreenPos = new Vector3(ratio.x * offScreenSpeed + transform.position.x,
+                                                    ratio.y * offScreenSpeed + transform.position.y,
+                                                    transform.position.z);
+                StartCoroutine(SmoothAnimation(offScreenPos));
+                Invoke("Delay", animTime);
+            }
 
-        else 
-        {
+            else
+            {
                 StartCoroutine(SmoothAnimation(startPos));
+            }
         }
     }
     void Delay()
@@ -65,6 +75,7 @@ public class dragable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     }
     IEnumerator SmoothAnimation(Vector3 targetPos)
     {
+        canIDrag = false;
         float timer = 0f;  
         while (timer < animTime)
         {
@@ -73,6 +84,7 @@ public class dragable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             timer += Time.deltaTime;
             yield return null;
         }
+        canIDrag = true;
     }
 
 

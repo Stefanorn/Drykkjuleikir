@@ -42,6 +42,11 @@ public class DiceHandler : MonoBehaviour
                 Destroy(diceInst);
             }
         }
+        GameObject[] junks = GameObject.FindGameObjectsWithTag("JunkToClear");
+        foreach(GameObject junk in junks)
+        {
+            Destroy(junk);
+        }
     }
     void SpawnDice()
     {

@@ -99,6 +99,7 @@ public class DiceHasStoped : MonoBehaviour {
         }
         else //Villa ?
         {
+            
             Debug.LogError("Kóði gat ekki lesið hverning teningur snýr");
             return 7; //ÞARF AÐ GETA BETRI K'OÐA TIL AÐ TEKKA A VILLU
         }

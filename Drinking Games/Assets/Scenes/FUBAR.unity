@@ -256,19 +256,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 27.4249992
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -13.25
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 54.8499985
+      value: 68
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 26.5
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_AnchorMin.x
@@ -620,30 +620,22 @@ MonoBehaviour:
     cardGFX: {fileID: 21300000, guid: 62aee84339798f04a866d14109b93a88, type: 3}
     cardRule: "Spurning: \xDE\xFA l\xEDtur \xE1 \xFEann sem \xFE\xE9r s\xFDnist, hann/h\xFAn
       ver\xF0ur a\xF0 svara spurningunni me\xF0 spurningu og \xFEannig heldur \xFEa\xF0
-      \xE1fram \xFEanga\xF0 til einhver klikkar. D\xE6mi. Hva\xF0 er a\xF0 gerast?
-      Af hverju snertir\xF0u \xFEig? \xDE\xFA \xFEarft ekki a\xF0 spyrja manneskjuna
-      sem spur\xF0i \xFEig. Vertu bara \xF6rugg/ur a\xF0 n\xE1 augnsambandi. "
+      \xE1fram \xFEanga\xF0 til einhver klikkar."
   - name: 4
     cardGFX: {fileID: 21300000, guid: a587af2ad51e6054289a5bd6f54b391f, type: 3}
     cardRule: "Spurning: \xDE\xFA l\xEDtur \xE1 \xFEann sem \xFE\xE9r s\xFDnist, hann/h\xFAn
       ver\xF0ur a\xF0 svara spurningunni me\xF0 spurningu og \xFEannig heldur \xFEa\xF0
-      \xE1fram \xFEanga\xF0 til einhver klikkar. D\xE6mi. Hva\xF0 er a\xF0 gerast?
-      Af hverju snertir\xF0u \xFEig? \xDE\xFA \xFEarft ekki a\xF0 spyrja manneskjuna
-      sem spur\xF0i \xFEig. Vertu bara \xF6rugg/ur a\xF0 n\xE1 augnsambandi. "
+      \xE1fram \xFEanga\xF0 til einhver klikkar."
   - name: 4
     cardGFX: {fileID: 21300000, guid: b8e056502fbe02a48ac21664cbc492ba, type: 3}
     cardRule: "Spurning: \xDE\xFA l\xEDtur \xE1 \xFEann sem \xFE\xE9r s\xFDnist, hann/h\xFAn
       ver\xF0ur a\xF0 svara spurningunni me\xF0 spurningu og \xFEannig heldur \xFEa\xF0
-      \xE1fram \xFEanga\xF0 til einhver klikkar. D\xE6mi. Hva\xF0 er a\xF0 gerast?
-      Af hverju snertir\xF0u \xFEig? \xDE\xFA \xFEarft ekki a\xF0 spyrja manneskjuna
-      sem spur\xF0i \xFEig. Vertu bara \xF6rugg/ur a\xF0 n\xE1 augnsambandi. "
+      \xE1fram \xFEanga\xF0 til einhver klikkar."
   - name: 4
     cardGFX: {fileID: 21300000, guid: acc8a647c74c15e40be6f2d6f5e80d3f, type: 3}
     cardRule: "Spurning: \xDE\xFA l\xEDtur \xE1 \xFEann sem \xFE\xE9r s\xFDnist, hann/h\xFAn
       ver\xF0ur a\xF0 svara spurningunni me\xF0 spurningu og \xFEannig heldur \xFEa\xF0
-      \xE1fram \xFEanga\xF0 til einhver klikkar. D\xE6mi. Hva\xF0 er a\xF0 gerast?
-      Af hverju snertir\xF0u \xFEig? \xDE\xFA \xFEarft ekki a\xF0 spyrja manneskjuna
-      sem spur\xF0i \xFEig. Vertu bara \xF6rugg/ur a\xF0 n\xE1 augnsambandi. "
+      \xE1fram \xFEanga\xF0 til einhver klikkar."
   - name: 5
     cardGFX: {fileID: 21300000, guid: acbc0438e1c72614190c02ae4311bd69, type: 3}
     cardRule: "Gef\xF0u 5 sopa."
@@ -680,26 +672,26 @@ MonoBehaviour:
     cardGFX: {fileID: 21300000, guid: f25bf31c5750fe84ea075562610563c9, type: 3}
     cardRule: "Puttar: S\xE1 sem dregur spili\xF0 setur einn putta \xE1 bor\xF0i\xF0
       og s\xE1 sem er s\xED\xF0astur a\xF0 setja putta \xE1 bor\xF0i\xF0 ver\xF0ur
-      a\xF0 drekka einn sopa. S\xE1 sem dr\xF3g m\xE1 gera \xFEetta eins oft og hann
-      vill \xFEanga\xF0 til n\xE6sta 7 kemur. "
+      a\xF0 drekka einn sopa. S\xE1 sem dr\xF3 m\xE1 gera \xFEetta eins oft og hann
+      vill \xFEanga\xF0 til n\xE6sta 7 kemur."
   - name: 7
     cardGFX: {fileID: 21300000, guid: 2be692508242bf54dbca8d61e5e3b6bb, type: 3}
     cardRule: "Puttar: S\xE1 sem dregur spili\xF0 setur einn putta \xE1 bor\xF0i\xF0
       og s\xE1 sem er s\xED\xF0astur a\xF0 setja putta \xE1 bor\xF0i\xF0 ver\xF0ur
-      a\xF0 drekka einn sopa. S\xE1 sem dr\xF3g m\xE1 gera \xFEetta eins oft og hann
-      vill \xFEanga\xF0 til n\xE6sta 7 kemur. "
+      a\xF0 drekka einn sopa. S\xE1 sem dr\xF3 m\xE1 gera \xFEetta eins oft og hann
+      vill \xFEanga\xF0 til n\xE6sta 7 kemur."
   - name: 7
     cardGFX: {fileID: 21300000, guid: a564d3c45df8bac408d1ed099af9435e, type: 3}
     cardRule: "Puttar: S\xE1 sem dregur spili\xF0 setur einn putta \xE1 bor\xF0i\xF0
       og s\xE1 sem er s\xED\xF0astur a\xF0 setja putta \xE1 bor\xF0i\xF0 ver\xF0ur
-      a\xF0 drekka einn sopa. S\xE1 sem dr\xF3g m\xE1 gera \xFEetta eins oft og hann
-      vill \xFEanga\xF0 til n\xE6sta 7 kemur. "
+      a\xF0 drekka einn sopa. S\xE1 sem dr\xF3 m\xE1 gera \xFEetta eins oft og hann
+      vill \xFEanga\xF0 til n\xE6sta 7 kemur."
   - name: 7
     cardGFX: {fileID: 21300000, guid: 3b526ed8f0f7bbd4e80af8e94304014f, type: 3}
     cardRule: "Puttar: S\xE1 sem dregur spili\xF0 setur einn putta \xE1 bor\xF0i\xF0
       og s\xE1 sem er s\xED\xF0astur a\xF0 setja putta \xE1 bor\xF0i\xF0 ver\xF0ur
-      a\xF0 drekka einn sopa. S\xE1 sem dr\xF3g m\xE1 gera \xFEetta eins oft og hann
-      vill \xFEanga\xF0 til n\xE6sta 7 kemur. "
+      a\xF0 drekka einn sopa. S\xE1 sem dr\xF3 m\xE1 gera \xFEetta eins oft og hann
+      vill \xFEanga\xF0 til n\xE6sta 7 kemur."
   - name: 8
     cardGFX: {fileID: 21300000, guid: 69f94e0f3f5860d49b69fde672baf9e7, type: 3}
     cardRule: "S\xE1 sem er sj\xE1anlega minnst fullur ver\xF0ur a\xF0 drekka 3 sopa.. "
@@ -766,24 +758,20 @@ MonoBehaviour:
     cardRule: Stelpur drekka.
   - name: K
     cardGFX: {fileID: 21300000, guid: c1953cbef31ba044d8201d8d590c8d55, type: 3}
-    cardRule: "S\xE1 sem dregur spili\xF0 drekkur eins og hann getur af bj\xF3r og
-      s\xE1 sem er \xE1 eftir honum ver\xF0ur a\xF0 drekka eins lengi og nr.1, \xFEri\xF0ji
-      ver\xF0ur a\xF0 drekka eins lengi og nr.2, og \xFEannig gengur \xFEa\xF0 \xE1fram."
+    cardRule: "Fossinn, s\xE1 sem dr\xF3 spili\xF0 drekkur \xFEar til hann vill stoppa
+      og hinir ver\xF0a a\xF0 filgja."
   - name: K
     cardGFX: {fileID: 21300000, guid: 5b9867bc9970f6a43a19b0851bc0949d, type: 3}
-    cardRule: "S\xE1 sem dregur spili\xF0 drekkur eins og hann getur af bj\xF3r og
-      s\xE1 sem er \xE1 eftir honum ver\xF0ur a\xF0 drekka eins lengi og nr.1, \xFEri\xF0ji
-      ver\xF0ur a\xF0 drekka eins lengi og nr.2, og \xFEannig gengur \xFEa\xF0 \xE1fram."
+    cardRule: "Fossinn, s\xE1 sem dr\xF3 spili\xF0 drekkur \xFEar til hann vill stoppa
+      og hinir ver\xF0a a\xF0 filgja."
   - name: K
     cardGFX: {fileID: 21300000, guid: c463b30a1bc6f7941aa9e3389019eabf, type: 3}
-    cardRule: "S\xE1 sem dregur spili\xF0 drekkur eins og hann getur af bj\xF3r og
-      s\xE1 sem er \xE1 eftir honum ver\xF0ur a\xF0 drekka eins lengi og nr.1, \xFEri\xF0ji
-      ver\xF0ur a\xF0 drekka eins lengi og nr.2, og \xFEannig gengur \xFEa\xF0 \xE1fram."
+    cardRule: "Fossinn, s\xE1 sem dr\xF3 spili\xF0 drekkur \xFEar til hann vill stoppa
+      og hinir ver\xF0a a\xF0 filgja."
   - name: K
     cardGFX: {fileID: 21300000, guid: c4e1ccaee67e82b43a3918ad4f591a3b, type: 3}
-    cardRule: "S\xE1 sem dregur spili\xF0 drekkur eins og hann getur af bj\xF3r og
-      s\xE1 sem er \xE1 eftir honum ver\xF0ur a\xF0 drekka eins lengi og nr.1, \xFEri\xF0ji
-      ver\xF0ur a\xF0 drekka eins lengi og nr.2, og \xFEannig gengur \xFEa\xF0 \xE1fram."
+    cardRule: "Fossinn, s\xE1 sem dr\xF3 spili\xF0 drekkur \xFEar til hann vill stoppa
+      og hinir ver\xF0a a\xF0 filgja."
   - name: A
     cardGFX: {fileID: 21300000, guid: 102baf0ddbc5e3a4b838653969e4daaa, type: 3}
     cardRule: Drekktu einn sopa.

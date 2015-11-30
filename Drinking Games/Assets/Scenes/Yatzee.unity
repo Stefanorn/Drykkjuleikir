@@ -171,8 +171,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 199639891}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 50.0999985, z: -70}
-  m_LocalScale: {x: 422.399994, y: 100, z: 20}
+  m_LocalPosition: {x: 0, y: 50.0999985, z: -61.0999985}
+  m_LocalScale: {x: 422.399994, y: 237.380005, z: 20}
   m_Children: []
   m_Father: {fileID: 1518311786}
   m_RootOrder: 3
@@ -291,19 +291,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 62
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -29
+      value: -62.5
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 124
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 58
+      value: 125
       objectReference: {fileID: 0}
     - target: {fileID: 22476120, guid: d35f29b9e140e554fa68cc3725b37a13, type: 2}
       propertyPath: m_AnchorMin.x
@@ -461,7 +461,7 @@ MonoBehaviour:
   - name: "Fj\xF3rir eins"
     rule: Allir taka 4x skot.
   - name: "Fullt h\xFAs"
-    rule: "Fullt h\xFAs"
+    rule: "Allir \xED h\xFAsinu drekka."
   - name: "\xDEr\xEDr eins"
     rule: Allir drekka 3x sopa.
   - name: "Stutt R\xF6\xF0"
@@ -561,7 +561,7 @@ Transform:
   m_GameObject: {fileID: 1094545545}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 50.0999985, z: 20}
-  m_LocalScale: {x: 422.399994, y: 100, z: 40}
+  m_LocalScale: {x: 422.399994, y: 237.380005, z: 40}
   m_Children: []
   m_Father: {fileID: 1518311786}
   m_RootOrder: 4
@@ -649,8 +649,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1159534372}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -60, y: 50.0999985, z: -25}
-  m_LocalScale: {x: 20, y: 100, z: 181.800003}
+  m_LocalPosition: {x: -53.0999985, y: 50.0999985, z: -25}
+  m_LocalScale: {x: 20, y: 237.380005, z: 181.800003}
   m_Children: []
   m_Father: {fileID: 1518311786}
   m_RootOrder: 1
@@ -893,8 +893,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1370709256}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 60, y: 50.0999985, z: -25}
-  m_LocalScale: {x: 20, y: 100, z: 181.800003}
+  m_LocalPosition: {x: 49.4000015, y: 50.0999985, z: -25}
+  m_LocalScale: {x: 20, y: 237.380005, z: 181.800003}
   m_Children: []
   m_Father: {fileID: 1518311786}
   m_RootOrder: 2

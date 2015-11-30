@@ -152,7 +152,6 @@ public class RuleHandler : MonoBehaviour
         }
         return array;
     }
-
     bool ResultYatzee()
     {
         if (diceResults[0] == diceResults[1] &&

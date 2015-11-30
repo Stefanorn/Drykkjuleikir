@@ -8,6 +8,7 @@ TagManager:
   - DiceRule
   - Dice
   - NonSelectedDice
+  - JunkToClear
   layers:
   - Default
   - TransparentFX

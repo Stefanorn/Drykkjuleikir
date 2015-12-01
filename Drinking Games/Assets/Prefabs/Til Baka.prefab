@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4359cc58ae2e74c41b9913c0fb52dded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FadeTimer: .5
 --- !u!114 &11427228
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -68,8 +69,8 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: .960784316, g: .960784316, b: .960784316, a: 1}
-    m_PressedColor: {r: .784313738, g: .784313738, b: .784313738, a: 1}
-    m_DisabledColor: {r: .784313738, g: .784313738, b: .784313738, a: .501960814}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: .100000001
   m_SpriteState:
@@ -87,7 +88,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11403810}
-        m_MethodName: LoadGame
+        m_MethodName: FadeGameObjectAndLoad
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -190,8 +191,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 90, y: -62.5}
-  m_SizeDelta: {x: 180, y: 125}
+  m_AnchoredPosition: {x: 34, y: -20}
+  m_SizeDelta: {x: 68, y: 41}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &100100000
 Prefab:

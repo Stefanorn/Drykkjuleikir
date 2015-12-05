@@ -20,7 +20,6 @@ public class DiceSound : MonoBehaviour {
 
             source.Play();
             source.volume  = (diceColForce / 100f);
-            Debug.Log(1 + (diceColForce / 100)); 
         }
     }
 }

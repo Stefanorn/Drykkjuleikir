@@ -23,7 +23,7 @@ public class gameLogic : MonoBehaviour
     public float rotateTimer = 1f;
     public Quaternion startRotation;
 
-    AudioSource audio;
+    AudioSource source;
 
     int[] chooesnCardIndex;
     int cardCounter = 0;
@@ -35,7 +35,7 @@ public class gameLogic : MonoBehaviour
     void Start()
     {
         chooesnCardIndex = new int[deck.Length];
-        audio = GetComponent<AudioSource>();
+        source = GetComponent<AudioSource>();
         cardChecker = GameObject.FindGameObjectWithTag("Card");
     }
 
@@ -44,15 +44,7 @@ public class gameLogic : MonoBehaviour
     {
         if (cardCounter == deck.Length) //Þegar búnkinn er búinn þá er alltaf kallað return og kallað á fall sem fer aftur í mainmenu
         {
-
-            curtains.gameObject.SetActive(true); //TODO taka þennan kóða út og gera static Klassa
-            curtains.color = new Color(255, 255, 255, cuirtainAlphaFader);
-            cuirtainAlphaFader = Mathf.Lerp(0, 1, fadeTimer / levelChangeTimer);
-            fadeTimer += Time.deltaTime;
-            if (!IsInvoking("BackToMainMenu"))
-            {
-                Invoke("BackToMainMenu", 2);
-            }
+            GameObject.FindGameObjectWithTag("Finish").GetComponent<MainMenuScrip>().FadeGameObjectAndLoad("MENU");
             return;
         }
 
@@ -62,7 +54,6 @@ public class gameLogic : MonoBehaviour
             if (index == randomNumber)
             {
                 randomNumber = Random.Range(0, deck.Length - 1);
-                Debug.Log(index);
             }
         }
         chooesnCardIndex[cardCounter] = randomNumber;
@@ -74,9 +65,9 @@ public class gameLogic : MonoBehaviour
         StartCoroutine(TextEffects.FadeText(rule, 0.5f)); // feidar inn regluna
         cardChecker.SetActive(true); //spil situr sjálft sig á false Þetta er trick til að passa að þessi kóði keyri bara 1x
         cardChecker.transform.rotation = startRotation; //Gefur spilinu upprunalega rotationið
-        audio.volume = Random.Range(0.5f, 1f); // Gefur hljóði smá random í vol
-        audio.Play(); // Spilar hljóð
-        audio.pitch = audio.clip.length / rotateTimer;
+        source.volume = Random.Range(0.5f, 1f); // Gefur hljóði smá random í vol
+        source.Play(); // Spilar hljóð
+        source.pitch = source.clip.length / rotateTimer;
         StartCoroutine(RotateCard(deck[randomNumber].cardGFX));
 
 

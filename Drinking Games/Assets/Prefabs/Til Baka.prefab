@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11403810}
   m_Layer: 5
   m_Name: Til Baka
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,7 +47,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4359cc58ae2e74c41b9913c0fb52dded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FadeTimer: .5
 --- !u!114 &11427228
 MonoBehaviour:
   m_ObjectHideFlags: 1

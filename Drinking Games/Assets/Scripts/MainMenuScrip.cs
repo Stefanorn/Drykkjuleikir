@@ -3,22 +3,41 @@ using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
+using System;
 
 public class MainMenuScrip : MonoBehaviour
 {
-    public float FadeTimer = 0.5f;
+    float FadeTimer = 0.5f;
 
-    private List<UIBehaviour> thingsInCanvas = new List<UIBehaviour>();
-    void Start()
+    enum Fade { fadeIn, fadeOut };
+
+    private UIBehaviour[] thingsInCanvas;
+    void Awake()
     {
         thingsInCanvas = FindThingsInCanvas();
+
         foreach (UIBehaviour thing in thingsInCanvas)
         {
+            TurnAlphaToZero(thing);
             StartCoroutine(FadeIn(thing));
         }
     }
 
-
+    private void TurnAlphaToZero(UIBehaviour thing)
+    {
+        if (thing.GetComponent<Text>() != null)
+        {
+            Color textColor = thing.GetComponent<Text>().color;
+            textColor = new Color(textColor.r, textColor.g, textColor.b, 0);
+            thing.GetComponent<Text>().color = textColor;
+        }
+        else if (thing.GetComponent<Image>() != null)
+        {
+            Color imgColor = thing.GetComponent<Image>().color;
+            imgColor = new Color(imgColor.r, imgColor.g, imgColor.b, 0);
+            thing.GetComponent<Image>().color = imgColor;
+        }
+    }
     public void LoadGame(string LevelName)
     {
         Application.LoadLevel(LevelName);
@@ -27,60 +46,27 @@ public class MainMenuScrip : MonoBehaviour
     {
         Application.LoadLevel(LevelIndex);
     }
-
     public void FadeGameObjectAndLoad(string LevelName)
     {
         foreach (UIBehaviour thing in thingsInCanvas)
         {
             StartCoroutine(FadeOut(thing, LevelName));
         }
+        StartCoroutine(LoadLevel(LevelName));
     }
-    public List<UIBehaviour> FindThingsInCanvas() //Fáramlega Redundat kóði þarf að láta skila bara array EZPZ
+    public UIBehaviour[] FindThingsInCanvas()
     {
         GameObject canvas = GameObject.Find("Canvas");
-         Transform[] canvasChildrens = canvas.GetComponentsInChildren<Transform>();
-
-
-        List<UIBehaviour> temp = new List<UIBehaviour>();
-        
-        foreach (Transform go in canvasChildrens)
-        {
-            if (go.GetComponent<Button>() != null)
-            {
-                temp.Add(go.GetComponent<Button>());
-                //  return go.GetComponent<Button>();
-                //  StartCoroutine(FadeOut(go.GetComponent<Button>(), LevelName));
-            }
-            else if (go.GetComponent<Text>() != null)
-            {
-                temp.Add(go.GetComponent<Text>());
-                //   StartCoroutine(FadeOut(go.GetComponent<Text>(), LevelName));
-            }
-            else if(go.GetComponent<Image>() != null)
-            {
-                temp.Add(go.GetComponent<Image>());
-            }
-        }
-        return temp;
+        UIBehaviour[] canvasChildrens = canvas.GetComponentsInChildren<UIBehaviour>();
+        return canvasChildrens;
     }
     IEnumerator FadeOut(UIBehaviour thingToFade, string levelToLoad) //TODO ekki troða levelToLoad hingað
     {
         float timer = FadeTimer;
-        if (thingToFade.GetComponent<Button>() != null)
+
+        if (thingToFade.GetComponent<Text>() != null)
         {
-            while (timer >= 0)
-            {
-                ColorBlock color = thingToFade.GetComponent<Button>().colors;
-                color.normalColor = new Color(color.normalColor.r, color.normalColor.g, color.normalColor.b, timer / FadeTimer);
-                color.highlightedColor = new Color(color.normalColor.r, color.normalColor.g, color.normalColor.b, timer / FadeTimer);
-                thingToFade.GetComponent<Button>().colors = color;
-                timer -= Time.deltaTime;
-                yield return null;
-            }
-        }
-        else if (thingToFade.GetComponent<Text>() != null)
-        {
-            while (timer >= 0)
+            while (timer > -0.1f)
             {
                 Color textColor = thingToFade.GetComponent<Text>().color;
                 textColor = new Color(textColor.r, textColor.g, textColor.b, timer / FadeTimer);
@@ -91,7 +77,7 @@ public class MainMenuScrip : MonoBehaviour
         }
         else if (thingToFade.GetComponent<Image>() != null)
         {
-            while (timer >= 0)
+            while (timer > -0.1f)
             {
                 Color imgColor = thingToFade.GetComponent<Image>().color;
                 imgColor = new Color(imgColor.r, imgColor.g, imgColor.b, timer / FadeTimer);
@@ -100,41 +86,21 @@ public class MainMenuScrip : MonoBehaviour
                 yield return null;
             }
         }
-        yield return new WaitForSeconds(0.5f);
-
-        Application.LoadLevel(levelToLoad);
         yield return null;
     }
     IEnumerator FadeIn(UIBehaviour thingToFade)
     {
+        yield return null;
+        yield return null;
+        yield return null;
+        yield return null;
 
         float timer = 0;
-        if (thingToFade.GetComponent<Button>() != null)
+        if (thingToFade.GetComponent<Text>() != null)
         {
-            ColorBlock color = thingToFade.GetComponent<Button>().colors;
-            color.normalColor = new Color(color.normalColor.r, color.normalColor.g, color.normalColor.b, 0);
-            color.highlightedColor = new Color(color.normalColor.r, color.normalColor.g, color.normalColor.b, 0);
-            thingToFade.GetComponent<Button>().colors = color;
-            yield return new WaitForSeconds(0.4f);
             while (timer <= FadeTimer)
             {
-                color = thingToFade.GetComponent<Button>().colors;
-                color.normalColor = new Color(color.normalColor.r, color.normalColor.g, color.normalColor.b, timer / FadeTimer);
-                color.highlightedColor = new Color(color.normalColor.r, color.normalColor.g, color.normalColor.b, timer / FadeTimer);
-                thingToFade.GetComponent<Button>().colors = color;
-                timer += Time.deltaTime;
-                yield return null;
-            }
-        }
-        else if (thingToFade.GetComponent<Text>() != null)
-        {
-            Color textColor = thingToFade.GetComponent<Text>().color;
-            textColor = new Color(textColor.r, textColor.g, textColor.b, 0);
-            thingToFade.GetComponent<Text>().color = textColor;
-            yield return new WaitForSeconds(0.4f);
-            while (timer <= FadeTimer)
-            {
-                textColor = thingToFade.GetComponent<Text>().color;
+                Color textColor = thingToFade.GetComponent<Text>().color;
                 textColor = new Color(textColor.r, textColor.g, textColor.b, timer / FadeTimer);
                 thingToFade.GetComponent<Text>().color = textColor;
                 timer += Time.deltaTime;
@@ -143,13 +109,9 @@ public class MainMenuScrip : MonoBehaviour
         }
         else if (thingToFade.GetComponent<Image>() != null)
         {
-            Color imgColor = thingToFade.GetComponent<Image>().color;
-            imgColor = new Color(imgColor.r, imgColor.g, imgColor.b, 0);
-            thingToFade.GetComponent<Image>().color = imgColor;
-            yield return new WaitForSeconds(0.4f);
             while (timer <= FadeTimer)
             {
-                imgColor = thingToFade.GetComponent<Image>().color;
+                Color imgColor = thingToFade.GetComponent<Image>().color;
                 imgColor = new Color(imgColor.r, imgColor.g, imgColor.b, timer / FadeTimer);
                 thingToFade.GetComponent<Image>().color = imgColor;
                 timer += Time.deltaTime;
@@ -157,5 +119,10 @@ public class MainMenuScrip : MonoBehaviour
             }
         }
         yield return null;
+    }
+    IEnumerator LoadLevel(string levelName)
+    {
+        yield return new WaitForSeconds(FadeTimer);
+        Application.LoadLevel(levelName);
     }
 }

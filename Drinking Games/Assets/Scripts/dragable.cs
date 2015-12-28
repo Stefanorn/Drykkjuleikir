@@ -38,7 +38,7 @@ public class dragable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         if (canIDrag)
         {
             transform.position = eventData.position;
-            transform.rotation = Quaternion.Euler(0, 0, (startPos.x - transform.position.x) / 8);
+            transform.rotation = Quaternion.Euler(0, 0, (startPos.x - transform.position.x) / 16);
         }
     }
     public void OnEndDrag (PointerEventData eventData)

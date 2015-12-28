@@ -8,12 +8,12 @@ using System;
 public class MainMenuScrip : MonoBehaviour
 {
     float FadeTimer = 0.5f;
-
-    enum Fade { fadeIn, fadeOut };
+    float offsetPosition = 8f;
 
     private UIBehaviour[] thingsInCanvas;
-    void Awake()
+    void Start()
     {
+
         thingsInCanvas = FindThingsInCanvas();
 
         foreach (UIBehaviour thing in thingsInCanvas)
@@ -23,6 +23,30 @@ public class MainMenuScrip : MonoBehaviour
         }
     }
 
+    IEnumerator findOffsetPositon(UIBehaviour thing)
+    {
+        yield return null;
+        yield return null;
+        yield return null;
+        yield return null;
+
+        float timer = 0f;
+        
+        if (thing.GetComponent<Button>() != null)
+        {
+            while (timer < FadeTimer)
+            {
+                Debug.Log(offsetPosition * timer / FadeTimer);
+                thing.GetComponent<RectTransform>().position = new Vector3( thing.GetComponent<RectTransform>().position.x - offsetPosition * timer / FadeTimer,
+                                                                            thing.GetComponent<RectTransform>().position.y,
+                                                                            thing.GetComponent<RectTransform>().position.z);
+                timer += Time.deltaTime;
+                yield return null;
+            }
+        }
+
+         yield return null; 
+    }
     private void TurnAlphaToZero(UIBehaviour thing)
     {
         if (thing.GetComponent<Text>() != null)
@@ -50,7 +74,8 @@ public class MainMenuScrip : MonoBehaviour
     {
         foreach (UIBehaviour thing in thingsInCanvas)
         {
-            StartCoroutine(FadeOut(thing, LevelName));
+            StartCoroutine(findOffsetPositon(thing));
+            StartCoroutine(FadeOut(thing));
         }
         StartCoroutine(LoadLevel(LevelName));
     }
@@ -60,7 +85,7 @@ public class MainMenuScrip : MonoBehaviour
         UIBehaviour[] canvasChildrens = canvas.GetComponentsInChildren<UIBehaviour>();
         return canvasChildrens;
     }
-    IEnumerator FadeOut(UIBehaviour thingToFade, string levelToLoad) //TODO ekki troða levelToLoad hingað
+    IEnumerator FadeOut(UIBehaviour thingToFade) 
     {
         float timer = FadeTimer;
 

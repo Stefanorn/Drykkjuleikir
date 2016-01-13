@@ -576,195 +576,299 @@ MonoBehaviour:
   - name: 2
     cardGFX: {fileID: 21300000, guid: 5a8498911c0d6f04bb01d01a8f09f2ba, type: 3}
     cardRule: Tveir sopar.
+    suit: 2
+    card: 1
   - name: 2
     cardGFX: {fileID: 21300000, guid: ded2f238e9a947d44aebf65bd234f440, type: 3}
     cardRule: Tveir sopar.
+    suit: 3
+    card: 1
   - name: 2
     cardGFX: {fileID: 21300000, guid: e08320bec1f7aea4ca3583c1e337f72f, type: 3}
     cardRule: Tveir sopar.
+    suit: 1
+    card: 1
   - name: 2
     cardGFX: {fileID: 21300000, guid: 6c11e30ac43a9954f93bd102488130c1, type: 3}
     cardRule: Tveir sopar.
+    suit: 0
+    card: 1
   - name: 3
     cardGFX: {fileID: 21300000, guid: 8b3b8500f4d90724dbff870632d605d6, type: 3}
     cardRule: "\xDEr\xEDr sopar."
+    suit: 2
+    card: 2
   - name: 3
     cardGFX: {fileID: 21300000, guid: 631d0a7b5cc78de48bba90ca773641f2, type: 3}
     cardRule: "\xDEr\xEDr sopar."
+    suit: 3
+    card: 2
   - name: 3
     cardGFX: {fileID: 21300000, guid: 31b09b2ed675f1a4697ae5f73f8d44a9, type: 3}
     cardRule: "\xDEr\xEDr sopar."
+    suit: 1
+    card: 2
   - name: 4
     cardGFX: {fileID: 21300000, guid: b88bd1a17e7db3c4e95c3be60e8bf3cf, type: 3}
     cardRule: "\xDEr\xEDr sopar."
+    suit: 0
+    card: 3
   - name: 4
     cardGFX: {fileID: 21300000, guid: 62aee84339798f04a866d14109b93a88, type: 3}
     cardRule: "Spurning: \xDE\xFA l\xEDtur \xE1 \xFEann sem \xFE\xE9r s\xFDnist, hann/h\xFAn
       ver\xF0ur a\xF0 svara spurningunni me\xF0 spurningu og \xFEannig heldur \xFEa\xF0
       \xE1fram \xFEanga\xF0 til einhver klikkar."
+    suit: 2
+    card: 3
   - name: 4
     cardGFX: {fileID: 21300000, guid: a587af2ad51e6054289a5bd6f54b391f, type: 3}
     cardRule: "Spurning: \xDE\xFA l\xEDtur \xE1 \xFEann sem \xFE\xE9r s\xFDnist, hann/h\xFAn
       ver\xF0ur a\xF0 svara spurningunni me\xF0 spurningu og \xFEannig heldur \xFEa\xF0
       \xE1fram \xFEanga\xF0 til einhver klikkar."
+    suit: 3
+    card: 3
   - name: 4
     cardGFX: {fileID: 21300000, guid: b8e056502fbe02a48ac21664cbc492ba, type: 3}
     cardRule: "Spurning: \xDE\xFA l\xEDtur \xE1 \xFEann sem \xFE\xE9r s\xFDnist, hann/h\xFAn
       ver\xF0ur a\xF0 svara spurningunni me\xF0 spurningu og \xFEannig heldur \xFEa\xF0
       \xE1fram \xFEanga\xF0 til einhver klikkar."
+    suit: 1
+    card: 3
   - name: 4
     cardGFX: {fileID: 21300000, guid: acc8a647c74c15e40be6f2d6f5e80d3f, type: 3}
     cardRule: "Spurning: \xDE\xFA l\xEDtur \xE1 \xFEann sem \xFE\xE9r s\xFDnist, hann/h\xFAn
       ver\xF0ur a\xF0 svara spurningunni me\xF0 spurningu og \xFEannig heldur \xFEa\xF0
       \xE1fram \xFEanga\xF0 til einhver klikkar."
+    suit: 0
+    card: 0
   - name: 5
     cardGFX: {fileID: 21300000, guid: acbc0438e1c72614190c02ae4311bd69, type: 3}
     cardRule: "Gef\xF0u 5 sopa."
+    suit: 0
+    card: 0
   - name: 5
     cardGFX: {fileID: 21300000, guid: 1ab0d97076b3c6048ad0c07f738b23ae, type: 3}
     cardRule: "Gef\xF0u 5 sopa."
+    suit: 3
+    card: 4
   - name: 5
     cardGFX: {fileID: 21300000, guid: 50e3b4a374536cd4bacad3fa37e59e12, type: 3}
     cardRule: "Gef\xF0u 5 sopa."
+    suit: 1
+    card: 4
   - name: 5
     cardGFX: {fileID: 21300000, guid: 3f99b04a05db01544af7dc0b76397fe0, type: 3}
     cardRule: "Gef\xF0u 5 sopa."
+    suit: 0
+    card: 4
   - name: 6
     cardGFX: {fileID: 21300000, guid: 63a6c88173ee0254ba15a693dcd34bb5, type: 3}
     cardRule: "\xC9g hef aldrei. H\xE9r segir s\xE1 sem dr\xF3 spili\xF0 eitthva\xF0
       sem hann hefur ekki gert en s\xE1/s\xFA sem hefur gert \xFEa\xF0 ver\xF0ur a\xF0
       drekka tvo sopa. "
+    suit: 2
+    card: 5
   - name: 6
     cardGFX: {fileID: 21300000, guid: 917f14c80a68a6a45a154b8579327f19, type: 3}
     cardRule: "\xC9g hef aldrei. H\xE9r segir s\xE1 sem dr\xF3 spili\xF0 eitthva\xF0
       sem hann hefur ekki gert en s\xE1/s\xFA sem hefur gert \xFEa\xF0 ver\xF0ur a\xF0
       drekka tvo sopa. "
+    suit: 3
+    card: 5
   - name: 6
     cardGFX: {fileID: 21300000, guid: ee15fe9cba8a41041aa8cbe736774ae1, type: 3}
     cardRule: "\xC9g hef aldrei. H\xE9r segir s\xE1 sem dr\xF3 spili\xF0 eitthva\xF0
       sem hann hefur ekki gert en s\xE1/s\xFA sem hefur gert \xFEa\xF0 ver\xF0ur a\xF0
       drekka tvo sopa. "
+    suit: 1
+    card: 5
   - name: 6
     cardGFX: {fileID: 21300000, guid: 98a4036552a4965489f94f8189c791e3, type: 3}
     cardRule: "\xC9g hef aldrei. S\xE1 sem dregur \xFEetta spil segir eitthva\xF0
       sem hann hefur aldrei og ef einhver hefur gert \xFEann gj\xF6rning \xFE\xE1
       tekur hann sopa."
+    suit: 0
+    card: 5
   - name: 7
     cardGFX: {fileID: 21300000, guid: f25bf31c5750fe84ea075562610563c9, type: 3}
     cardRule: "Puttar: S\xE1 sem dregur spili\xF0 setur einn putta \xE1 bor\xF0i\xF0
       og s\xE1 sem er s\xED\xF0astur a\xF0 setja putta \xE1 bor\xF0i\xF0 ver\xF0ur
       a\xF0 drekka einn sopa. S\xE1 sem dr\xF3 m\xE1 gera \xFEetta eins oft og hann
       vill \xFEanga\xF0 til n\xE6sta 7 kemur."
+    suit: 2
+    card: 6
   - name: 7
     cardGFX: {fileID: 21300000, guid: 2be692508242bf54dbca8d61e5e3b6bb, type: 3}
     cardRule: "Puttar: S\xE1 sem dregur spili\xF0 setur einn putta \xE1 bor\xF0i\xF0
       og s\xE1 sem er s\xED\xF0astur a\xF0 setja putta \xE1 bor\xF0i\xF0 ver\xF0ur
       a\xF0 drekka einn sopa. S\xE1 sem dr\xF3 m\xE1 gera \xFEetta eins oft og hann
       vill \xFEanga\xF0 til n\xE6sta 7 kemur."
+    suit: 3
+    card: 6
   - name: 7
     cardGFX: {fileID: 21300000, guid: a564d3c45df8bac408d1ed099af9435e, type: 3}
     cardRule: "Puttar: S\xE1 sem dregur spili\xF0 setur einn putta \xE1 bor\xF0i\xF0
       og s\xE1 sem er s\xED\xF0astur a\xF0 setja putta \xE1 bor\xF0i\xF0 ver\xF0ur
       a\xF0 drekka einn sopa. S\xE1 sem dr\xF3 m\xE1 gera \xFEetta eins oft og hann
       vill \xFEanga\xF0 til n\xE6sta 7 kemur."
+    suit: 1
+    card: 6
   - name: 7
     cardGFX: {fileID: 21300000, guid: 3b526ed8f0f7bbd4e80af8e94304014f, type: 3}
     cardRule: "Puttar: S\xE1 sem dregur spili\xF0 setur einn putta \xE1 bor\xF0i\xF0
       og s\xE1 sem er s\xED\xF0astur a\xF0 setja putta \xE1 bor\xF0i\xF0 ver\xF0ur
       a\xF0 drekka einn sopa. S\xE1 sem dr\xF3 m\xE1 gera \xFEetta eins oft og hann
       vill \xFEanga\xF0 til n\xE6sta 7 kemur."
+    suit: 0
+    card: 6
   - name: 8
     cardGFX: {fileID: 21300000, guid: 69f94e0f3f5860d49b69fde672baf9e7, type: 3}
     cardRule: "S\xE1 sem er sj\xE1anlega minnst fullur ver\xF0ur a\xF0 drekka 3 sopa.. "
+    suit: 2
+    card: 7
   - name: 8
     cardGFX: {fileID: 21300000, guid: 9e6525bdaccabd94f8f659c8769eb6f2, type: 3}
     cardRule: "S\xE1 sem er sj\xE1anlega minnst fullur ver\xF0ur a\xF0 drekka 3 sopa.. "
+    suit: 3
+    card: 7
   - name: 8
     cardGFX: {fileID: 21300000, guid: 6a8bdf561f1515644a6630ac301eabf7, type: 3}
     cardRule: "S\xE1 sem er sj\xE1anlega minnst fullur ver\xF0ur a\xF0 drekka 3 sopa.. "
+    suit: 1
+    card: 7
   - name: 8
     cardGFX: {fileID: 21300000, guid: 40c8a6d1f90847f4299996303de7d5fd, type: 3}
     cardRule: "S\xE1 sem er sj\xE1anlega minnst fullur ver\xF0ur a\xF0 drekka 3 sopa.. "
+    suit: 0
+    card: 7
   - name: 9
     cardGFX: {fileID: 21300000, guid: be8d6ff05cd808d489b8d1ffe569b757, type: 3}
     cardRule: "R\xEDm: Allir ver\xF0a a\xF0 koma me\xF0 or\xF0 sem r\xEDmar vi\xF0
       \xFEitt. "
+    suit: 2
+    card: 8
   - name: 9
     cardGFX: {fileID: 21300000, guid: 69738a1fb9c11644fa976c67d33ed194, type: 3}
     cardRule: "R\xEDm: Allir ver\xF0a a\xF0 koma me\xF0 or\xF0 sem r\xEDmar vi\xF0
       \xFEitt. "
+    suit: 3
+    card: 8
   - name: 9
     cardGFX: {fileID: 21300000, guid: 684ac615d42ea8448b34fb5467477336, type: 3}
     cardRule: "R\xEDm: Allir ver\xF0a a\xF0 koma me\xF0 or\xF0 sem r\xEDmar vi\xF0
       \xFEitt. "
+    suit: 1
+    card: 8
   - name: 9
     cardGFX: {fileID: 21300000, guid: 2d42d0e158d04ea4d99908fb919ca7b5, type: 3}
     cardRule: "R\xEDm: Allir ver\xF0a a\xF0 koma me\xF0 or\xF0 sem r\xEDmar vi\xF0
       \xFEitt. "
+    suit: 0
+    card: 8
   - name: 10
     cardGFX: {fileID: 21300000, guid: 922e86a7ca6fa734d9808c5023bb8989, type: 3}
     cardRule: 'Allir drekka einn sopa. '
+    suit: 2
+    card: 9
   - name: 10
     cardGFX: {fileID: 21300000, guid: 5b2598df7d2beed4e86a7784fac2bb18, type: 3}
     cardRule: 'Allir drekka einn sopa. '
+    suit: 3
+    card: 9
   - name: 10
     cardGFX: {fileID: 21300000, guid: 0659799568cc1da42ac065b50b9ee926, type: 3}
     cardRule: 'Allir drekka einn sopa. '
+    suit: 1
+    card: 9
   - name: 10
     cardGFX: {fileID: 21300000, guid: 4269d849154754845ad7af736304410e, type: 3}
     cardRule: 'Allir drekka einn sopa. '
+    suit: 0
+    card: 9
   - name: G
     cardGFX: {fileID: 21300000, guid: 6c609c48f56a53d488e4f9c5b7f15126, type: 3}
     cardRule: "Str\xE1kar drekka. "
+    suit: 2
+    card: 10
   - name: G
     cardGFX: {fileID: 21300000, guid: 6f53c3865bf79884c95ed8dab2f3096c, type: 3}
     cardRule: "Str\xE1kar drekka. "
+    suit: 3
+    card: 10
   - name: G
     cardGFX: {fileID: 21300000, guid: e099d9d0cf50dcb49a24929773b66217, type: 3}
     cardRule: "Str\xE1kar drekka. "
+    suit: 1
+    card: 10
   - name: G
     cardGFX: {fileID: 21300000, guid: cea11059a0b53c04c972454d3bf4b018, type: 3}
     cardRule: "Str\xE1kar drekka."
+    suit: 0
+    card: 10
   - name: D
     cardGFX: {fileID: 21300000, guid: ab9d92608f791ac4e813724b5f0a7759, type: 3}
     cardRule: Stelpur drekka.
+    suit: 2
+    card: 11
   - name: D
     cardGFX: {fileID: 21300000, guid: c8116eab8380dd44aa9a66217e9f0c80, type: 3}
     cardRule: Stelpur drekka.
+    suit: 3
+    card: 11
   - name: D
     cardGFX: {fileID: 21300000, guid: 59cf3d437495373438ddd317637a2124, type: 3}
     cardRule: Stelpur drekka.
+    suit: 1
+    card: 11
   - name: D
     cardGFX: {fileID: 21300000, guid: 8344142806644d548a9eeb1e0798c745, type: 3}
     cardRule: Stelpur drekka.
+    suit: 0
+    card: 11
   - name: K
     cardGFX: {fileID: 21300000, guid: c1953cbef31ba044d8201d8d590c8d55, type: 3}
     cardRule: "Fossinn, s\xE1 sem dr\xF3 spili\xF0 drekkur \xFEar til hann vill stoppa
       og hinir ver\xF0a a\xF0 filgja."
+    suit: 2
+    card: 12
   - name: K
     cardGFX: {fileID: 21300000, guid: 5b9867bc9970f6a43a19b0851bc0949d, type: 3}
     cardRule: "Fossinn, s\xE1 sem dr\xF3 spili\xF0 drekkur \xFEar til hann vill stoppa
       og hinir ver\xF0a a\xF0 filgja."
+    suit: 3
+    card: 12
   - name: K
     cardGFX: {fileID: 21300000, guid: c463b30a1bc6f7941aa9e3389019eabf, type: 3}
     cardRule: "Fossinn, s\xE1 sem dr\xF3 spili\xF0 drekkur \xFEar til hann vill stoppa
       og hinir ver\xF0a a\xF0 filgja."
+    suit: 1
+    card: 12
   - name: K
     cardGFX: {fileID: 21300000, guid: c4e1ccaee67e82b43a3918ad4f591a3b, type: 3}
     cardRule: "Fossinn, s\xE1 sem dr\xF3 spili\xF0 drekkur \xFEar til hann vill stoppa
       og hinir ver\xF0a a\xF0 filgja."
+    suit: 0
+    card: 12
   - name: A
     cardGFX: {fileID: 21300000, guid: 102baf0ddbc5e3a4b838653969e4daaa, type: 3}
     cardRule: Drekktu einn sopa.
+    suit: 2
+    card: 0
   - name: A
     cardGFX: {fileID: 21300000, guid: 54f7bb9b6c610b74ea8b8b8ed2fc86ac, type: 3}
     cardRule: Drekktu einn sopa.
+    suit: 3
+    card: 0
   - name: A
     cardGFX: {fileID: 21300000, guid: 2a648d24a0abddc4ab636ddb7e8b1ba7, type: 3}
     cardRule: Drekktu einn sopa.
+    suit: 1
+    card: 0
   - name: A
     cardGFX: {fileID: 21300000, guid: ea789b52057624341b30531723666760, type: 3}
     cardRule: Drekktu einn sopa.
+    suit: 0
+    card: 0
   rule: {fileID: 7574982}
   cardImage: {fileID: 1880624548}
   curtains: {fileID: 0}

@@ -8,6 +8,32 @@ public class deck
     public string name;
     public Sprite cardGFX;
     public string cardRule;
+
+    public Suit suit;
+    public Card card;
+}
+public enum Suit
+{
+    spade,
+    heart,
+    clubs,
+    dimond
+}
+public enum Card
+{
+    ace,
+    two,
+    three,
+    four,
+    five,
+    six,
+    seven,
+    eight,
+    nine,
+    ten,
+    jack,
+    queen,
+    king
 }
 
 public class gameLogic : MonoBehaviour

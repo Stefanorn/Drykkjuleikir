@@ -3,6 +3,12 @@ using UnityEngine.UI;
 using System.Collections;
 
 [System.Serializable]
+public class Paterns
+{
+    public string name;
+    public Vector2[] CenterImgPos;
+}
+[System.Serializable]
 public class deck
 {
     public string name;
@@ -49,6 +55,15 @@ public class gameLogic : MonoBehaviour
     public float rotateTimer = 1f;
     public Quaternion startRotation;
 
+    public string[] numbers;
+    public Color[] sortColor;
+    public Sprite[] suits;
+    public Sprite[] highCardIMG;
+    public Paterns[] paterns;
+
+    public Text[] numberOnCard = new Text[2];
+    public Image[] imgOnCard = new Image[11];
+    public Image[] sortOnCard = new Image[2];
     AudioSource source;
 
     int[] chooesnCardIndex;
@@ -57,15 +72,12 @@ public class gameLogic : MonoBehaviour
     float levelChangeTimer = 2;
     float fadeTimer = 0;
 
-    // Use this for initialization
     void Start()
     {
         chooesnCardIndex = new int[deck.Length];
         source = GetComponent<AudioSource>();
         cardChecker = GameObject.FindGameObjectWithTag("Card");
     }
-
-    // Update is called once per frame
     public void FindAndCallTheNextCard()
     {
         if (cardCounter == deck.Length) //Þegar búnkinn er búinn þá er alltaf kallað return og kallað á fall sem fer aftur í mainmenu
@@ -96,11 +108,35 @@ public class gameLogic : MonoBehaviour
         source.pitch = source.clip.length / rotateTimer;
         StartCoroutine(RotateCard(deck[randomNumber].cardGFX));
 
-
     }
     void BackToMainMenu()
     {
         Application.LoadLevel(0);
+    }
+    void UpdateCardGFX(deck card)
+    {
+        foreach(Image img in imgOnCard)
+        {
+            img.gameObject.SetActive(false);
+        }
+        if(card.suit == Suit.heart)
+        {
+
+        }
+        else if (card.suit == Suit.spade)
+        {
+
+        }
+        else if (card.suit == Suit.dimond)
+        {
+
+        }
+        else if (card.suit == Suit.clubs)
+        {
+
+        }
+
+
     }
     IEnumerator RotateCard(Sprite drawnCard)
     {

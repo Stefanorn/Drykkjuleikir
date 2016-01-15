@@ -63,6 +63,7 @@ public class gameLogic : MonoBehaviour
 
     public Text[] numberOnCard = new Text[2];
     public Image[] imgOnCard = new Image[11];
+    public Image higCardImageOnCard;
     public Image[] sortOnCard = new Image[2];
     AudioSource source;
 
@@ -74,7 +75,10 @@ public class gameLogic : MonoBehaviour
 
     void Start()
     {
-        chooesnCardIndex = new int[deck.Length];
+        SetImgOnCardDisabled(true);
+    
+
+            chooesnCardIndex = new int[deck.Length];
         source = GetComponent<AudioSource>();
         cardChecker = GameObject.FindGameObjectWithTag("Card");
     }
@@ -106,6 +110,7 @@ public class gameLogic : MonoBehaviour
         source.volume = Random.Range(0.5f, 1f); // Gefur hljóði smá random í vol
         source.Play(); // Spilar hljóð
         source.pitch = source.clip.length / rotateTimer;
+        UpdateCardGFX(deck[randomNumber]);
         StartCoroutine(RotateCard(deck[randomNumber].cardGFX));
 
     }
@@ -115,29 +120,258 @@ public class gameLogic : MonoBehaviour
     }
     void UpdateCardGFX(deck card)
     {
-        foreach(Image img in imgOnCard)
+        SetImgOnCardDisabled(false);
+
+        UpdateSuit(card);
+        UpdateNumber(card);
+        if (card.card == Card.ace ||
+            card.card == Card.jack ||
+            card.card == Card.queen ||
+            card.card == Card.king)
+        {
+            UpdateHighCardIMG(card);
+        }
+        else
+        {
+
+        }
+
+    }
+    void SetImgOnCardDisabled( bool everything )
+    {
+        foreach (Image img in imgOnCard)
         {
             img.gameObject.SetActive(false);
         }
-        if(card.suit == Suit.heart)
-        {
+        higCardImageOnCard.gameObject.SetActive(false);
 
+        if (everything)
+        {
+            foreach( Text num in numberOnCard)
+            {
+                num.gameObject.SetActive(false);
+            }
+            foreach(Image suit in sortOnCard)
+            {
+                suit.gameObject.SetActive(false);
+            }
+        }
+    }
+
+    private void UpdateHighCardIMG(deck card)
+    {
+        if (card.card == Card.ace)
+        {
+            higCardImageOnCard.gameObject.SetActive(true);
+            if (card.suit == Suit.clubs)
+            {
+                higCardImageOnCard.sprite = highCardIMG[1];
+            }
+            else if (card.suit == Suit.dimond)
+            {
+                higCardImageOnCard.sprite = highCardIMG[2];
+            }
+            else if (card.suit == Suit.spade)
+            {
+                higCardImageOnCard.sprite = highCardIMG[0];
+            }
+            else if (card.suit == Suit.heart)
+            {
+                higCardImageOnCard.sprite = highCardIMG[3];
+            }
+        }
+        else if (card.card == Card.jack)
+        {
+            higCardImageOnCard.gameObject.SetActive(true);
+            if (card.suit == Suit.clubs)
+            {
+                higCardImageOnCard.sprite = highCardIMG[5];
+            }
+            else if (card.suit == Suit.dimond)
+            {
+                higCardImageOnCard.sprite = highCardIMG[8];
+            }
+            else if (card.suit == Suit.spade)
+            {
+                higCardImageOnCard.sprite = highCardIMG[7];
+            }
+            else if (card.suit == Suit.heart)
+            {
+                higCardImageOnCard.sprite = highCardIMG[6];
+            }
+        }
+        else if (card.card == Card.queen)
+        {
+            higCardImageOnCard.gameObject.SetActive(true);
+            if (card.suit == Suit.clubs)
+            {
+                higCardImageOnCard.sprite = highCardIMG[10];
+            }
+            else if (card.suit == Suit.dimond)
+            {
+                higCardImageOnCard.sprite = highCardIMG[11];
+            }
+            else if (card.suit == Suit.spade)
+            {
+                higCardImageOnCard.sprite = highCardIMG[13];
+            }
+            else if (card.suit == Suit.heart)
+            {
+                higCardImageOnCard.sprite = highCardIMG[12];
+            }
+        }
+        else if (card.card == Card.king)
+        {
+            higCardImageOnCard.gameObject.SetActive(true);
+            if (card.suit == Suit.clubs)
+            {
+                higCardImageOnCard.sprite = highCardIMG[14];
+            }
+            else if (card.suit == Suit.dimond)
+            {
+                higCardImageOnCard.sprite = highCardIMG[15];
+            }
+            else if (card.suit == Suit.spade)
+            {
+                higCardImageOnCard.sprite = highCardIMG[4];
+            }
+            else if (card.suit == Suit.heart)
+            {
+                higCardImageOnCard.sprite = highCardIMG[9];
+            }
+        }
+    }
+    private void UpdateNumber(deck card)
+    {
+        if (card.card == Card.ace)
+        {
+            foreach (Text number in numberOnCard)
+            {
+                number.text = "A";
+            }
+        }
+        else if (card.card == Card.two)
+        {
+            foreach (Text number in numberOnCard)
+            {
+                number.text = "2";
+            }
+        }
+        else if (card.card == Card.three)
+        {
+            foreach (Text number in numberOnCard)
+            {
+                number.text = "3";
+            }
+        }
+        else if (card.card == Card.four)
+        {
+            foreach (Text number in numberOnCard)
+            {
+                number.text = "4";
+            }
+        }
+        else if (card.card == Card.five)
+        {
+            foreach (Text number in numberOnCard)
+            {
+                number.text = "5";
+            }
+        }
+        else if (card.card == Card.six)
+        {
+            foreach (Text number in numberOnCard)
+            {
+                number.text = "6";
+            }
+        }
+        else if (card.card == Card.seven)
+        {
+            foreach (Text number in numberOnCard)
+            {
+                number.text = "7";
+            }
+        }
+        else if (card.card == Card.eight)
+        {
+            foreach (Text number in numberOnCard)
+            {
+                number.text = "8";
+            }
+        }
+        else if (card.card == Card.nine)
+        {
+            foreach (Text number in numberOnCard)
+            {
+                number.text = "9";
+            }
+        }
+        else if (card.card == Card.ten)
+        {
+            foreach (Text number in numberOnCard)
+            {
+                number.text = "10";
+            }
+        }
+        else if (card.card == Card.jack)
+        {
+            foreach (Text number in numberOnCard)
+            {
+                number.text = "G";
+            }
+        }
+        else if (card.card == Card.queen)
+        {
+            foreach (Text number in numberOnCard)
+            {
+                number.text = "Q";
+            }
+        }
+        else if (card.card == Card.king)
+        {
+            foreach (Text number in numberOnCard)
+            {
+                number.text = "K";
+            }
+        }
+    }
+    private void UpdateSuit(deck card)
+    {
+        foreach (Image img in imgOnCard)
+        {
+            img.gameObject.SetActive(false);
+        }
+
+        if (card.suit == Suit.heart)
+        {
+            foreach (Image sort in sortOnCard)
+            {
+                sort.sprite = suits[3];
+            }
         }
         else if (card.suit == Suit.spade)
         {
-
+            foreach (Image sort in sortOnCard)
+            {
+                sort.sprite = suits[0];
+            }
         }
         else if (card.suit == Suit.dimond)
         {
-
+            foreach (Image sort in sortOnCard)
+            {
+                sort.sprite = suits[2];
+            }
         }
         else if (card.suit == Suit.clubs)
         {
-
+            foreach (Image sort in sortOnCard)
+            {
+                sort.sprite = suits[1];
+            }
         }
-
-
     }
+
     IEnumerator RotateCard(Sprite drawnCard)
     {
         float timer = 0;

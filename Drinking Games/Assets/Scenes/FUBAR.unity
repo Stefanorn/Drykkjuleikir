@@ -1551,6 +1551,7 @@ GameObject:
   - 4: {fileID: 1728375648}
   - 114: {fileID: 1728375647}
   - 82: {fileID: 1728375649}
+  - 114: {fileID: 1728375650}
   m_Layer: 0
   m_Name: GameLogic
   m_TagString: GameController
@@ -1872,45 +1873,7 @@ MonoBehaviour:
   backCover: {fileID: 21300000, guid: c6c4cbf002885064186af76302ffc52e, type: 3}
   rotateTimer: 0.2
   startRotation: {x: 0, y: 90, z: 0, w: 0}
-  numbers:
-  - A
-  - 2
-  - 3
-  - 4
-  - 5
-  - 6
-  - 7
-  - 8
-  - 9
-  - 10
-  - G
-  - D
-  - K
-  sortColor:
-  - {r: 1, g: 0, b: 0, a: 0}
-  - {r: 0, g: 0, b: 0, a: 0}
-  suits:
-  - {fileID: 21300008, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
-  - {fileID: 21300010, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
-  - {fileID: 21300012, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
-  - {fileID: 21300014, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
-  highCardIMG:
-  - {fileID: 21300000, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
-  - {fileID: 21300002, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
-  - {fileID: 21300004, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
-  - {fileID: 21300006, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
-  - {fileID: 21300016, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
-  - {fileID: 21300018, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
-  - {fileID: 21300020, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
-  - {fileID: 21300022, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
-  - {fileID: 21300024, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
-  - {fileID: 21300026, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
-  - {fileID: 21300028, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
-  - {fileID: 21300030, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
-  - {fileID: 21300032, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
-  - {fileID: 21300034, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
-  - {fileID: 21300036, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
-  - {fileID: 21300088, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
+  cardIMG: {fileID: 0}
   paterns: []
   numberOnCard:
   - {fileID: 1736563484}
@@ -2016,6 +1979,40 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1728375650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1728375646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e02d359b0b35ef7469b845a79510e9db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backImage: {fileID: 21300000, guid: cc4cd9e50599c1e4daa5b4007159de83, type: 3}
+  reverseBackImage: {fileID: 21300000, guid: c6c4cbf002885064186af76302ffc52e, type: 3}
+  jocker: {fileID: 0}
+  aceSpade: {fileID: 21300000, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
+  aceClubs: {fileID: 21300002, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
+  aceHeart: {fileID: 21300006, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
+  aceDimond: {fileID: 21300004, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
+  jackSpade: {fileID: 21300022, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
+  jackClubs: {fileID: 21300018, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
+  jackHeart: {fileID: 21300020, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
+  jackDimond: {fileID: 21300024, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
+  queenSpade: {fileID: 21300034, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
+  queenClubs: {fileID: 21300028, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
+  queenHeart: {fileID: 21300032, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
+  queenDimond: {fileID: 21300030, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
+  kingSpade: {fileID: 21300016, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
+  kingClubs: {fileID: 21300036, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
+  kingHeart: {fileID: 21300026, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
+  kingDimond: {fileID: 21300088, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
+  spade: {fileID: 21300008, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
+  clubs: {fileID: 21300010, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
+  heart: {fileID: 21300014, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
+  dimond: {fileID: 21300012, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
 --- !u!1 &1736563482
 GameObject:
   m_ObjectHideFlags: 0

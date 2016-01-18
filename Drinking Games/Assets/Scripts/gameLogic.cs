@@ -55,10 +55,7 @@ public class gameLogic : MonoBehaviour
     public float rotateTimer = 1f;
     public Quaternion startRotation;
 
-    public string[] numbers;
-    public Color[] sortColor;
-    public Sprite[] suits;
-    public Sprite[] highCardIMG;
+    public RefrensToCardImages cardIMG;
     public Paterns[] paterns;
 
     public Text[] numberOnCard = new Text[2];
@@ -76,9 +73,9 @@ public class gameLogic : MonoBehaviour
     void Start()
     {
         SetImgOnCardDisabled(true);
-    
+        cardIMG = this.GetComponent<RefrensToCardImages>();
 
-            chooesnCardIndex = new int[deck.Length];
+        chooesnCardIndex = new int[deck.Length];
         source = GetComponent<AudioSource>();
         cardChecker = GameObject.FindGameObjectWithTag("Card");
     }
@@ -133,11 +130,11 @@ public class gameLogic : MonoBehaviour
         }
         else
         {
-
+            //lágstpil partern og shit
         }
 
     }
-    void SetImgOnCardDisabled( bool everything )
+    void SetImgOnCardDisabled(bool everything)
     {
         foreach (Image img in imgOnCard)
         {
@@ -147,11 +144,11 @@ public class gameLogic : MonoBehaviour
 
         if (everything)
         {
-            foreach( Text num in numberOnCard)
+            foreach (Text num in numberOnCard)
             {
                 num.gameObject.SetActive(false);
             }
-            foreach(Image suit in sortOnCard)
+            foreach (Image suit in sortOnCard)
             {
                 suit.gameObject.SetActive(false);
             }
@@ -165,19 +162,19 @@ public class gameLogic : MonoBehaviour
             higCardImageOnCard.gameObject.SetActive(true);
             if (card.suit == Suit.clubs)
             {
-                higCardImageOnCard.sprite = highCardIMG[1];
+                higCardImageOnCard.sprite = cardIMG.aceSpade;
             }
             else if (card.suit == Suit.dimond)
             {
-                higCardImageOnCard.sprite = highCardIMG[2];
+                higCardImageOnCard.sprite = cardIMG.aceDimond;
             }
             else if (card.suit == Suit.spade)
             {
-                higCardImageOnCard.sprite = highCardIMG[0];
+                higCardImageOnCard.sprite = cardIMG.aceSpade;
             }
             else if (card.suit == Suit.heart)
             {
-                higCardImageOnCard.sprite = highCardIMG[3];
+                higCardImageOnCard.sprite = cardIMG.aceHeart;
             }
         }
         else if (card.card == Card.jack)
@@ -185,19 +182,19 @@ public class gameLogic : MonoBehaviour
             higCardImageOnCard.gameObject.SetActive(true);
             if (card.suit == Suit.clubs)
             {
-                higCardImageOnCard.sprite = highCardIMG[5];
+                higCardImageOnCard.sprite = cardIMG.jackClubs;
             }
             else if (card.suit == Suit.dimond)
             {
-                higCardImageOnCard.sprite = highCardIMG[8];
+                higCardImageOnCard.sprite = cardIMG.jackDimond;
             }
             else if (card.suit == Suit.spade)
             {
-                higCardImageOnCard.sprite = highCardIMG[7];
+                higCardImageOnCard.sprite = cardIMG.jackSpade;
             }
             else if (card.suit == Suit.heart)
             {
-                higCardImageOnCard.sprite = highCardIMG[6];
+                higCardImageOnCard.sprite = cardIMG.jackHeart;
             }
         }
         else if (card.card == Card.queen)
@@ -205,19 +202,19 @@ public class gameLogic : MonoBehaviour
             higCardImageOnCard.gameObject.SetActive(true);
             if (card.suit == Suit.clubs)
             {
-                higCardImageOnCard.sprite = highCardIMG[10];
+                higCardImageOnCard.sprite = cardIMG.queenClubs;
             }
             else if (card.suit == Suit.dimond)
             {
-                higCardImageOnCard.sprite = highCardIMG[11];
+                higCardImageOnCard.sprite = cardIMG.queenDimond;
             }
             else if (card.suit == Suit.spade)
             {
-                higCardImageOnCard.sprite = highCardIMG[13];
+                higCardImageOnCard.sprite = cardIMG.queenSpade;
             }
             else if (card.suit == Suit.heart)
             {
-                higCardImageOnCard.sprite = highCardIMG[12];
+                higCardImageOnCard.sprite = cardIMG.queenHeart;
             }
         }
         else if (card.card == Card.king)
@@ -225,111 +222,78 @@ public class gameLogic : MonoBehaviour
             higCardImageOnCard.gameObject.SetActive(true);
             if (card.suit == Suit.clubs)
             {
-                higCardImageOnCard.sprite = highCardIMG[14];
+                higCardImageOnCard.sprite = cardIMG.kingClubs;
             }
             else if (card.suit == Suit.dimond)
             {
-                higCardImageOnCard.sprite = highCardIMG[15];
+                higCardImageOnCard.sprite = cardIMG.kingDimond;
             }
             else if (card.suit == Suit.spade)
             {
-                higCardImageOnCard.sprite = highCardIMG[4];
+                higCardImageOnCard.sprite = cardIMG.kingSpade;
             }
             else if (card.suit == Suit.heart)
             {
-                higCardImageOnCard.sprite = highCardIMG[9];
+                higCardImageOnCard.sprite = cardIMG.kingHeart;
             }
         }
     }
     private void UpdateNumber(deck card)
     {
-        if (card.card == Card.ace)
+        foreach (Text number in numberOnCard)
         {
-            foreach (Text number in numberOnCard)
+            number.gameObject.SetActive(true); //þarf ekki að vera kallað í hvert sinn
+
+            if (card.card == Card.ace)
             {
                 number.text = "A";
             }
-        }
-        else if (card.card == Card.two)
-        {
-            foreach (Text number in numberOnCard)
+            else if (card.card == Card.two)
             {
                 number.text = "2";
             }
-        }
-        else if (card.card == Card.three)
-        {
-            foreach (Text number in numberOnCard)
+            else if (card.card == Card.three)
             {
                 number.text = "3";
+
             }
-        }
-        else if (card.card == Card.four)
-        {
-            foreach (Text number in numberOnCard)
+            else if (card.card == Card.four)
             {
                 number.text = "4";
             }
-        }
-        else if (card.card == Card.five)
-        {
-            foreach (Text number in numberOnCard)
+            else if (card.card == Card.five)
             {
                 number.text = "5";
             }
-        }
-        else if (card.card == Card.six)
-        {
-            foreach (Text number in numberOnCard)
+            else if (card.card == Card.six)
             {
                 number.text = "6";
             }
-        }
-        else if (card.card == Card.seven)
-        {
-            foreach (Text number in numberOnCard)
+            else if (card.card == Card.seven)
             {
                 number.text = "7";
             }
-        }
-        else if (card.card == Card.eight)
-        {
-            foreach (Text number in numberOnCard)
+            else if (card.card == Card.eight)
             {
                 number.text = "8";
             }
-        }
-        else if (card.card == Card.nine)
-        {
-            foreach (Text number in numberOnCard)
+            else if (card.card == Card.nine)
             {
                 number.text = "9";
             }
-        }
-        else if (card.card == Card.ten)
-        {
-            foreach (Text number in numberOnCard)
+            else if (card.card == Card.ten)
             {
                 number.text = "10";
             }
-        }
-        else if (card.card == Card.jack)
-        {
-            foreach (Text number in numberOnCard)
+            else if (card.card == Card.jack)
             {
                 number.text = "G";
             }
-        }
-        else if (card.card == Card.queen)
-        {
-            foreach (Text number in numberOnCard)
+            else if (card.card == Card.queen)
             {
                 number.text = "Q";
             }
-        }
-        else if (card.card == Card.king)
-        {
-            foreach (Text number in numberOnCard)
+            else if (card.card == Card.king)
             {
                 number.text = "K";
             }
@@ -337,37 +301,25 @@ public class gameLogic : MonoBehaviour
     }
     private void UpdateSuit(deck card)
     {
-        foreach (Image img in imgOnCard)
-        {
-            img.gameObject.SetActive(false);
-        }
 
-        if (card.suit == Suit.heart)
+        foreach (Image sort in sortOnCard)
         {
-            foreach (Image sort in sortOnCard)
+            sort.gameObject.SetActive(true);
+            if (card.suit == Suit.heart)
             {
-                sort.sprite = suits[3];
+                sort.sprite = cardIMG.heart;
             }
-        }
-        else if (card.suit == Suit.spade)
-        {
-            foreach (Image sort in sortOnCard)
+            else if (card.suit == Suit.spade)
             {
-                sort.sprite = suits[0];
+                sort.sprite = cardIMG.spade;
             }
-        }
-        else if (card.suit == Suit.dimond)
-        {
-            foreach (Image sort in sortOnCard)
+            else if (card.suit == Suit.dimond)
             {
-                sort.sprite = suits[2];
+                sort.sprite = cardIMG.dimond;
             }
-        }
-        else if (card.suit == Suit.clubs)
-        {
-            foreach (Image sort in sortOnCard)
+            else if (card.suit == Suit.clubs)
             {
-                sort.sprite = suits[1];
+                sort.sprite = cardIMG.clubs;
             }
         }
     }

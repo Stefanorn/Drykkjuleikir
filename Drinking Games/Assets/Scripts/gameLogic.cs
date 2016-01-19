@@ -130,10 +130,77 @@ public class gameLogic : MonoBehaviour
         }
         else
         {
-            //lágstpil partern og shit
+            if (card.card == Card.two)
+            {
+                SetUpImgAndPatern(2);
+                UpdateSortImg(card);
+            }
+            else if (card.card == Card.three)
+            {
+                SetUpImgAndPatern(3);
+                UpdateSortImg(card);
+            }
+            else if (card.card == Card.four)
+            {
+                SetUpImgAndPatern(4);
+                UpdateSortImg(card);
+            }
+            else if (card.card == Card.five)
+            {
+                SetUpImgAndPatern(5);
+                UpdateSortImg(card);
+            }
+            else if (card.card == Card.six)
+            {
+                SetUpImgAndPatern(6);
+                UpdateSortImg(card);
+            }
+            else if (card.card == Card.seven)
+            {
+                SetUpImgAndPatern(7);
+                UpdateSortImg(card);
+            }
+            else if (card.card == Card.eight)
+            {
+                SetUpImgAndPatern(8);
+                UpdateSortImg(card);
+            }
+            else if (card.card == Card.nine)
+            {
+                SetUpImgAndPatern(9);
+                UpdateSortImg(card);
+            }
+            else if (card.card == Card.ten)
+            {
+                SetUpImgAndPatern(10);
+                UpdateSortImg(card);
+            }
         }
 
     }
+
+    private void SetUpImgAndPatern(int noOnCard)
+    {
+        for (int i = 0; i < noOnCard; i++)
+        {
+            imgOnCard[i].gameObject.SetActive(true);
+            
+        }
+
+        for (int i = 0; i < paterns.Length; i++)
+        {
+            if(paterns[i].CenterImgPos.Length == noOnCard)
+            {
+                
+                for (int u = 0; u < noOnCard; u++)
+                {
+                    imgOnCard[u].rectTransform.anchoredPosition = paterns[i].CenterImgPos[u];
+                }
+                break;
+            }
+        }
+    }
+
     void SetImgOnCardDisabled(bool everything)
     {
         foreach (Image img in imgOnCard)
@@ -299,6 +366,34 @@ public class gameLogic : MonoBehaviour
             }
         }
     }
+
+    private void UpdateSortImg(deck card)
+    {
+
+        foreach (Image sort in imgOnCard)
+        {
+            if (sort.IsActive())
+            {
+                sort.gameObject.SetActive(true);
+                if (card.suit == Suit.heart)
+                {
+                    sort.sprite = cardIMG.heart;
+                }
+                else if (card.suit == Suit.spade)
+                {
+                    sort.sprite = cardIMG.spade;
+                }
+                else if (card.suit == Suit.dimond)
+                {
+                    sort.sprite = cardIMG.dimond;
+                }
+                else if (card.suit == Suit.clubs)
+                {
+                    sort.sprite = cardIMG.clubs;
+                }
+            }
+        }
+    }
     private void UpdateSuit(deck card)
     {
 
@@ -333,7 +428,7 @@ public class gameLogic : MonoBehaviour
             cardChecker.transform.rotation = Quaternion.Lerp(orgRotation, Quaternion.Euler(0, 0, 0), timer / rotateTimer);
             if (timer / rotateTimer >= 0.5)
             {
-                cardImage.sprite = drawnCard;
+                //cardImage.sprite = drawnCard;
             }
             timer += Time.deltaTime;
             yield return new WaitForFixedUpdate();

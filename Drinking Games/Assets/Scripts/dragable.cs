@@ -61,7 +61,7 @@ public class dragable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
                 StartCoroutine(SmoothAnimation(offScreenPos));
                 if (!IsInvoking("Delay"))
                 {
-                    Invoke("Delay", animTime);
+                    Invoke("Delay", animTime + 0.1f);
                 }
             }
 

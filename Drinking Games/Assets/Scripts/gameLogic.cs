@@ -55,7 +55,7 @@ public class gameLogic : MonoBehaviour
     public float rotateTimer = 1f;
     public Quaternion startRotation;
 
-    public RefrensToCardImages cardIMG;
+    private RefrensToCardImages cardIMG;
     public Paterns[] paterns;
 
     public Text[] numberOnCard = new Text[2];
@@ -98,7 +98,7 @@ public class gameLogic : MonoBehaviour
         chooesnCardIndex[cardCounter] = randomNumber;
         cardCounter++;
 
-        cardImage.sprite = backCover; //Stillir spritin á back cover þannig þegar card fer aftur á byrjunar reit og snýst þá er eins og það snúi öfugt
+        cardImage.sprite = cardIMG.reverseBackImage; //Stillir spritin á back cover þannig þegar card fer aftur á byrjunar reit og snýst þá er eins og það snúi öfugt
                                       // cardImage.tag = "Card";
         rule.text = deck[randomNumber].cardRule; //velur næstu reglu
         StartCoroutine(TextEffects.FadeText(rule, 0.5f)); // feidar inn regluna
@@ -108,7 +108,7 @@ public class gameLogic : MonoBehaviour
         source.Play(); // Spilar hljóð
         source.pitch = source.clip.length / rotateTimer;
         UpdateCardGFX(deck[randomNumber]);
-        StartCoroutine(RotateCard(deck[randomNumber].cardGFX));
+        StartCoroutine(RotateCard(deck[randomNumber]));
 
     }
     void BackToMainMenu()
@@ -366,7 +366,6 @@ public class gameLogic : MonoBehaviour
             }
         }
     }
-
     private void UpdateSortImg(deck card)
     {
 
@@ -419,16 +418,25 @@ public class gameLogic : MonoBehaviour
         }
     }
 
-    IEnumerator RotateCard(Sprite drawnCard)
+    IEnumerator RotateCard(deck drawnCard)
     {
+        SetImgOnCardDisabled(true);
         float timer = 0;
         Quaternion orgRotation = cardChecker.transform.rotation;
+        bool cardHasBeenUpdated = true;
         while (timer < rotateTimer)
         {
             cardChecker.transform.rotation = Quaternion.Lerp(orgRotation, Quaternion.Euler(0, 0, 0), timer / rotateTimer);
+
             if (timer / rotateTimer >= 0.5)
             {
-                //cardImage.sprite = drawnCard;
+                if (cardHasBeenUpdated)
+                {
+                    cardImage.sprite = cardIMG.blankCard;
+                    UpdateCardGFX(drawnCard);
+                    cardHasBeenUpdated = false;
+                    
+                }
             }
             timer += Time.deltaTime;
             yield return new WaitForFixedUpdate();

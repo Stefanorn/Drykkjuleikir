@@ -7,6 +7,7 @@ public class RefrensToCardImages : MonoBehaviour
     public Sprite backImage;
     public Sprite reverseBackImage;
     public Sprite jocker;
+    public Sprite blankCard;
 
     public Sprite aceSpade;
     public Sprite aceClubs;

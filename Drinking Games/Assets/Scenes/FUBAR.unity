@@ -1011,7 +1011,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 68cb6ba5d88cdbc43b06f9e666a64809, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cc4cd9e50599c1e4daa5b4007159de83, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1873,7 +1873,6 @@ MonoBehaviour:
   backCover: {fileID: 21300000, guid: c6c4cbf002885064186af76302ffc52e, type: 3}
   rotateTimer: 0.2
   startRotation: {x: 0, y: 90, z: 0, w: 0}
-  cardIMG: {fileID: 0}
   paterns:
   - name: Tvistur
     CenterImgPos:
@@ -2065,6 +2064,7 @@ MonoBehaviour:
   backImage: {fileID: 21300000, guid: cc4cd9e50599c1e4daa5b4007159de83, type: 3}
   reverseBackImage: {fileID: 21300000, guid: c6c4cbf002885064186af76302ffc52e, type: 3}
   jocker: {fileID: 0}
+  blankCard: {fileID: 21300000, guid: 68cb6ba5d88cdbc43b06f9e666a64809, type: 3}
   aceSpade: {fileID: 21300000, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
   aceClubs: {fileID: 21300002, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}
   aceHeart: {fileID: 21300006, guid: 76d873f857a808a4e8db755d43bcce73, type: 3}

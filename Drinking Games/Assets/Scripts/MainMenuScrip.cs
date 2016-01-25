@@ -36,7 +36,6 @@ public class MainMenuScrip : MonoBehaviour
         {
             while (timer < FadeTimer)
             {
-                Debug.Log(offsetPosition * timer / FadeTimer);
                 thing.GetComponent<RectTransform>().position = new Vector3( thing.GetComponent<RectTransform>().position.x - offsetPosition * timer / FadeTimer,
                                                                             thing.GetComponent<RectTransform>().position.y,
                                                                             thing.GetComponent<RectTransform>().position.z);

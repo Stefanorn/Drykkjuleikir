@@ -10,16 +10,25 @@ public class MainMenuScrip : MonoBehaviour
     float FadeTimer = 0.5f;
     float offsetPosition = 8f;
 
+
+
     private UIBehaviour[] thingsInCanvas;
+    private Animation anim;
     void Start()
     {
-
         thingsInCanvas = FindThingsInCanvas();
-
-        foreach (UIBehaviour thing in thingsInCanvas)
+        if(GameObject.FindGameObjectWithTag("SceneAnimator") != null)
         {
-            TurnAlphaToZero(thing);
-            StartCoroutine(FadeIn(thing));
+            anim = GameObject.FindGameObjectWithTag("SceneAnimator").GetComponent<Animation>();
+            anim.Play("4colorScrollDownPart2");
+        }
+        else
+        {
+            foreach (UIBehaviour thing in thingsInCanvas)
+            {
+                TurnAlphaToZero(thing);
+                StartCoroutine(FadeIn(thing));
+            }
         }
     }
 
@@ -31,12 +40,12 @@ public class MainMenuScrip : MonoBehaviour
         yield return null;
 
         float timer = 0f;
-        
+
         if (thing.GetComponent<Button>() != null)
         {
             while (timer < FadeTimer)
             {
-                thing.GetComponent<RectTransform>().position = new Vector3( thing.GetComponent<RectTransform>().position.x - offsetPosition * timer / FadeTimer,
+                thing.GetComponent<RectTransform>().position = new Vector3(thing.GetComponent<RectTransform>().position.x - offsetPosition * timer / FadeTimer,
                                                                             thing.GetComponent<RectTransform>().position.y,
                                                                             thing.GetComponent<RectTransform>().position.z);
                 timer += Time.deltaTime;
@@ -44,7 +53,7 @@ public class MainMenuScrip : MonoBehaviour
             }
         }
 
-         yield return null; 
+        yield return null;
     }
     private void TurnAlphaToZero(UIBehaviour thing)
     {
@@ -76,15 +85,29 @@ public class MainMenuScrip : MonoBehaviour
             StartCoroutine(findOffsetPositon(thing));
             StartCoroutine(FadeOut(thing));
         }
-        StartCoroutine(LoadLevel(LevelName));
+        StartCoroutine(LoadLevel(LevelName, FadeTimer));
     }
+    public void PlayAnimationOnLoad(string LevelName)
+    {
+        if (anim != null)
+        {
+        anim.Play("4colorScrollDownPart1");
+        StartCoroutine(LoadLevel(LevelName, anim.clip.length));
+        }
+        else
+        {
+            FadeGameObjectAndLoad(LevelName);
+        }
+
+    }
+
     public UIBehaviour[] FindThingsInCanvas()
     {
         GameObject canvas = GameObject.Find("Canvas");
         UIBehaviour[] canvasChildrens = canvas.GetComponentsInChildren<UIBehaviour>();
         return canvasChildrens;
     }
-    IEnumerator FadeOut(UIBehaviour thingToFade) 
+    IEnumerator FadeOut(UIBehaviour thingToFade)
     {
         float timer = FadeTimer;
 
@@ -144,9 +167,9 @@ public class MainMenuScrip : MonoBehaviour
         }
         yield return null;
     }
-    IEnumerator LoadLevel(string levelName)
+    IEnumerator LoadLevel(string levelName, float timer)
     {
-        yield return new WaitForSeconds(FadeTimer);
+        yield return new WaitForSeconds(timer);
         Application.LoadLevel(levelName);
     }
 }

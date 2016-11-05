@@ -93,10 +93,11 @@ Animation:
   m_GameObject: {fileID: 123172}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 0c05ae804ceeefe48bf495ebfb40142d, type: 2}
+  m_Animation: {fileID: 7400000, guid: 1cecf061f97b46c408c1ca4d927a9cba, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 0c05ae804ceeefe48bf495ebfb40142d, type: 2}
   - {fileID: 7400000, guid: 990c95a0145d86f41ad70870f3075fb4, type: 2}
+  - {fileID: 7400000, guid: 1cecf061f97b46c408c1ca4d927a9cba, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -272,11 +273,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 22405854}
   m_RootOrder: 1
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0.000030517578}
-  m_SizeDelta: {x: 537, y: 0}
-  m_Pivot: {x: 0, y: 1}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22427344
 RectTransform:
   m_ObjectHideFlags: 1
@@ -289,11 +290,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 22405854}
   m_RootOrder: 3
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 537, y: 0}
-  m_Pivot: {x: 0, y: 1}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22445614
 RectTransform:
   m_ObjectHideFlags: 1
@@ -306,11 +307,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 22405854}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 537, y: 0}
-  m_Pivot: {x: 0, y: 1}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22478896
 RectTransform:
   m_ObjectHideFlags: 1
@@ -323,11 +324,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 22405854}
   m_RootOrder: 2
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 537, y: 0}
-  m_Pivot: {x: 0, y: 1}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

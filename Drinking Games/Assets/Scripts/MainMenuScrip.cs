@@ -20,7 +20,7 @@ public class MainMenuScrip : MonoBehaviour
         if(GameObject.FindGameObjectWithTag("SceneAnimator") != null)
         {
             anim = GameObject.FindGameObjectWithTag("SceneAnimator").GetComponent<Animation>();
-            anim.Play("4colorScrollDownPart2");
+            anim.Play("4ColorScrollDown");
         }
         else
         {

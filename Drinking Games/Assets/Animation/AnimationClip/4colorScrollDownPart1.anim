@@ -20,44 +20,129 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 0
-        inSlope: -761.3055
-        outSlope: -761.3055
+        value: -1034
+        inSlope: 1888.8805
+        outSlope: 1888.8805
+        tangentMode: 10
+      - time: 0.7
+        value: 288.21634
+        inSlope: -925.16797
+        outSlope: -925.16797
         tangentMode: 0
-      - time: 0.33333334
-        value: 404.50006
-        inSlope: 2063.9873
-        outSlope: 2063.9873
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_AnchoredPosition.y
+    path: AnimatedFXIMG4
+    classID: 224
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -698
+        inSlope: 1884.2858
+        outSlope: 1884.2858
+        tangentMode: 10
+      - time: 0.7
+        value: 621
+        inSlope: -1014.5464
+        outSlope: -1014.5464
         tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_SizeDelta.y
+    path: AnimatedFXIMG4
+    classID: 224
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 19
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_SizeDelta.x
+    path: AnimatedFXIMG4
+    classID: 224
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -724
+        inSlope: 2241.6665
+        outSlope: 2241.6665
+        tangentMode: 10
+      - time: 0.6
+        value: 621
+        inSlope: -1423.575
+        outSlope: -1423.575
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_SizeDelta.y
+    path: AnimatedFXIMG3
+    classID: 224
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 19
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.6
+        value: 19
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_SizeDelta.x
+    path: AnimatedFXIMG3
+    classID: 224
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -1058.3218
+        inSlope: 2247.2603
+        outSlope: 2247.2603
+        tangentMode: 10
+      - time: 0.6
+        value: 290.03445
+        inSlope: -1219.5874
+        outSlope: -1219.5874
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_AnchoredPosition.y
+    path: AnimatedFXIMG3
+    classID: 224
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -698
+        inSlope: 2630
+        outSlope: 2630
+        tangentMode: 10
       - time: 0.5
-        value: 1023.9702
-        inSlope: 3334.869
-        outSlope: 3334.869
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_SizeDelta.y
-    path: AnimatedFXIMG1
-    classID: 224
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0.06666667
-        value: -13.375366
-        inSlope: 444.4691
-        outSlope: 444.4691
-        tangentMode: 0
-      - time: 0.76666665
-        value: 340.5712
-        inSlope: 1520.1569
-        outSlope: 1520.1569
-        tangentMode: 0
-      - time: 1
-        value: 1010.62463
-        inSlope: 1554.17
-        outSlope: 1554.17
+        value: 617
+        inSlope: -1510.484
+        outSlope: -1510.484
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -70,80 +155,35 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 0
-        inSlope: -276.43375
-        outSlope: -276.43375
-        tangentMode: 10
-      - time: 0.46666667
-        value: -129.00241
-        inSlope: 151.28194
-        outSlope: 151.28194
-        tangentMode: 10
-      - time: 1.1333333
-        value: 256.99597
-        inSlope: 386.11612
-        outSlope: 386.11612
-        tangentMode: 0
-      - time: 1.5
-        value: 1024
-        inSlope: 2091.829
-        outSlope: 2091.829
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_SizeDelta.y
-    path: AnimatedFXIMG3
-    classID: 224
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
+        value: 19
         inSlope: 0
         outSlope: 0
         tangentMode: 10
-      - time: 1.0666667
-        value: 0
-        inSlope: 590.7693
-        outSlope: 590.7693
-        tangentMode: 10
-      - time: 1.9333333
-        value: 1024
-        inSlope: 1181.5386
-        outSlope: 1181.5386
+      - time: 0.5
+        value: 19
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_SizeDelta.y
-    path: AnimatedFXIMG4
+    attribute: m_SizeDelta.x
+    path: AnimatedFXIMG2
     classID: 224
     script: {fileID: 0}
   - curve:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: -12.442124
-        inSlope: -35.149876
-        outSlope: -35.149876
+        value: -1034
+        inSlope: 2650.1377
+        outSlope: 2650.1377
         tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_AnchoredPosition.y
-    path: AnimatedFXIMG1
-    classID: 224
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0.000030517578
-        inSlope: -0.00013078962
-        outSlope: -0.00013078962
-        tangentMode: 10
+      - time: 0.5
+        value: 291.0689
+        inSlope: -1359.9186
+        outSlope: -1359.9186
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -155,30 +195,40 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
+        value: -776
+        inSlope: 4206
+        outSlope: 4206
         tangentMode: 10
+      - time: 0.33333334
+        value: 626
+        inSlope: -1529.7902
+        outSlope: -1529.7902
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_AnchoredPosition.y
-    path: AnimatedFXIMG3
+    attribute: m_SizeDelta.y
+    path: AnimatedFXIMG1
     classID: 224
     script: {fileID: 0}
   - curve:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 0
-        inSlope: 46.982685
-        outSlope: 46.982685
+        value: -1112
+        inSlope: 4206
+        outSlope: 4206
         tangentMode: 10
+      - time: 0.33333334
+        value: 290
+        inSlope: -1898.5693
+        outSlope: -1898.5693
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_AnchoredPosition.y
-    path: AnimatedFXIMG4
+    path: AnimatedFXIMG1
     classID: 224
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -195,7 +245,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.9333333
+    m_StopTime: 0.7
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -215,44 +265,129 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 0
-        inSlope: -761.3055
-        outSlope: -761.3055
+        value: -1034
+        inSlope: 1888.8805
+        outSlope: 1888.8805
+        tangentMode: 10
+      - time: 0.7
+        value: 288.21634
+        inSlope: -925.16797
+        outSlope: -925.16797
         tangentMode: 0
-      - time: 0.33333334
-        value: 404.50006
-        inSlope: 2063.9873
-        outSlope: 2063.9873
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_AnchoredPosition.y
+    path: AnimatedFXIMG4
+    classID: 224
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -698
+        inSlope: 1884.2858
+        outSlope: 1884.2858
+        tangentMode: 10
+      - time: 0.7
+        value: 621
+        inSlope: -1014.5464
+        outSlope: -1014.5464
         tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_SizeDelta.y
+    path: AnimatedFXIMG4
+    classID: 224
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 19
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_SizeDelta.x
+    path: AnimatedFXIMG4
+    classID: 224
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -724
+        inSlope: 2241.6665
+        outSlope: 2241.6665
+        tangentMode: 10
+      - time: 0.6
+        value: 621
+        inSlope: -1423.575
+        outSlope: -1423.575
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_SizeDelta.y
+    path: AnimatedFXIMG3
+    classID: 224
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 19
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.6
+        value: 19
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_SizeDelta.x
+    path: AnimatedFXIMG3
+    classID: 224
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -1058.3218
+        inSlope: 2247.2603
+        outSlope: 2247.2603
+        tangentMode: 10
+      - time: 0.6
+        value: 290.03445
+        inSlope: -1219.5874
+        outSlope: -1219.5874
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_AnchoredPosition.y
+    path: AnimatedFXIMG3
+    classID: 224
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -698
+        inSlope: 2630
+        outSlope: 2630
+        tangentMode: 10
       - time: 0.5
-        value: 1023.9702
-        inSlope: 3334.869
-        outSlope: 3334.869
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_SizeDelta.y
-    path: AnimatedFXIMG1
-    classID: 224
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0.06666667
-        value: -13.375366
-        inSlope: 444.4691
-        outSlope: 444.4691
-        tangentMode: 0
-      - time: 0.76666665
-        value: 340.5712
-        inSlope: 1520.1569
-        outSlope: 1520.1569
-        tangentMode: 0
-      - time: 1
-        value: 1010.62463
-        inSlope: 1554.17
-        outSlope: 1554.17
+        value: 617
+        inSlope: -1510.484
+        outSlope: -1510.484
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -265,80 +400,35 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 0
-        inSlope: -276.43375
-        outSlope: -276.43375
-        tangentMode: 10
-      - time: 0.46666667
-        value: -129.00241
-        inSlope: 151.28194
-        outSlope: 151.28194
-        tangentMode: 10
-      - time: 1.1333333
-        value: 256.99597
-        inSlope: 386.11612
-        outSlope: 386.11612
-        tangentMode: 0
-      - time: 1.5
-        value: 1024
-        inSlope: 2091.829
-        outSlope: 2091.829
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_SizeDelta.y
-    path: AnimatedFXIMG3
-    classID: 224
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
+        value: 19
         inSlope: 0
         outSlope: 0
         tangentMode: 10
-      - time: 1.0666667
-        value: 0
-        inSlope: 590.7693
-        outSlope: 590.7693
-        tangentMode: 10
-      - time: 1.9333333
-        value: 1024
-        inSlope: 1181.5386
-        outSlope: 1181.5386
+      - time: 0.5
+        value: 19
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_SizeDelta.y
-    path: AnimatedFXIMG4
+    attribute: m_SizeDelta.x
+    path: AnimatedFXIMG2
     classID: 224
     script: {fileID: 0}
   - curve:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: -12.442124
-        inSlope: -35.149876
-        outSlope: -35.149876
+        value: -1034
+        inSlope: 2650.1377
+        outSlope: 2650.1377
         tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_AnchoredPosition.y
-    path: AnimatedFXIMG1
-    classID: 224
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0.000030517578
-        inSlope: -0.00013078962
-        outSlope: -0.00013078962
-        tangentMode: 10
+      - time: 0.5
+        value: 291.0689
+        inSlope: -1359.9186
+        outSlope: -1359.9186
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -350,30 +440,40 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
+        value: -776
+        inSlope: 4206
+        outSlope: 4206
         tangentMode: 10
+      - time: 0.33333334
+        value: 626
+        inSlope: -1529.7902
+        outSlope: -1529.7902
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_AnchoredPosition.y
-    path: AnimatedFXIMG3
+    attribute: m_SizeDelta.y
+    path: AnimatedFXIMG1
     classID: 224
     script: {fileID: 0}
   - curve:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 0
-        inSlope: 46.982685
-        outSlope: 46.982685
+        value: -1112
+        inSlope: 4206
+        outSlope: 4206
         tangentMode: 10
+      - time: 0.33333334
+        value: 290
+        inSlope: -1898.5693
+        outSlope: -1898.5693
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_AnchoredPosition.y
-    path: AnimatedFXIMG4
+    path: AnimatedFXIMG1
     classID: 224
     script: {fileID: 0}
   m_EulerEditorCurves: []

@@ -90,14 +90,14 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleIdentifier: com.biaC.prufa
-  bundleVersion: 1.01
+  bundleVersion: 1.02
   preloadedAssets: []
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
   virtualRealitySupported: 0
   productGUID: 92b7cae9fe88f044eb99329b94fc3eb5
-  AndroidBundleVersionCode: 7
+  AndroidBundleVersionCode: 8
   AndroidMinSdkVersion: 18
   AndroidPreferredInstallLocation: 1
   aotOptions: 
@@ -158,7 +158,7 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/StefanOrn/Documents/GitHub/Unity/Drykkjuleikir/MyKeystore/user.keystore
+  AndroidKeystoreName: "C:/Users/Stef\xE1n \xD6rn/Documents/GitHub/Drykkjuleikir/MyKeystore/user.keystore"
   AndroidKeyaliasName: stebbiti
   AndroidTVCompatibility: 1
   AndroidIsGame: 1

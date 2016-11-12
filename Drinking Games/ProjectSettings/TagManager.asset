@@ -9,6 +9,7 @@ TagManager:
   - Dice
   - NonSelectedDice
   - JunkToClear
+  - SceneAnimator
   layers:
   - Default
   - TransparentFX

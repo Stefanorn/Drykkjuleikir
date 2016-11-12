@@ -235,7 +235,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1023201595}
-        m_MethodName: FadeGameObjectAndLoad
+        m_MethodName: PlayAnimationOnLoad
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -280,6 +280,100 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 180990980}
+--- !u!1001 &238862539
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1898851383}
+    m_Modifications:
+    - target: {fileID: 11198302, guid: f995b1752f0863f428b2a43f96a55980, type: 2}
+      propertyPath: m_Animations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405854, guid: f995b1752f0863f428b2a43f96a55980, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405854, guid: f995b1752f0863f428b2a43f96a55980, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405854, guid: f995b1752f0863f428b2a43f96a55980, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405854, guid: f995b1752f0863f428b2a43f96a55980, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405854, guid: f995b1752f0863f428b2a43f96a55980, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405854, guid: f995b1752f0863f428b2a43f96a55980, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405854, guid: f995b1752f0863f428b2a43f96a55980, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405854, guid: f995b1752f0863f428b2a43f96a55980, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405854, guid: f995b1752f0863f428b2a43f96a55980, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405854, guid: f995b1752f0863f428b2a43f96a55980, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405854, guid: f995b1752f0863f428b2a43f96a55980, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405854, guid: f995b1752f0863f428b2a43f96a55980, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405854, guid: f995b1752f0863f428b2a43f96a55980, type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405854, guid: f995b1752f0863f428b2a43f96a55980, type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405854, guid: f995b1752f0863f428b2a43f96a55980, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405854, guid: f995b1752f0863f428b2a43f96a55980, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405854, guid: f995b1752f0863f428b2a43f96a55980, type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405854, guid: f995b1752f0863f428b2a43f96a55980, type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11198302, guid: f995b1752f0863f428b2a43f96a55980, type: 2}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 7400000, guid: 1cecf061f97b46c408c1ca4d927a9cba, type: 2}
+    - target: {fileID: 11198302, guid: f995b1752f0863f428b2a43f96a55980, type: 2}
+      propertyPath: m_Animations.Array.data[2]
+      value: 
+      objectReference: {fileID: 7400000, guid: 1cecf061f97b46c408c1ca4d927a9cba, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: f995b1752f0863f428b2a43f96a55980, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &327053757
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,7 +668,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1023201595}
-        m_MethodName: FadeGameObjectAndLoad
+        m_MethodName: PlayAnimationOnLoad
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -677,7 +771,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1023201595}
-        m_MethodName: FadeGameObjectAndLoad
+        m_MethodName: PlayAnimationOnLoad
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -946,7 +1040,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1023201595}
-        m_MethodName: FadeGameObjectAndLoad
+        m_MethodName: PlayAnimationOnLoad
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1156,6 +1250,7 @@ RectTransform:
   - {fileID: 1563679654}
   - {fileID: 980396344}
   - {fileID: 180990981}
+  - {fileID: 2068561251}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 0}
@@ -1218,6 +1313,11 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!224 &2068561251 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 22405854, guid: f995b1752f0863f428b2a43f96a55980,
+    type: 2}
+  m_PrefabInternal: {fileID: 238862539}
 --- !u!1 &2119325263
 GameObject:
   m_ObjectHideFlags: 0

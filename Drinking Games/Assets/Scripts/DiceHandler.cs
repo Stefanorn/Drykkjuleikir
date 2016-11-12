@@ -14,22 +14,34 @@ public class DiceHandler : MonoBehaviour
 
     Vector3 startPos;
     Vector3 endPos;
+    float totalAcciliration;
 
     void Start()
     {
         diceInsts = new GameObject[maxNoDice];
     }
-    void Update()
+    void FixedUpdate()
     {
-        if (Input.GetMouseButtonDown(0))
+       float positiveAcciliration = Input.acceleration.x * Input.acceleration.x;
+        if( positiveAcciliration > 0.3)
         {
-            startPos = ClickMessageSender.MousePos();
+            totalAcciliration += positiveAcciliration;
         }
-        else if (Input.GetMouseButtonUp(0))
+        if( totalAcciliration > 150)
         {
-            endPos = ClickMessageSender.MousePos();
             SpawnDice();
+            totalAcciliration = 0;
         }
+
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    startPos = ClickMessageSender.MousePos();
+        //}
+        //else if (Input.GetMouseButtonUp(0))
+        //{
+        //    endPos = ClickMessageSender.MousePos();
+        //    SpawnDice();
+        //}
 
     }
 

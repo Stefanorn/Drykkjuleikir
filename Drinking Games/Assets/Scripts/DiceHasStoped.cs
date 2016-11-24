@@ -20,6 +20,8 @@ public class DiceHasStoped : MonoBehaviour {
                                                                                                                       //Hér væri hugsamlega hægt að láta hvern tening skila +1 til að auka performance
                                                                                                                       //þegar þeir hafa stöðvast enn það skilar stundum óskiljandi bögga (triggerOnce verður stundum ekki false og þá loopast allt)
             }
+            Rigidbody rb = gameObject.GetComponent<Rigidbody>();
+            rb.constraints = RigidbodyConstraints.FreezeAll;
         }
         else
         {

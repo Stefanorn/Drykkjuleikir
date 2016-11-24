@@ -1,0 +1,183 @@
+fileFormatVersion: 2
+guid: ae325756c02b90e4ab62cf65e6e14591
+timeCreated: 1479757241
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: _
+    100002: _1_Cylinder
+    100004: _1_Cylinder_1
+    100006: _2_Cylinder1
+    100008: _2_Cylinder_11
+    100010: _2_Cylinder_2
+    100012: _3_Cylinder2
+    100014: _3_Cylinder_12
+    100016: _3_Cylinder_21
+    100018: _3_Cylinder_5
+    100020: _4_Cylinder3
+    100022: _4_Cylinder_13
+    100024: _4_Cylinder_22
+    100026: _4_Cylinder_3
+    100028: _4_Cylinder_51
+    100030: _5_Cylinder4
+    100032: _5_Cylinder_14
+    100034: _5_Cylinder_23
+    100036: _5_Cylinder_31
+    100038: _5_Cylinder_4
+    100040: _5_Cylinder_52
+    100042: Subdivision_Surface_Cube
+    100044: //RootNode
+    400000: _
+    400002: _1_Cylinder
+    400004: _1_Cylinder_1
+    400006: _2_Cylinder1
+    400008: _2_Cylinder_11
+    400010: _2_Cylinder_2
+    400012: _3_Cylinder2
+    400014: _3_Cylinder_12
+    400016: _3_Cylinder_21
+    400018: _3_Cylinder_5
+    400020: _4_Cylinder3
+    400022: _4_Cylinder_13
+    400024: _4_Cylinder_22
+    400026: _4_Cylinder_3
+    400028: _4_Cylinder_51
+    400030: _5_Cylinder4
+    400032: _5_Cylinder_14
+    400034: _5_Cylinder_23
+    400036: _5_Cylinder_31
+    400038: _5_Cylinder_4
+    400040: _5_Cylinder_52
+    400042: Subdivision_Surface_Cube
+    400044: //RootNode
+    2300000: _
+    2300002: _1_Cylinder
+    2300004: _1_Cylinder_1
+    2300006: _2_Cylinder1
+    2300008: _2_Cylinder_11
+    2300010: _2_Cylinder_2
+    2300012: _3_Cylinder2
+    2300014: _3_Cylinder_12
+    2300016: _3_Cylinder_21
+    2300018: _3_Cylinder_5
+    2300020: _4_Cylinder3
+    2300022: _4_Cylinder_13
+    2300024: _4_Cylinder_22
+    2300026: _4_Cylinder_3
+    2300028: _4_Cylinder_51
+    2300030: _5_Cylinder4
+    2300032: _5_Cylinder_14
+    2300034: _5_Cylinder_23
+    2300036: _5_Cylinder_31
+    2300038: _5_Cylinder_4
+    2300040: _5_Cylinder_52
+    2300042: Subdivision_Surface_Cube
+    3300000: _
+    3300002: _1_Cylinder
+    3300004: _1_Cylinder_1
+    3300006: _2_Cylinder1
+    3300008: _2_Cylinder_11
+    3300010: _2_Cylinder_2
+    3300012: _3_Cylinder2
+    3300014: _3_Cylinder_12
+    3300016: _3_Cylinder_21
+    3300018: _3_Cylinder_5
+    3300020: _4_Cylinder3
+    3300022: _4_Cylinder_13
+    3300024: _4_Cylinder_22
+    3300026: _4_Cylinder_3
+    3300028: _4_Cylinder_51
+    3300030: _5_Cylinder4
+    3300032: _5_Cylinder_14
+    3300034: _5_Cylinder_23
+    3300036: _5_Cylinder_31
+    3300038: _5_Cylinder_4
+    3300040: _5_Cylinder_52
+    3300042: Subdivision_Surface_Cube
+    4300000: _
+    4300002: _1_Cylinder
+    4300004: _1_Cylinder_1
+    4300006: _2_Cylinder1
+    4300008: _2_Cylinder_11
+    4300010: _2_Cylinder_2
+    4300012: _3_Cylinder2
+    4300014: _3_Cylinder_12
+    4300016: _3_Cylinder_21
+    4300018: _3_Cylinder_5
+    4300020: _4_Cylinder3
+    4300022: _4_Cylinder_13
+    4300024: _4_Cylinder_22
+    4300026: _4_Cylinder_3
+    4300028: _4_Cylinder_51
+    4300030: _5_Cylinder4
+    4300032: _5_Cylinder_14
+    4300034: _5_Cylinder_23
+    4300036: _5_Cylinder_31
+    4300038: _5_Cylinder_4
+    4300040: _5_Cylinder_52
+    4300042: Subdivision_Surface_Cube
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.03
+    meshCompression: 3
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 0
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

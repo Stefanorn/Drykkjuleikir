@@ -17,7 +17,7 @@ public class RuleHandler : MonoBehaviour
     public YatzeeRule[] yatzeeRule = new YatzeeRule[8];
     public Text textBox;
     public Button resetButton;
-    public int ReThrows = 1;
+   // public int ReThrows = 1;
     public int reRoll = 1;
 
     //privat Breytur

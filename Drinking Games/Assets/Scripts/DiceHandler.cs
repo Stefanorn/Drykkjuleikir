@@ -24,11 +24,15 @@ public class DiceHandler : MonoBehaviour
 
     }
 
+    float dealayTimer = 0;
+
     void FixedUpdate()
     {
-       float positiveAcciliration = Input.acceleration.x * Input.acceleration.x;
-        if( positiveAcciliration > 0.3)
+        dealayTimer += Time.deltaTime;
+        float positiveAcciliration = Input.acceleration.x * Input.acceleration.x;
+        if (positiveAcciliration > 0.2 && dealayTimer >= 0.02)
         {
+            dealayTimer = 0;
             totalAcciliration += positiveAcciliration;
 
             if (!diceReleced)
@@ -36,28 +40,28 @@ public class DiceHandler : MonoBehaviour
                 foreach (GameObject dice in diceInsts)
                 {
                     Rigidbody rb = dice.GetComponent<Rigidbody>();
-                    Vector3 accilForce = new Vector3(Input.acceleration.x, 0, Input.acceleration.z);
+                    Vector3 accilForce = new Vector3(Input.acceleration.x * Random.Range(-2, 2),
+                                                        0,
+                                                        Input.acceleration.x * Random.Range(2, 2));
+
+
+
                     rb.AddForce(accilForce * -75, ForceMode.Impulse);
-                    Debug.Log(accilForce);
-
-
                 }
             }
 
         }
-        if( totalAcciliration > 200)
+        if (totalAcciliration > 100)
         {
             ReleceDice();
             totalAcciliration = 0;
         }
-
-
-
     }
+
     void ReleceDice()
     {
         diceReleced = true;
-        foreach(GameObject dice in diceInsts)
+        foreach (GameObject dice in diceInsts)
         {
             Rigidbody rb = dice.GetComponent<Rigidbody>();
             rb.useGravity = true;
@@ -70,7 +74,7 @@ public class DiceHandler : MonoBehaviour
     {
         diceReleced = false;
         totalAcciliration = 0;
-        
+
         foreach (GameObject diceInst in diceInsts)
         {
             if (diceInst.tag == "NonSelectedDice")
@@ -80,7 +84,7 @@ public class DiceHandler : MonoBehaviour
             }
         }
         GameObject[] junks = GameObject.FindGameObjectsWithTag("JunkToClear");
-        foreach(GameObject junk in junks)
+        foreach (GameObject junk in junks)
         {
             Destroy(junk);
         }
@@ -105,6 +109,7 @@ public class DiceHandler : MonoBehaviour
         rb.useGravity = false;
         rb.constraints = RigidbodyConstraints.FreezePositionY;
         dice.gameObject.tag = "Dice";
+        dice.GetComponent<DiceHasStoped>().triggerOnce = true;
     }
 
 
@@ -118,7 +123,7 @@ public class DiceHandler : MonoBehaviour
                                                             Random.Range(0, 360),
                                                             Random.Range(0, 360));
 
-                Vector3 instPos = new Vector3(  (i * Random.Range(1, 7)),
+                Vector3 instPos = new Vector3((i * Random.Range(1, 7)),
                                                 diceDropHight,
                                                 (i * Random.Range(1, 7)));
                 diceInsts[i] = (GameObject)Instantiate(dice, instPos, randomRotation);
@@ -150,9 +155,5 @@ public class DiceHandler : MonoBehaviour
         //        //Hér getur komið alskonar foce og eginleikar fyrir hvern tening
 
         //     }
-    }
-    void MouseUp(Vector3 endClick)
-    {
-
     }
 }

@@ -17,7 +17,6 @@ public class RuleHandler : MonoBehaviour
     public YatzeeRule[] yatzeeRule = new YatzeeRule[8];
     public Text textBox;
     public Button resetButton;
-   // public int ReThrows = 1;
     public int reRoll = 1;
 
     //privat Breytur
@@ -35,17 +34,9 @@ public class RuleHandler : MonoBehaviour
 
     public void RoleAgin() //Kallað þegar það er ýtt á rest button
     {
-
         if (reRoll <= 0)
         {
             Application.LoadLevel(Application.loadedLevel);
-            /*
-            reRoll = reRollCatcher;
-            diceHandler.ClearDice();
-            for (int i = 0; i < diceResults.Length; i++)
-            {
-                diceResults[i] = 0;
-            }*/
         }
         else
         {
@@ -57,7 +48,7 @@ public class RuleHandler : MonoBehaviour
     void FixedUpdate()
     {
 
-        if (haveAllDiceStop) // Þegar allir teningarnir eru búnir að stoppa keyrist þetta
+        if (haveAllDiceStop || CountTheDice("Dice") == diceHandler.maxNoDice ) // Þegar allir teningarnir eru búnir að stoppa keyrist þetta
         {
             if (reRoll == 0)
             {
@@ -83,6 +74,7 @@ public class RuleHandler : MonoBehaviour
     {
         //taggið dice er sett á dice sem hefur verið valin og takkið nonselected dice kemur á tening sem hefur stöðvast
         numOfStopedDice = CountTheDice("NonSelectedDice") + CountTheDice("Dice");
+
         if (numOfStopedDice >= diceHandler.maxNoDice)
         {
             haveAllDiceStop = true;

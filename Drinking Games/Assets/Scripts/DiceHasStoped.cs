@@ -5,28 +5,34 @@ public class DiceHasStoped : MonoBehaviour {
 
     Vector3 lastFramePos;
     Quaternion lastFrameRotation;
+    float startdelay = 2f;
 
-    bool triggerOnce = true;
-	// Update is called once per frame
-	void FixedUpdate () {
+    public bool triggerOnce = true;
+	void FixedUpdate ()
+    {
+        startdelay -= Time.deltaTime;
 
-        if(lastFramePos == transform.position && lastFrameRotation == transform.rotation)
+        if (startdelay < 0)
         {
-            if (triggerOnce)
+            if (lastFramePos == transform.position && lastFrameRotation == transform.rotation)
             {
-                gameObject.tag = "NonSelectedDice";
-                GameObject.FindGameObjectWithTag("DiceRule").GetComponent<RuleHandler>().DiceStopedChecker();         //Segir við RuleHandler að þessi teningu er búin að stoppa, 
-                triggerOnce = false;                                                                                  //og rule handler telur hversu margir teningar eru stopp og kallar svo á diceface þegar allir teningar eru stopp
-                                                                                                                      //Hér væri hugsamlega hægt að láta hvern tening skila +1 til að auka performance
-                                                                                                                      //þegar þeir hafa stöðvast enn það skilar stundum óskiljandi bögga (triggerOnce verður stundum ekki false og þá loopast allt)
+                if (triggerOnce)
+                {
+                    gameObject.tag = "NonSelectedDice";
+                    GameObject.FindGameObjectWithTag("DiceRule").GetComponent<RuleHandler>().DiceStopedChecker();         //Segir við RuleHandler að þessi teningu er búin að stoppa, 
+                    triggerOnce = false;                                                                                  //og rule handler telur hversu margir teningar eru stopp og kallar svo á diceface þegar allir teningar eru stopp
+                                                                                                                          //Hér væri hugsamlega hægt að láta hvern tening skila +1 til að auka performance
+                                                                                                                          //þegar þeir hafa stöðvast enn það skilar stundum óskiljandi bögga (triggerOnce verður stundum ekki false og þá loopast allt)
+                }
+                Rigidbody rb = gameObject.GetComponent<Rigidbody>();
+                rb.constraints = RigidbodyConstraints.FreezeAll;
             }
-            Rigidbody rb = gameObject.GetComponent<Rigidbody>();
-            rb.constraints = RigidbodyConstraints.FreezeAll;
-        }
-        else
-        {
-            lastFramePos = transform.position;
-            lastFrameRotation = transform.rotation;
+            else
+            {
+                lastFramePos = transform.position;
+                lastFrameRotation = transform.rotation;
+            }
+
         }
     }
     //0 90 180 270 360
@@ -101,9 +107,10 @@ public class DiceHasStoped : MonoBehaviour {
         }
         else //Villa ?
         {
-            
+            Rigidbody rb = gameObject.GetComponent<Rigidbody>();
+            rb.AddForce(Vector3.up * 20, ForceMode.Impulse);
             Debug.LogError("Kóði gat ekki lesið hverning teningur snýr");
-            return 7; //ÞARF AÐ GETA BETRI K'OÐA TIL AÐ TEKKA A VILLU
+            return 7;
         }
     }
 }

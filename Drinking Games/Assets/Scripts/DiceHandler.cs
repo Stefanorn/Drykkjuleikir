@@ -8,6 +8,7 @@ public class DiceHandler : MonoBehaviour
     public float diceDropHight = 50f;
     public float clearTimer = 5f;
     public int maxNoDice = 3;
+    public float maximusAcciliration = 50.0f;
 
 
     public GameObject[] diceInsts;
@@ -32,6 +33,7 @@ public class DiceHandler : MonoBehaviour
         float positiveAcciliration = Input.acceleration.x * Input.acceleration.x;
         if (positiveAcciliration > 0.2 && dealayTimer >= 0.02)
         {
+            Debug.Log(totalAcciliration);
             dealayTimer = 0;
             totalAcciliration += positiveAcciliration;
 
@@ -51,7 +53,7 @@ public class DiceHandler : MonoBehaviour
             }
 
         }
-        if (totalAcciliration > 100)
+        if (totalAcciliration > maximusAcciliration)
         {
             ReleceDice();
             totalAcciliration = 0;

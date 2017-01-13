@@ -72,12 +72,13 @@ public class MainMenuScrip : MonoBehaviour
     }
     public void LoadGame(string LevelName)
     {
+        gameObject.GetComponent<RuleSender>().LevelSelected(LevelName);
         Application.LoadLevel(LevelName);
     }
-    public void LoadGame(int LevelIndex)
-    {
-        Application.LoadLevel(LevelIndex);
-    }
+    //public void LoadGame(int LevelIndex)
+    //{
+    //    Application.LoadLevel(LevelIndex);
+    //}
     public void FadeGameObjectAndLoad(string LevelName)
     {
         foreach (UIBehaviour thing in thingsInCanvas)

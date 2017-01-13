@@ -12,8 +12,7 @@ public class Paterns
 public class deck
 {
     public string name;
-    public Sprite cardGFX;
-    public string cardRule;
+    public string cardRule; //Þarf ekki að hafa sem public þegar ég er buin aðsenda reglur yfir.
 
     public Suit suit;
     public Card card;
